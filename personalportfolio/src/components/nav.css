@@ -1,0 +1,23 @@
+li {
+	list-style: none;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	initial-letter: 3;
+	display: inline-block;
+}
+ul {
+	background-color: aqua;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	text-align: right;
+}
+a {
+	color: aliceblue;
+	font-size: large;
+	text-decoration: none;
+}
+a:visited {
+	font-size: large;
+	text-decoration: none;
+}

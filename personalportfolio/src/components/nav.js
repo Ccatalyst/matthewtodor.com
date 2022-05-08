@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./nav.css";
 
 function Nav() {
 	return (
@@ -7,22 +8,22 @@ function Nav() {
 			<div>
 				<ul>
 					<li>
-						<Link activeClassName="active" isActive={() => window.location.pathname === "/About"} to="/About">
+						<Link activeclassname="active" to="/About">
 							About Me
 						</Link>
 					</li>
 					<li>
-						<Link activeClassName="active" isActive={() => window.location.pathname === "/Portfolio"} to="/Portfolio">
+						<Link activeclassname="active" to="/Portfolio">
 							Portfolio
 						</Link>
 					</li>
 					<li>
-						<Link activeClassName="active" isActive={() => window.location.pathname === "/Contact"} to="/Contact">
+						<Link activeclassname="active" to="/Contact">
 							Contact Me
 						</Link>
 					</li>
 					<li>
-						<Link activeClassName="active" isActive={() => window.location.pathname === "/Resume"} to="/Resume">
+						<Link activeclassname="active" to="/Resume">
 							Resume
 						</Link>
 					</li>
