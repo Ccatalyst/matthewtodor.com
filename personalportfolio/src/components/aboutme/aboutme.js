@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-
+import "./aboutme.css";
 function AboutMe() {
 	return (
 		<>
-			<div>
-				<h2>About Me</h2>
-				<p>
+			<h2>About Me</h2>
+			<div className="aboutMe">
+				<img src="https://i.imgur.com/ZVsB0rV.jpg" />
+				<p id="aboutMeContent">
 					I am a web developer, recently graduated from Denver University's Full Stack Web Development Bootcamp! I'm experienced in HTML and CSS, as
 					well as Javascript, JQuery, Node, Express, SQL, MongoDB, GraphQL, and ReactJS. I'm currently learning Typescript and AngularJS, with plans
 					to learn C# and dive into React Native.

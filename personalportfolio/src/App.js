@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AboutMe from "./components/aboutme";
-import Contact from "./components/contactme";
-import Portfolio from "./components/portfolio";
-import Resume from "./components/resume";
+import AboutMe from "./components/aboutme/aboutme";
+import Contact from "./components/contactme/contactme";
+import Portfolio from "./components/portfolio/portfolio";
+import Resume from "./components/resume/resume";
 import Nav from "./components/nav";
-import Footer from "./components/footer";
+import Footer from "./components/footer/footer";
 import "./App.css";
 
 function App() {
@@ -19,6 +19,9 @@ function App() {
 					<Route exact path="/Portfolio" element={<Portfolio />} />
 					<Route exact path="/Resume" element={<Resume />} />
 				</Routes>
+				<br />
+				<br />
+				<br />
 				<Footer />
 			</Router>
 		</div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./contactme.css";
 
 function Contact() {
 	// Here we set two state variables for firstName and lastName using `useState`
@@ -43,7 +44,7 @@ function Contact() {
 					<br />
 					<input value={email} name="email" onChange={handleInputChange} type="text" placeholder="Email" />
 					<br />
-					<input value={message} name="message" onChange={handleInputChange} type="text" placeholder="Message" />
+					<textarea value={message} name="message" onChange={handleInputChange} type="text" rows={5} cols={25} placeholder="Message" />
 					<br />
 					<button type="button" onClick={handleFormSubmit}>
 						Submit

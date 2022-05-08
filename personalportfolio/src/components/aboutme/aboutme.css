@@ -1,0 +1,22 @@
+h2 {
+	display: block;
+	color: #cad2c5;
+	-webkit-text-stroke: 1px #2f3e46;
+	padding: 0.25em;
+	padding-left: 0.75em;
+}
+.aboutMe p {
+	padding: 0.25em;
+	color: #cad2c5;
+}
+.aboutMe img {
+	padding: 1em;
+	min-width: 50px;
+}
+.aboutMe {
+	display: flex;
+	flex-direction: row;
+}
+#aboutMeContent {
+	width: 70%;
+}

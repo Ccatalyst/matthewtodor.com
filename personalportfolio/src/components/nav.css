@@ -1,23 +1,30 @@
-li {
+h1 {
+	color: #cad2c5;
+	padding-left: 15px;
+}
+.navigation li {
 	list-style: none;
 	padding-left: 50px;
 	padding-right: 50px;
 	padding-bottom: 10px;
 	padding-top: 10px;
-	initial-letter: 3;
 	display: inline-block;
 }
-ul {
-	background-color: aqua;
-	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+.navigation ul {
 	text-align: right;
 }
 a {
-	color: aliceblue;
+	color: #cad2c5;
 	font-size: large;
 	text-decoration: none;
 }
 a:visited {
 	font-size: large;
 	text-decoration: none;
+}
+.navigation {
+	background-color: #2f3e46;
+	border-bottom: 1px solid black;
+	display: flex;
+	align-content: space-between;
 }

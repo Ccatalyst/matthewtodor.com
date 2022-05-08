@@ -1,0 +1,17 @@
+.form {
+	padding: 1em;
+}
+input,
+textarea,
+button {
+	margin: 0.25em;
+	border: none;
+	border-radius: 5px;
+}
+button {
+	color: #cad2c5;
+	border: none;
+	background-color: #2f3e46;
+	border-radius: 4px;
+	padding: 7px;
+}
