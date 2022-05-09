@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./portfolio.css";
 
 function Portfolio() {
@@ -11,7 +11,7 @@ function Portfolio() {
 			</div>
 			<div className="projects">
 				<div className="card">
-					<a href="https://github.com/samanthajrexroat/DiscCover" target="_blank">
+					<a href="https://github.com/samanthajrexroat/DiscCover" target="_blank" rel="noreferrer">
 						<h2 className="card-title">DiscCover</h2>
 						<img src="https://i.imgur.com/8VeGoPp.png" alt="" />
 						<p className="card-desc">
@@ -20,7 +20,7 @@ function Portfolio() {
 					</a>
 				</div>
 				<div className="card">
-					<a href="https://github.com/Ccatalyst/Find-Your-Next-Pet" target="_blank">
+					<a href="https://github.com/Ccatalyst/Find-Your-Next-Pet" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Find Your Next Pet</h2>
 						<img src="https://i.imgur.com/u3cLMG8.png" alt="" />
 						<p className="card-desc">
@@ -29,7 +29,7 @@ function Portfolio() {
 					</a>
 				</div>
 				<div className="card">
-					<a href="https://github.com/Ccatalyst/Social-Network-API" target="_blank">
+					<a href="https://github.com/Ccatalyst/Social-Network-API" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Social Network API</h2>
 						<img src="https://i.imgur.com/BxowT6s.png" alt="" />
 						<p className="card-desc">
@@ -39,7 +39,7 @@ function Portfolio() {
 					</a>
 				</div>
 				<div className="card">
-					<a href="https://github.com/Ccatalyst/Rejex-Tutorial" target="_blank">
+					<a href="https://github.com/Ccatalyst/Rejex-Tutorial" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Regex URL Tutorial</h2>
 						<img src="https://i.imgur.com/8fo2w7U.png" alt="" />
 						<p className="card-desc">
@@ -49,7 +49,7 @@ function Portfolio() {
 					</a>
 				</div>
 				<div className="card">
-					<a href="https://github.com/samanthajrexroat/Friender" target="_blank">
+					<a href="https://github.com/samanthajrexroat/Friender" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Friender</h2>
 						<img src="https://i.imgur.com/yeIUxGo.png" alt="" />
 						<p className="card-desc">
@@ -59,7 +59,7 @@ function Portfolio() {
 					</a>
 				</div>
 				<div className="card">
-					<a href="https://github.com/Ccatalyst/Employee-Tracker" target="_blank">
+					<a href="https://github.com/Ccatalyst/Employee-Tracker" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Employee Tracker</h2>
 						<img src="https://i.imgur.com/V8FiMhj.png" alt="" />
 						<p className="card-desc">
