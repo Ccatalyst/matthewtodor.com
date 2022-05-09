@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./resume.css";
 import resume from "./MatthewTodorResume.pdf";
 function Resume() {

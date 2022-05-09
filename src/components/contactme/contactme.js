@@ -1,9 +1,19 @@
 import React, { useState } from "react";
+import validator from "validator";
 import "./contactme.css";
 
 function Contact() {
 	// Here we set two state variables for firstName and lastName using `useState`
+	const [emailError, setEmailError] = useState("");
+	const validateEmail = (e) => {
+		var email = e.target.value;
 
+		if (validator.isEmail(email)) {
+			setEmailError("Thank you for entering a valid email");
+		} else {
+			setEmailError("Please enter a valid email!");
+		}
+	};
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
@@ -40,11 +50,25 @@ function Contact() {
 				<h2>Contact Me</h2>
 
 				<form className="form">
-					<input value={name} name="name" onChange={handleInputChange} type="text" placeholder="Name" />
+					<label for="name">Name</label>
 					<br />
-					<input value={email} name="email" onChange={handleInputChange} type="text" placeholder="Email" />
+					<input value={name} name="name" onChange={handleInputChange} type="text" placeholder="Matthew Todor" />
 					<br />
-					<textarea value={message} name="message" onChange={handleInputChange} type="text" rows={5} cols={25} placeholder="Message" />
+					<label for="email">Email</label>
+					<br />
+					<input value={email} name="email" onChange={handleInputChange} type="text" placeholder="todor.matthew.john@gmail.com" />
+					<br />
+					<label for="message">Message</label>
+					<br />
+					<textarea
+						value={message}
+						name="message"
+						onChange={(handleInputChange, validateEmail)}
+						type="text"
+						rows={5}
+						cols={25}
+						placeholder="Can't wait to hear from you!"
+					/>
 					<br />
 					<button type="button" onClick={handleFormSubmit}>
 						Submit

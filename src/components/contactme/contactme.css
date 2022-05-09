@@ -1,6 +1,9 @@
 .form {
 	padding: 1em;
 }
+label {
+	color: #cad2c5;
+}
 input,
 textarea,
 button {
