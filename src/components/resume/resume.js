@@ -1,20 +1,18 @@
 import React from "react";
-import "./resume.css";
 import resume from "./MatthewTodorResume.pdf";
+import { Button } from "@mui/material";
 function Resume() {
-	// Here we set two state variables for firstName and lastName using `useState`
-
 	return (
 		<>
 			<div>
 				<h2>Resume and Proficiencies</h2>
 			</div>
 			<div className="resumeLink">
-				<button>
+				<Button>
 					<a href={resume} target="_blank" rel="noreferrer">
 						Download Resume
 					</a>
-				</button>
+				</Button>
 			</div>
 			<div className="skills">
 				<div className="skillList">

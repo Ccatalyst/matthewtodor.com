@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./aboutme.css";
-function AboutMe() {
+
+function Home() {
 	return (
 		<>
 			<h2>About Me</h2>
@@ -18,4 +18,4 @@ function AboutMe() {
 	);
 }
 
-export default AboutMe;
+export default Home;
