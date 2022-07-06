@@ -1,5 +1,4 @@
 import React from "react";
-import "./portfolio.css";
 
 function Portfolio() {
 	// Here we set two state variables for firstName and lastName using `useState`
