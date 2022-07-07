@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Email, GitHub, LinkedIn, Twitter, PhoneAndroid } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
+
+// NOTE: Read further on converting MUI Link to react-router-dom on MUI documentation. Needed for Link styling.
+
 function Nav() {
 	return (
 		<>

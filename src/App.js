@@ -16,6 +16,7 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<Home />} />
 					<Route exact path="/Portfolio" element={<Portfolio />} />
+					{/* <Route exact path="/Algorithms" element={<Algorithms />} /> */}
 				</Routes>
 			</Router>
 		</Grid>
