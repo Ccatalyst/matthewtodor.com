@@ -6,25 +6,21 @@ import Grid from "@mui//material/Grid";
 
 function App() {
 	return (
-		<ColorModeContext.Provider value={colorMode}>
-			<ThemeProvider theme={theme}>
-				<Grid
-					sx={{
-						bgcolor: "background.paper",
-					}}
-				>
-					<Router>
-						<br />
-						<Nav />
-						<Routes>
-							<Route exact path="/" element={<Home />} />
-							<Route exact path="/Portfolio" element={<Portfolio />} />
-							{/* <Route exact path="/Algorithms" element={<Algorithms />} /> */}
-						</Routes>
-					</Router>
-				</Grid>
-			</ThemeProvider>
-		</ColorModeContext.Provider>
+		<Grid
+			sx={{
+				bgcolor: "background.paper",
+			}}
+		>
+			<Router>
+				<br />
+				<Nav />
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route exact path="/Portfolio" element={<Portfolio />} />
+					{/* <Route exact path="/Algorithms" element={<Algorithms />} /> */}
+				</Routes>
+			</Router>
+		</Grid>
 	);
 }
 
