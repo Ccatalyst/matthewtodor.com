@@ -9,9 +9,18 @@ function Home() {
 				sx={{
 					maxWidth: "md",
 					bgcolor: "background.paper",
-					border: 1,
-					borderRadius: 1,
-					m: "auto",
+					ml: "auto",
+					mr: "auto",
+					mb: 3,
+					mt: 3,
+					borderRadius: "12px",
+					width: 1,
+					boxShadow: 4,
+					pl: 3,
+					pr: 3,
+					pt: 3,
+					pb: 0,
+					justifyContent: "center",
 				}}
 			>
 				<h2>About Me</h2>

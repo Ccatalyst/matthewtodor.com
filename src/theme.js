@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createTheme, ThemeProvider, styled, ThemeOptions } from "@mui/material";
 
-const theme = createTheme({
+let theme = createTheme({
 	palette: {
 		type: "light",
 		primary: {
@@ -26,5 +26,3 @@ const theme = createTheme({
 });
 
 export default theme;
-
-
