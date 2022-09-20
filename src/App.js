@@ -6,7 +6,6 @@ import Nav from "./components/nav";
 function App() {
 	return (
 		<Router>
-			<br />
 			<Nav />
 			<Routes>
 				<Route exact path="/" element={<Home />} />

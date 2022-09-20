@@ -2,8 +2,6 @@ import React from "react";
 
 class Portfolio extends React.Component {
 	render() {
-		// Here we set two state variables for firstName and lastName using `useState`
-
 		return (
 			<>
 				<div>
