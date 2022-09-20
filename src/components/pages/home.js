@@ -1,28 +1,10 @@
 import React from "react";
-import Button from "@mui/material/Button";
-import resume from "../resume/MatthewTodorResume.pdf";
-import { Box } from "@mui/material";
-function Home() {
-	return (
-		<>
-			<Box
-				sx={{
-					maxWidth: "md",
-					bgcolor: "background.paper",
-					ml: "auto",
-					mr: "auto",
-					mb: 3,
-					mt: 3,
-					borderRadius: "12px",
-					width: 1,
-					boxShadow: 4,
-					pl: 3,
-					pr: 3,
-					pt: 3,
-					pb: 0,
-					justifyContent: "center",
-				}}
-			>
+import resume from "../../assets/resume/MatthewTodorResume.pdf";
+
+class Home extends React.Component {
+	render() {
+		return (
+			<>
 				<h2>About Me</h2>
 				<div className="aboutMe">
 					<img src="https://i.imgur.com/ZVsB0rV.jpg" />
@@ -38,11 +20,9 @@ function Home() {
 					<h2>Resume and Proficiencies</h2>
 				</div>
 				<div className="resumeLink">
-					<Button>
-						<a href={resume} target="_blank" rel="noreferrer">
-							Download Resume
-						</a>
-					</Button>
+					<a href={resume} target="_blank" rel="noreferrer">
+						Download Resume
+					</a>
 				</div>
 				<div className="skills">
 					<div className="skillList">
@@ -78,9 +58,9 @@ function Home() {
 						</ul>
 					</div>
 				</div>
-			</Box>
-		</>
-	);
+			</>
+		);
+	}
 }
 
 export default Home;
