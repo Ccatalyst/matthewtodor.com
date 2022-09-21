@@ -1,5 +1,6 @@
 import React from "react";
 import resume from "../../assets/resume/MatthewTodorResume.pdf";
+import picture from "../../assets/pictures/profilepicture.jpg";
 
 class Home extends React.Component {
 	render() {
@@ -7,7 +8,7 @@ class Home extends React.Component {
 			<>
 				<h2>About Me</h2>
 				<div className="aboutMe">
-					<img src="https://i.imgur.com/ZVsB0rV.jpg" alt="headshot of Matthew" />
+					<img src={picture} alt="headshot of Matthew" />
 					<p id="aboutMeContent">
 						I am a web developer, recently graduated from Denver University's Full Stack Web Development Bootcamp! I'm experienced in HTML and CSS, as
 						well as Javascript, JQuery, Node, Express, SQL, MongoDB, GraphQL, and ReactJS. I'm currently learning Typescript and AngularJS, with plans
