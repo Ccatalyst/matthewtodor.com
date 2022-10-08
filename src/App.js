@@ -1,18 +1,56 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/pages/home";
 import Portfolio from "./components/pages/portfolio";
+import Algorithms from "./components/pages/algorithms";
 import Nav from "./components/nav";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
+const golfTheme = createTheme({
+	palette: {
+		type: "light",
+		primary: {
+			main: "#3e5641",
+		},
+		secondary: {
+			main: "#00a7e1",
+		},
+		success: {
+			main: "#43974b",
+		},
+		info: {
+			main: "#436597",
+		},
+		warning: {
+			main: "#F45D01",
+		},
+		error: {
+			main: "#85161e",
+		},
+		background: {
+			default: "#c6ae82",
+			paper: "#d7c7a8",
+		},
+	},
+});
 
 function App() {
 	return (
-		<Router>
-			<Nav />
-			<Routes>
-				<Route exact path="/" element={<Home />} />
-				<Route exact path="/Portfolio" element={<Portfolio />} />
-				{/* <Route exact path="/Algorithms" element={<Algorithms />} /> */}
-			</Routes>
-		</Router>
+		<ThemeProvider theme={golfTheme}>
+			<CssBaseline />
+			<Router>
+				<Nav />
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route exact path="/Portfolio" element={<Portfolio />} />
+					<Route exact path="/Algorithms" element={<Algorithms />} />
+				</Routes>
+			</Router>
+		</ThemeProvider>
 	);
 }
 
