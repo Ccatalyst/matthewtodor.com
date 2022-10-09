@@ -1,4 +1,8 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+// eslint-disable-next-line
+import { Link as RouterLink, MemoryRouter } from "react-router-dom";
+import { StaticRouter } from "react-router-dom/server";
+import PropTypes from "prop-types";
 import Home from "./components/pages/home";
 import Portfolio from "./components/pages/portfolio";
 import Algorithms from "./components/pages/algorithms";
@@ -37,7 +41,17 @@ const golfTheme = createTheme({
 		},
 	},
 });
+function Router(props) {
+	const { children } = props;
+	if (typeof window === "undefined") {
+		return <StaticRouter location="/">{children}</StaticRouter>;
+	}
+	return <MemoryRouter>{children}</MemoryRouter>;
+}
 
+Router.propTypes = {
+	children: PropTypes.node,
+};
 function App() {
 	return (
 		<ThemeProvider theme={golfTheme}>
