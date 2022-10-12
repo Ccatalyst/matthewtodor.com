@@ -46,10 +46,12 @@
 .navbar {
 	width: 100%;
 	background-color: #12121250;
+	z-index: 4;
 }
 .sticky {
 	position: sticky;
 	top: 0;
 	width: 100%;
 	background-color: #121212e6;
+	z-index: 4;
 }
