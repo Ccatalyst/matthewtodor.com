@@ -3,7 +3,7 @@ import React from "react";
 
 const Banner = () => {
 	return (
-		<Typography variant="h2" component="h1" align="center" color="primary">
+		<Typography variant="h4" component="h1" align="center" color="primary" sx={{ mt: 1 }}>
 			Matthew Todor
 		</Typography>
 	);

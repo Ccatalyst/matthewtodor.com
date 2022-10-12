@@ -1,3 +1,4 @@
+import { React, useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
 // eslint-disable-next-line
 import { Link as RouterLink, MemoryRouter } from "react-router-dom";
@@ -15,7 +16,10 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
-
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import "./App.css";
+import particlesOptions from "./particles.json";
 const theme = createTheme({
 	palette: {
 		mode: "dark",
@@ -51,17 +55,22 @@ Router.propTypes = {
 	children: PropTypes.node,
 };
 function App() {
+	const particlesInit = useCallback((main) => {
+		loadFull(main);
+	}, []);
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Router>
 				<Nav />
+				<Particles options={particlesOptions} init={particlesInit} />
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/algorithms" element={<Algorithms />} />
 					<Route path="/resume" element={<Resume />} />
 				</Routes>
+
 				<Footer />
 			</Router>
 		</ThemeProvider>

@@ -92,6 +92,7 @@ const Nav = () => {
 						m: "auto",
 						justifyContent: "center",
 					}}
+					id="nav"
 				>
 					<Grid item xs={12} sm={7} md={5} lg={4} xl={3}>
 						<Typography
@@ -109,7 +110,7 @@ const Nav = () => {
 						</Typography>
 					</Grid>
 					{/* this container holds the links */}
-					<Grid container xs={12} md={7} lg={8} xl={9} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center" }} className="mdNav">
+					<Grid container xs={12} md={7} lg={8} xl={9} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center", mx: {} }} className="mdNav">
 						{/* empty div, used to push links to the right. bad way to do it, fix later */}
 						<Grid item xs={0} lg={4} xl={7}></Grid>
 						{/* link to portfolio */}
@@ -171,7 +172,7 @@ const Nav = () => {
 						</Grid>
 					</Grid>
 					<Grid item xs={11} md={12}>
-						<Divider variant="middle" sx={{ mb: 1, borderWidth: 1, borderColor: "primary.main" }} />
+						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
 					</Grid>
 				</Grid>
 			)}
