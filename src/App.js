@@ -1,8 +1,6 @@
 import { React, useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
-// eslint-disable-next-line
 import { BrowserRouter as Router } from "react-router-dom";
-// import { StaticRouter } from "react-router-dom/server";
 import Home from "./components/pages/home";
 import Portfolio from "./components/pages/portfolio";
 import Algorithms from "./components/pages/algorithms";
@@ -51,14 +49,16 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Router>
-				<Nav />
-				<Particles options={particlesOptions} init={particlesInit} />
-				<Routes>
-					<Route exact path="/" element={<Home />} />
-					<Route path="/portfolio" element={<Portfolio />} />
-					<Route path="/algorithms" element={<Algorithms />} />
-					<Route path="/resume" element={<Resume />} />
-				</Routes>
+				<div className="page-container">
+					<Nav />
+					<Particles options={particlesOptions} init={particlesInit} />
+					<Routes>
+						<Route exact path="/" element={<Home />} />
+						<Route path="/portfolio" element={<Portfolio />} />
+						<Route path="/algorithms" element={<Algorithms />} />
+						<Route path="/resume" element={<Resume />} />
+					</Routes>
+				</div>
 
 				<Footer />
 			</Router>

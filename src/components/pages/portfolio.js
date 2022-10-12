@@ -11,7 +11,7 @@ const Portfolio = () => {
 					<a href="https://github.com/samanthajrexroat/DiscCover" target="_blank" rel="noreferrer">
 						<h2 className="card-title">DiscCover</h2>
 						<img src="https://i.imgur.com/8VeGoPp.png" alt="" />
-						<p className="card-desc">
+						<p>
 							A basic website that uses the Shazam API and Youtube API to find similar artists to the searched song or artist. Built using JQuery.
 						</p>
 					</a>
@@ -20,18 +20,16 @@ const Portfolio = () => {
 					<a href="https://github.com/Ccatalyst/Find-Your-Next-Pet" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Find Your Next Pet</h2>
 						<img src="https://i.imgur.com/u3cLMG8.png" alt="" />
-						<p className="card-desc">
-							A site built using HandlbarsJs. It searches for cats or dogs up for adoption via an API run by Purina Pet Foods
-						</p>
+						<p>A site built using HandlbarsJs. It searches for cats or dogs up for adoption via an API run by Purina Pet Foods</p>
 					</a>
 				</div>
 				<div className="card">
 					<a href="https://github.com/Ccatalyst/Social-Network-API" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Social Network API</h2>
 						<img src="https://i.imgur.com/BxowT6s.png" alt="" />
-						<p className="card-desc">
-							A backend project using MongoDB and Mongoose. An API that has users who can post "thoughts", and have other users respond to the
-							thoughts with responses. Allows for users to add friends as well.
+						<p>
+							A backend project using MongoDB and Mongoose. An API that has users who can post &quot;thoughts&quot;, and have other users respond to
+							the thoughts with responses. Allows for users to add friends as well.
 						</p>
 					</a>
 				</div>
@@ -39,9 +37,9 @@ const Portfolio = () => {
 					<a href="https://github.com/Ccatalyst/Rejex-Tutorial" target="_blank" rel="noreferrer">
 						<h2 className="card-title">Regex URL Tutorial</h2>
 						<img src="https://i.imgur.com/8fo2w7U.png" alt="" />
-						<p className="card-desc">
+						<p>
 							A tutorial covering regular expressions for URLs. Outlines an expression that allows for the inclusion/exclusion of portions of a url,
-							such as "http".
+							such as &quot;http&quot;.
 						</p>
 					</a>
 				</div>
@@ -60,7 +58,7 @@ const Portfolio = () => {
 					<a href="https://github.com/Ccatalyst/Employee-Tracker" target="_blank" rel="noreferrer">
 						<img src="https://i.imgur.com/V8FiMhj.png" alt="" />
 						<p className="card-desc">
-							A backend application based on nodejs and SQL that allows for manipulation of employees' job information within a company.
+							A backend application based on nodejs and SQL that allows for manipulation of employees&apos; job information within a company.
 						</p>
 					</a>
 				</div>

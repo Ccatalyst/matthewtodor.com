@@ -5,8 +5,8 @@ import { GitHub, LinkedIn, MailOutline, PhoneAndroid, Twitter } from "@mui/icons
 
 const Footer = () => {
 	return (
-		<Grid container sx={{ position: "absolute", bottom: 5, width: { xs: 8 / 10, sm: 1 / 1 } }}>
-			<Grid item xs={11} sx={{ m: "auto", mt: 2 }}>
+		<Grid container sx={{ bottom: 0, width: { xs: 8 / 10, sm: 1 / 1 }, backgroundColor: "#121212e6" }}>
+			<Grid item xs={11} sx={{ m: "auto" }}>
 				<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1 }}>
 					<a href="mailto:todor.matthew.john@gmail.com" target="_blank" rel="noreferrer">
 						<IconButton fontSize="large" name="Email" aria-label="email">

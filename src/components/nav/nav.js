@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link, Typography, Box, SpeedDial, SpeedDialAction, useMediaQuery, useTheme, Divider } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { GitHub, LinkedIn, Home, Fingerprint } from "@mui/icons-material/";
@@ -7,7 +7,7 @@ import Banner from "../banner";
 import "./nav.scss";
 const Nav = () => {
 	// Handling mobile SpeedDial navigation open/close settings
-	const [open, setOpen] = React.useState(false);
+	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	const icons = [
@@ -52,6 +52,19 @@ const Nav = () => {
 			name: "Contact",
 		},
 	];
+
+	// const [expand, updateExpanded] = useState(false);
+	const [navColor, updateNavbar] = useState(false);
+
+	function scrollHandler() {
+		if (window.scrollY >= 20) {
+			updateNavbar(true);
+		} else {
+			updateNavbar(false);
+		}
+	}
+
+	window.addEventListener("scroll", scrollHandler);
 	// checking if the screen width is below the small breakpoint
 	const theme = useTheme();
 	const mobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -91,7 +104,7 @@ const Nav = () => {
 						m: "auto",
 						justifyContent: "center",
 					}}
-					id="nav"
+					className={navColor ? "sticky" : "navbar"}
 				>
 					<Grid item xs={12} sm={7} md={5} lg={4} xl={3}>
 						<Typography
