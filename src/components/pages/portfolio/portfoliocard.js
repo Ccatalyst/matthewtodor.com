@@ -4,8 +4,7 @@ import { GitHub } from "@mui/icons-material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import PropTypes from "prop-types";
 const PortfolioCard = ({ props }) => {
-	const deploy = props.deploy === "";
-
+	const deploy = props.project.deploy === "";
 	return (
 		<Grid item xs={12} sm={6} md={4} lg={3} sx={{ p: 2 }}>
 			<Card>

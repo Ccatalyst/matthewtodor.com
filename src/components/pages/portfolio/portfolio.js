@@ -6,8 +6,8 @@ import PortfolioCard from "./portfoliocard";
 const Portfolio = () => {
 	return (
 		<Grid container>
-			<Grid item xs={12}>
-				<Typography variant="h3" component="h2">
+			<Grid item xs={12} sx={{ mt: 1 }}>
+				<Typography variant="h3" component="h2" align="center" color="primary">
 					Projects
 				</Typography>
 			</Grid>
