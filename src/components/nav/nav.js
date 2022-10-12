@@ -1,11 +1,11 @@
 import React from "react";
-import { Link, Typography, Box, SpeedDial, SpeedDialAction, useMediaQuery, useTheme } from "@mui/material";
+import { Link, Typography, Box, SpeedDial, SpeedDialAction, useMediaQuery, useTheme, Divider } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { GitHub, LinkedIn, Home, Fingerprint } from "@mui/icons-material/";
 // eslint-disable-next-line
 import { Link as RouterLink, MemoryRouter } from "react-router-dom";
 import Banner from "../banner";
-
+import "./nav.scss";
 const Nav = () => {
 	// Handling mobile SpeedDial navigation open/close settings
 	const [open, setOpen] = React.useState(false);
@@ -109,13 +109,14 @@ const Nav = () => {
 						</Typography>
 					</Grid>
 					{/* this container holds the links */}
-					<Grid container xs={12} md={7} lg={8} xl={9} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center" }}>
+					<Grid container xs={12} md={7} lg={8} xl={9} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center" }} className="mdNav">
 						{/* empty div, used to push links to the right. bad way to do it, fix later */}
 						<Grid item xs={0} lg={4} xl={7}></Grid>
 						{/* link to portfolio */}
 						<Grid item xs={12} sm={3} lg={2} xl={1}>
 							<Typography
 								variant="h6"
+								component="p"
 								sx={{
 									textAlign: "center",
 								}}
@@ -129,6 +130,7 @@ const Nav = () => {
 						<Grid item xs={12} sm={3} lg={2} xl={1}>
 							<Typography
 								variant="h6"
+								component="p"
 								sx={{
 									textAlign: "center",
 								}}
@@ -142,6 +144,7 @@ const Nav = () => {
 						<Grid item xs={12} sm={3} lg={2} xl={1}>
 							<Typography
 								variant="h6"
+								component="p"
 								sx={{
 									textAlign: "center",
 								}}
@@ -155,6 +158,7 @@ const Nav = () => {
 						<Grid item xs={12} sm={3} lg={2} xl={1}>
 							<Typography
 								variant="h6"
+								component="p"
 								sx={{
 									textAlign: "center",
 								}}
@@ -165,6 +169,9 @@ const Nav = () => {
 								</Link>
 							</Typography>
 						</Grid>
+					</Grid>
+					<Grid item xs={11} md={12}>
+						<Divider variant="middle" sx={{ mb: 1, borderWidth: 1, borderColor: "primary.main" }} />
 					</Grid>
 				</Grid>
 			)}
