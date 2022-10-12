@@ -1,5 +1,5 @@
 import React from "react";
-import AboutMe from "../aboutme";
+import AboutMe from "./aboutme";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
 const Home = () => {

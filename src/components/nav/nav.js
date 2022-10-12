@@ -118,7 +118,14 @@ const Nav = () => {
 							}}
 						>
 							<Link component={RouterLink} to="/" underline="none">
-								Matthew Todor
+								<Typography variant="h2" color="primary.light" sx={{ fontWeight: 400, display: "inline" }}>
+									M
+								</Typography>
+								atthew &nbsp;
+								<Typography variant="h2" color="primary.light" sx={{ fontWeight: 400, display: "inline" }}>
+									T
+								</Typography>
+								odor
 							</Link>
 						</Typography>
 					</Grid>
