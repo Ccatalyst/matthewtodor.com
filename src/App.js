@@ -6,7 +6,9 @@ import PropTypes from "prop-types";
 import Home from "./components/pages/home";
 import Portfolio from "./components/pages/portfolio";
 import Algorithms from "./components/pages/algorithms";
-import Nav from "./components/nav";
+import Resume from "./components/pages/resume";
+import Nav from "./components/nav/nav";
+import Footer from "./components/footer/footer";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "@fontsource/roboto/300.css";
@@ -14,30 +16,26 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-const golfTheme = createTheme({
+const theme = createTheme({
 	palette: {
-		type: "light",
+		mode: "dark",
 		primary: {
-			main: "#3e5641",
+			main: "#0E9594",
 		},
 		secondary: {
-			main: "#00a7e1",
-		},
-		success: {
-			main: "#43974b",
-		},
-		info: {
-			main: "#436597",
-		},
-		warning: {
-			main: "#F45D01",
+			main: "#F1FEC6",
 		},
 		error: {
-			main: "#85161e",
+			main: "#ED6A5A",
 		},
-		background: {
-			default: "#c6ae82",
-			paper: "#d7c7a8",
+		warning: {
+			main: "#EAF27C",
+		},
+		info: {
+			main: "#3ABEFF",
+		},
+		success: {
+			main: "#37FF8B",
 		},
 	},
 });
@@ -54,15 +52,17 @@ Router.propTypes = {
 };
 function App() {
 	return (
-		<ThemeProvider theme={golfTheme}>
+		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Router>
 				<Nav />
 				<Routes>
-					<Route exact path="/" element={<Home />} />
-					<Route exact path="/Portfolio" element={<Portfolio />} />
-					<Route exact path="/Algorithms" element={<Algorithms />} />
+					<Route path="/" element={<Home />} />
+					<Route path="/portfolio" element={<Portfolio />} />
+					<Route path="/algorithms" element={<Algorithms />} />
+					<Route path="/resume" element={<Resume />} />
 				</Routes>
+				<Footer />
 			</Router>
 		</ThemeProvider>
 	);

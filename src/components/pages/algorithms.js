@@ -7,7 +7,6 @@ const Algorithms = () => {
 		<Grid container>
 			<Grid item>
 				<Typography variant="h1" component="h6">
-					{" "}
 					Algorithms
 				</Typography>
 			</Grid>
