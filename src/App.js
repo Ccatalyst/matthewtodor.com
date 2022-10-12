@@ -2,7 +2,7 @@ import { React, useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import Home from "./components/pages/home";
-import Portfolio from "./components/pages/portfolio";
+import Portfolio from "./components/pages/portfolio/portfolio";
 import Algorithms from "./components/pages/algorithms";
 import Resume from "./components/pages/resume";
 import Nav from "./components/nav/nav";

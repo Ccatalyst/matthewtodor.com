@@ -55,9 +55,10 @@ const Nav = () => {
 
 	// const [expand, updateExpanded] = useState(false);
 	const [navColor, updateNavbar] = useState(false);
-
+	// This scrollhandler was working fine, but I added a
 	function scrollHandler() {
-		if (window.scrollY >= 20) {
+		// console.log(window.scrollY);
+		if (window.scrollY >= 10) {
 			updateNavbar(true);
 		} else {
 			updateNavbar(false);
