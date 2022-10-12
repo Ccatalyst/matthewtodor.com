@@ -5,11 +5,11 @@ import { GitHub, LinkedIn, MailOutline, PhoneAndroid, Twitter } from "@mui/icons
 
 const Footer = () => {
 	return (
-		<Grid container>
+		<Grid container sx={{ position: "absolute", bottom: 5, width: { xs: 8 / 10, sm: 1 / 1 } }}>
 			<Grid item xs={11} sx={{ m: "auto", mt: 2 }}>
-				<Stack direction="row" sx={{ m: "auto", width: 1 / 1 }}>
+				<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1 }}>
 					<a href="mailto:todor.matthew.john@gmail.com" target="_blank" rel="noreferrer">
-						<IconButton name="Email" aria-label="email">
+						<IconButton fontSize="large" name="Email" aria-label="email">
 							<MailOutline color="primary" />
 						</IconButton>
 					</a>

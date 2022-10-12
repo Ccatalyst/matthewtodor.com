@@ -2,8 +2,7 @@ import React from "react";
 import { Link, Typography, Box, SpeedDial, SpeedDialAction, useMediaQuery, useTheme, Divider } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { GitHub, LinkedIn, Home, Fingerprint } from "@mui/icons-material/";
-// eslint-disable-next-line
-import { Link as RouterLink, MemoryRouter } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import Banner from "../banner";
 import "./nav.scss";
 const Nav = () => {

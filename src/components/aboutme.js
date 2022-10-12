@@ -8,7 +8,7 @@ const AboutMe = () => {
 	return (
 		<Grid container>
 			<Grid item xs={12}>
-				<Typography variant="h3" align="center">
+				<Typography variant="h3" align="center" color="gray">
 					I am...
 				</Typography>
 			</Grid>

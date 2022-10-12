@@ -1,9 +1,8 @@
 import { React, useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
 // eslint-disable-next-line
-import { Link as RouterLink, MemoryRouter } from "react-router-dom";
-import { StaticRouter } from "react-router-dom/server";
-import PropTypes from "prop-types";
+import { BrowserRouter as Router } from "react-router-dom";
+// import { StaticRouter } from "react-router-dom/server";
 import Home from "./components/pages/home";
 import Portfolio from "./components/pages/portfolio";
 import Algorithms from "./components/pages/algorithms";
@@ -43,17 +42,7 @@ const theme = createTheme({
 		},
 	},
 });
-function Router(props) {
-	const { children } = props;
-	if (typeof window === "undefined") {
-		return <StaticRouter location="/">{children}</StaticRouter>;
-	}
-	return <MemoryRouter>{children}</MemoryRouter>;
-}
 
-Router.propTypes = {
-	children: PropTypes.node,
-};
 function App() {
 	const particlesInit = useCallback((main) => {
 		loadFull(main);
@@ -65,7 +54,7 @@ function App() {
 				<Nav />
 				<Particles options={particlesOptions} init={particlesInit} />
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route exact path="/" element={<Home />} />
 					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/algorithms" element={<Algorithms />} />
 					<Route path="/resume" element={<Resume />} />
