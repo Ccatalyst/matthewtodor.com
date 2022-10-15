@@ -5,6 +5,7 @@ import { GitHub, LinkedIn, Home, Fingerprint } from "@mui/icons-material/";
 import { Link as RouterLink } from "react-router-dom";
 import Banner from "../banner";
 import "./nav.scss";
+
 const Nav = () => {
 	// Handling mobile SpeedDial navigation open/close settings
 	const [open, setOpen] = useState(false);

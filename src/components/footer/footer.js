@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<Grid container sx={{ bottom: 0, width: { xs: 8 / 10, sm: 1 / 1 }, backgroundColor: "#121212e6" }}>
 			<Grid item xs={11} sx={{ m: "auto" }}>
-				<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1 }}>
+				<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1, border: `${1}px solid #0E9594` }}>
 					<a href="mailto:todor.matthew.john@gmail.com" target="_blank" rel="noreferrer">
 						<IconButton fontSize="large" name="Email" aria-label="email">
 							<MailOutline color="primary" />

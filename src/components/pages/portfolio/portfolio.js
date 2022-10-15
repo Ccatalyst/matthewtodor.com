@@ -6,13 +6,13 @@ import PortfolioCard from "./portfoliocard";
 const Portfolio = () => {
 	return (
 		<Grid container>
-			<Grid item xs={12} sx={{ mt: 1 }}>
-				<Typography variant="h3" component="h2" align="center" color="primary">
-					Projects
+			<Grid item xs={12} sx={{ mt: 1, backgroundColor: "background.default" }}>
+				<Typography variant="h4" component="h2" align="left" color="primary" sx={{ textDecoration: "underline", ml: 2 }}>
+					Here is some of the work I've done
 				</Typography>
 			</Grid>
-			{projects.map((project) => {
-				return <PortfolioCard key={project.id} props={{ project }} />;
+			{projects.map((project, index) => {
+				return <PortfolioCard key={index} props={{ project }} />;
 			})}
 		</Grid>
 	);
