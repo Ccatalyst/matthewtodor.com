@@ -80,15 +80,16 @@ const Nav = () => {
 							size="small"
 							FabProps={{
 								sx: {
-									bgcolor: "background.paper",
+									bgcolor: "primary.main",
 									"&:hover": {
-										bgcolor: "background.paper",
+										bgcolor: "primary.main",
 									},
+									color: "background.paper",
 								},
 							}}
 							ariaLabel="Navigation"
 							sx={{ position: "fixed", bottom: 16, right: 16 }}
-							icon={<Fingerprint color="primary" />}
+							icon={<Fingerprint />}
 							onOpen={handleOpen}
 							onClose={handleClose}
 							open={open}

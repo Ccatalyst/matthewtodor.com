@@ -26,13 +26,13 @@ const SkillsTable = () => {
 					</Button>
 				</Grid>
 				{/* EXPERIENCE */}
-				<Grid container xs={12} sm={6} p={1} justifyContent="center">
+				<Grid container xs={12} sm={6} p={1} px={{ xs: 3 }} justifyContent="center">
 					<Grid item xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
 							Experience
 						</Typography>
 					</Grid>
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
+					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item sm={8} m="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" gutterBottom sx={{ backgroundColor: "#0E959466" }}>
 								Full Stack Web Development Teacher's Assistant
@@ -103,7 +103,17 @@ const SkillsTable = () => {
 							Extracurricular Activities
 						</Typography>
 					</Grid>
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={1} m={1} mt={-2} position="relative" className="resumeitem">
+					<Grid
+						container
+						sm={6}
+						borderLeft="2px solid"
+						borderColor="primary.main"
+						pl={2}
+						m={{ sm: 1 }}
+						mt={-2}
+						position="relative"
+						className="resumeitem"
+					>
 						<Grid item sm={6} m="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" gutterBottom sx={{ backgroundColor: "#0E959466" }}>
 								Golf
