@@ -6,8 +6,14 @@ import PortfolioCard from "./portfoliocard";
 const Portfolio = () => {
 	return (
 		<Grid container>
-			<Grid item xs={12} sx={{ mt: 1, backgroundColor: "background.default" }}>
-				<Typography variant="h4" component="h2" align="left" color="primary" sx={{ textDecoration: "underline", ml: 2 }}>
+			<Grid item xs={12} sx={{ mt: 1 }}>
+				<Typography
+					variant="h4"
+					component="h2"
+					align="left"
+					color="primary"
+					sx={{ backgroundColor: "#12121200", textDecoration: "underline", ml: 4 }}
+				>
 					Here is some of the work I've done
 				</Typography>
 			</Grid>
