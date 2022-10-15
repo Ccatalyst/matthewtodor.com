@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { Link, Typography, Box, SpeedDial, SpeedDialAction, useMediaQuery, useTheme, Divider } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { GitHub, LinkedIn, Home, Fingerprint } from "@mui/icons-material/";
+import { Home, Fingerprint, Description, ContactPage, Construction, Functions } from "@mui/icons-material/";
 import { Link as RouterLink } from "react-router-dom";
 import Banner from "../banner";
 import "./nav.scss";
@@ -23,7 +23,7 @@ const Nav = () => {
 		{
 			icon: (
 				<Link component={RouterLink} to="/portfolio" sx={{ mt: 1 }}>
-					<LinkedIn />
+					<Construction />
 				</Link>
 			),
 			name: "Portfolio",
@@ -31,7 +31,7 @@ const Nav = () => {
 		{
 			icon: (
 				<Link component={RouterLink} to="/algorithms" sx={{ mt: 1 }}>
-					<GitHub />
+					<Functions />
 				</Link>
 			),
 			name: "Algorithms",
@@ -39,7 +39,7 @@ const Nav = () => {
 		{
 			icon: (
 				<Link component={RouterLink} to="/resume" sx={{ mt: 1 }}>
-					<GitHub />
+					<Description />
 				</Link>
 			),
 			name: "Resume",
@@ -47,7 +47,7 @@ const Nav = () => {
 		{
 			icon: (
 				<Link component={RouterLink} to="/#" sx={{ mt: 1 }}>
-					<GitHub />
+					<ContactPage />
 				</Link>
 			),
 			name: "Contact",
