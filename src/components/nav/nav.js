@@ -54,11 +54,9 @@ const Nav = () => {
 		},
 	];
 
-	// const [expand, updateExpanded] = useState(false);
-	const [navColor, updateNavbar] = useState(false);
-	// This scrollhandler was working fine, but I added a
+	const [navBar, updateNavbar] = useState(false);
+
 	function scrollHandler() {
-		// console.log(window.scrollY);
 		if (window.scrollY >= 10) {
 			updateNavbar(true);
 		} else {
@@ -107,24 +105,26 @@ const Nav = () => {
 						m: "auto",
 						justifyContent: "center",
 					}}
-					className={navColor ? "sticky" : "navbar"}
+					className={navBar ? "sticky" : "navbar"}
 				>
 					<Grid item xs={12} sm={7} md={5} lg={4} xl={3}>
 						<Typography
 							variant="h2"
 							component="h1"
+							fontFamily="Raleway"
+							fontWeight={100}
 							sx={{
 								textAlign: "center",
 								[theme.breakpoints.up("md")]: { textAlign: "right" },
 								[theme.breakpoints.up("lg")]: { textAlign: "center" },
 							}}
 						>
-							<Link component={RouterLink} to="/" underline="none">
-								<Typography variant="h2" color="primary.light" sx={{ fontWeight: 400, display: "inline" }}>
+							<Link component={RouterLink} to="/" underline="none" className="homeLink">
+								<Typography variant="h2" component="span" fontFamily="Raleway" fontWeight={300}>
 									M
 								</Typography>
 								atthew &nbsp;
-								<Typography variant="h2" color="primary.light" sx={{ fontWeight: 400, display: "inline" }}>
+								<Typography variant="h2" component="span" fontFamily="Raleway" fontWeight={300}>
 									T
 								</Typography>
 								odor

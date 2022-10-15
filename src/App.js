@@ -13,6 +13,7 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import "@fontsource/raleway";
 
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -50,17 +51,15 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Router>
-				<div className="page-container">
-					<Nav />
-					<Particles options={particlesOptions} init={particlesInit} />
-					<Routes>
-						<Route exact path="/" element={<Home />} />
-						<Route path="/portfolio" element={<Portfolio />} />
-						<Route path="/algorithms" element={<Algorithms />} />
-						<Route path="/resume" element={<Resume />} />
-						<Route path="/*" element={<Home />} />
-					</Routes>
-				</div>
+				<Nav />
+				<Particles options={particlesOptions} init={particlesInit} />
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route path="/portfolio" element={<Portfolio />} />
+					<Route path="/algorithms" element={<Algorithms />} />
+					<Route path="/resume" element={<Resume />} />
+					<Route path="/*" element={<Home />} />
+				</Routes>
 
 				<Footer />
 			</Router>

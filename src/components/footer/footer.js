@@ -1,11 +1,11 @@
 import React from "react";
-import { Stack, IconButton } from "@mui/material";
+import { Stack, IconButton, Tooltip } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { GitHub, LinkedIn, MailOutline, PhoneAndroid, Twitter } from "@mui/icons-material/";
 
 const Footer = () => {
 	return (
-		<Grid container sx={{ bottom: 0, width: { xs: 83 / 100, sm: 1 / 1 }, backgroundColor: "#121212e6" }}>
+		<Grid container sx={{ bottom: 0, width: { xs: 83 / 100, sm: 1 / 1 }, backgroundColor: "#121212e6" }} component="footer">
 			<Grid item xs={11} sx={{ m: "auto" }}>
 				<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1, border: `${1}px solid #0E9594` }}>
 					<a href="mailto:todor.matthew.john@gmail.com" target="_blank" rel="noreferrer">

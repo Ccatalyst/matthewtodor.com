@@ -15,7 +15,7 @@ const AboutMe = () => {
 			<Grid item xs={12}>
 				<Box elevation={0} sx={{ width: 95 / 100, m: "auto" }}>
 					<Typography variant="h4" sx={{ m: 1, p: 1, color: "primary.main" }} align="center">
-						<TypeAnimation sequence={["A Programmer", 1000, "A Teacher", 1000, "On Fire", 1000]} wrapper="div" cursor={true} repeat={Infinity} />
+						<TypeAnimation sequence={["A Programmer", 1000, "A Teacher", 1000, "Full Stack", 1000]} wrapper="div" cursor={true} repeat={Infinity} />
 					</Typography>
 				</Box>
 			</Grid>
