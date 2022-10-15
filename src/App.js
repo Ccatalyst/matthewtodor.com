@@ -51,15 +51,18 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Router>
-				<Nav />
-				<Particles options={particlesOptions} init={particlesInit} />
-				<Routes>
-					<Route exact path="/" element={<Home />} />
-					<Route path="/portfolio" element={<Portfolio />} />
-					<Route path="/algorithms" element={<Algorithms />} />
-					<Route path="/resume" element={<Resume />} />
-					<Route path="/*" element={<Home />} />
-				</Routes>
+				{/* this is here to keep the footer at the bottom of the page */}
+				<div className="container">
+					<Nav />
+					<Particles options={particlesOptions} init={particlesInit} />
+					<Routes>
+						<Route exact path="/" element={<Home />} />
+						<Route path="/portfolio" element={<Portfolio />} />
+						<Route path="/algorithms" element={<Algorithms />} />
+						<Route path="/resume" element={<Resume />} />
+						<Route path="/*" element={<Home />} />
+					</Routes>
+				</div>
 
 				<Footer />
 			</Router>

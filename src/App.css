@@ -8,6 +8,11 @@
 	top: 0;
 	z-index: -1;
 }
-.content {
+#root {
 	position: relative;
+	min-height: 100vh;
+	overflow: auto;
+}
+.container {
+	padding-bottom: 72px;
 }
