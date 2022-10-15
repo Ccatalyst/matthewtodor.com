@@ -85,13 +85,30 @@ const SkillsTable = () => {
 							</ul>
 						</Grid>
 					</Grid>
-				</Grid>
-				{/* EXTRACURRICULAR ACTIVITIES */}
-				<Grid container xs={12} sm={6} p={1} justifyContent="center" height="auto">
+					{/* EXTRACURRICULAR ACTIVITIES */}
 					<Grid item xs={12}>
-						Experience
+						<Typography variant="h5" gutterBottom color="primary" align="center">
+							Extracurricular Activities
+						</Typography>
 					</Grid>
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={1} position="relative" className="resumeitem">
+					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={1} m={1} position="relative" className="resumeitem">
+						<Grid item sm={7} m="auto">
+							<Typography variant="h6" py={0.5} px={1} align="center" gutterBottom sx={{ backgroundColor: "#0E959466" }}>
+								Golf
+							</Typography>
+						</Grid>
+						<Grid item>
+							<ul>
+								<Typography variant="body1" component="article" px={1}>
+									<li>Consistent focus on personal improvement, with a focus on repetition and routine.</li>
+								</Typography>
+								<Typography variant="body1" component="article" px={1}>
+									<li>A frequent review of recent performance increases learning speed and personal performance.</li>
+								</Typography>
+							</ul>
+						</Grid>
+					</Grid>
+					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={1} m={1} position="relative" className="resumeitem">
 						<Grid item sm={6} m="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" gutterBottom sx={{ backgroundColor: "#0E959466" }}>
 								Golf
@@ -106,14 +123,48 @@ const SkillsTable = () => {
 					</Grid>
 				</Grid>
 
-				<Grid container sx={12} sm={6} justifyContent="center">
+				<Grid container xs={12} sm={6} justifyContent="center">
 					<Grid item xs={12}>
 						<Typography variant="h5" gutterBottom color="primary" align="center">
 							Skillset
 						</Typography>
 					</Grid>
+					<Grid item>
+						<div className="skillList">
+							<ul>
+								<h3>Languages</h3>
+								<li>Javascript</li>
+								<li>HTML</li>
+								<li>CSS</li>
+							</ul>
+						</div>
+						<div className="skillList">
+							<ul>
+								<h3>Tools</h3>
+								<li>Node</li>
+								<li>Express</li>
+								<li>SQL</li>
+								<li>MongoDB</li>
+								<li>React</li>
+								<li>Handlebars</li>
+								<li>GraphQL</li>
+								<li>Google</li>
+							</ul>
+						</div>
+						<div className="skillList">
+							<ul>
+								<h3>Applications</h3>
+								<li>Github</li>
+								<li>Mongo Compass</li>
+								<li>Insomnia</li>
+								<li>Apollo Sandbox</li>
+								<li>MySQL</li>
+								<li>Heroku</li>
+							</ul>
+						</div>
+					</Grid>
 				</Grid>
-				<h4>Achievements</h4>
+				{/* <h4>Achievements</h4>
 
 				<div className="skillList">
 					<ul>
@@ -146,7 +197,7 @@ const SkillsTable = () => {
 						<li>MySQL</li>
 						<li>Heroku</li>
 					</ul>
-				</div>
+				</div> */}
 			</Grid>
 		</>
 	);
