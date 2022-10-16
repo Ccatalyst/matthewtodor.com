@@ -197,7 +197,7 @@ const SkillsTable = () => {
 							Skillset
 						</Typography>
 					</Grid>
-					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item xs={10} mx="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
 								Languages
@@ -230,7 +230,7 @@ const SkillsTable = () => {
 							</Grid>
 						</Grid>
 					</Grid>
-					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item xs={10} mx="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
 								Tools
@@ -304,7 +304,7 @@ const SkillsTable = () => {
 						</Grid>
 					</Grid>
 
-					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item xs={10} m="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={130} sx={{ backgroundColor: "#0E959466" }}>
 								Applications
