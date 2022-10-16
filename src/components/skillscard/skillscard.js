@@ -3,7 +3,6 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Button, Typography } from "@mui/material";
 import resume from "../../assets/resume/MatthewTodorResume.pdf";
 import "./skillscard.scss";
-import { DiHtml5 } from "react-icons/di";
 const SkillsTable = () => {
 	return (
 		<>
@@ -33,13 +32,13 @@ const SkillsTable = () => {
 						</Typography>
 					</Grid>
 					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid item sm={8} m="auto">
+						<Grid item sm={8} mx="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Full Stack Web Development Teacher's Assistant
 							</Typography>
 						</Grid>
 						<Grid item sm={12} m="auto">
-							<Typography variant="caption" paragraph gutterBottom align="center" mt={1} fontStyle="oblique">
+							<Typography variant="caption" paragraph gutterBottom align="center" mt={2} fontStyle="oblique">
 								July 2022-present
 							</Typography>
 						</Grid>
@@ -152,80 +151,80 @@ const SkillsTable = () => {
 						</Typography>
 					</Grid>
 					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
-						<Grid item sm={8} m="auto">
+						<Grid item sm={8} mx="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
 								Languages
 							</Typography>
 						</Grid>
-						<Grid item sm={6} component="article" m="auto">
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+						<Grid item sm={6} component="article" mx="auto">
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								HTML
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								CSS
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Javascript
 							</Typography>
 						</Grid>
 					</Grid>
 					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
-						<Grid item sm={8} m="auto">
+						<Grid item sm={8} mx="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
 								Tools
 							</Typography>
 						</Grid>
-						<Grid item sm={8} component="article">
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+						<Grid item sm={6} component="article" mx="auto">
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Nodejs
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Express
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								SQL
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								MongoDB
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								React
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Handlebars
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								GraphQL
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Google
 							</Typography>
 						</Grid>
 					</Grid>
 
 					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
-						<Grid item xs={8} m="auto">
+						<Grid item sm={8} m="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={130} sx={{ backgroundColor: "#0E959466" }}>
 								Applications
 							</Typography>
 						</Grid>
-						<Grid item component="article">
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+						<Grid item sm={6} component="article" mx="auto">
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Github
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Mongo Compass
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Insomnia
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Apollo Sandbox
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								MySQL
 							</Typography>
-							<Typography variant="body1" fontSize={15} gutterBottom px={1}>
+							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
 								Heroku
 							</Typography>
 						</Grid>
@@ -236,6 +235,17 @@ const SkillsTable = () => {
 							Certificates
 						</Typography>
 					</Grid>
+					<Grid
+						container
+						sm={6}
+						borderLeft="2px solid"
+						borderColor="primary.main"
+						pl={2}
+						mt={-2}
+						ml={1}
+						position="relative"
+						className="resumeitem"
+					></Grid>
 				</Grid>
 				<Grid container xs={12} my={2}>
 					{/* Add the same link animation to this that you have on the nav bar */}
