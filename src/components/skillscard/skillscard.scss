@@ -5,8 +5,8 @@
 	height: 16px;
 	left: -9px;
 	top: 0;
-	background: #fff;
-	border: 1px solid #0e9594;
+	background: #121212;
+	border: 2px solid #0e9594;
 }
 .resumedlbutton {
 	position: relative;
@@ -41,7 +41,7 @@
 		z-index: -1;
 	}
 	&:hover {
-		color: #fff;
+		color: #121212;
 		&:before {
 			transform: scaleY(1);
 			opacity: 1;
@@ -51,7 +51,4 @@
 			opacity: 1;
 		}
 	}
-}
-#skillSet {
-	font-family: "Roboto Mono", monospace;
 }

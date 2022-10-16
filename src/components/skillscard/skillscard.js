@@ -1,13 +1,66 @@
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, Slider, styled } from "@mui/material";
 import resume from "../../assets/resume/MatthewTodorResume.pdf";
 import "./skillscard.scss";
+
+const SkillSlider = styled(Slider)(({ theme }) => ({
+	color: "primary.main",
+	height: 2,
+	padding: "15px 0",
+	pointerEvents: "none",
+	"& .MuiSlider-thumb": {
+		height: 10,
+		width: 10,
+		backgroundColor: "primary.main",
+		boxShadow: iOSBoxShadow,
+		"&:focus, &:hover, &.Mui-active": {
+			boxShadow: "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)",
+			// Reset on touch devices, it doesn't add specificity
+			"@media (hover: none)": {
+				boxShadow: iOSBoxShadow,
+			},
+		},
+	},
+	"& .MuiSlider-valueLabel": {
+		fontSize: 12,
+		fontWeight: "normal",
+		top: -6,
+		backgroundColor: "unset",
+		color: theme.palette.text.primary,
+		"&:before": {
+			display: "none",
+		},
+		"& *": {
+			background: "transparent",
+			color: theme.palette.mode === "dark" ? "#fff" : "#000",
+		},
+	},
+	"& .MuiSlider-track": {
+		border: "none",
+	},
+	"& .MuiSlider-rail": {
+		opacity: 0.5,
+		backgroundColor: "#bfbfbf",
+	},
+	"& .MuiSlider-mark": {
+		backgroundColor: "#bfbfbf",
+		height: 8,
+		width: 1,
+		"&.MuiSlider-markActive": {
+			opacity: 1,
+			backgroundColor: "currentColor",
+		},
+	},
+}));
+const iOSBoxShadow = "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
+// Values for Skill Slider
+const marks = new Array(10).fill(null).map((value, index) => ({ value: index }));
 const SkillsTable = () => {
 	return (
 		<>
 			<Grid container>
-				<Grid container xs={12} mt={2}>
+				<Grid container xs={12} mt={6}>
 					{/* Add the same link animation to this that you have on the nav bar */}
 
 					<Button
@@ -16,6 +69,7 @@ const SkillsTable = () => {
 						href={resume}
 						target="_blank"
 						rel="noreferrer"
+						backgroundColor="#00000099"
 						sx={{ m: "auto", borderRadius: `${1}px` }}
 						className="resumedlbutton"
 					>
@@ -25,14 +79,14 @@ const SkillsTable = () => {
 					</Button>
 				</Grid>
 				{/* EXPERIENCE */}
-				<Grid container xs={12} sm={6} p={1} px={{ xs: 3 }} justifyContent="center">
+				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
 					<Grid item xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
 							Experience
 						</Typography>
 					</Grid>
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid item sm={8} mx="auto">
+					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
+						<Grid item sm={10} mx="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Full Stack Web Development Teacher's Assistant
 							</Typography>
@@ -43,7 +97,7 @@ const SkillsTable = () => {
 							</Typography>
 						</Grid>
 
-						<Grid item component="article">
+						<Grid item md={9} component="article" mx="auto">
 							<ul>
 								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
 									Assisted in teaching students of various development skill levels web development concepts and languages, including HTML, CSS and
@@ -59,11 +113,11 @@ const SkillsTable = () => {
 									Lesson Planning and Grading
 								</Typography>
 								<ul>
-									<Typography variant="body2" component="li" fontSize={15}>
+									<Typography variant="body2" component="li" fontSize={16}>
 										Worked with instructor on reviewing lesson plans for the day, going over goals and potential stumbling blocks, discussing
 										solutions and simplified explanations for complex subjects
 									</Typography>
-									<Typography variant="body2" component="li" fontSize={15}>
+									<Typography variant="body2" component="li" fontSize={16}>
 										Worked with fellow Teacher’s Assistants and Instructor to analyze students’ projects and grade based on functionality, appearance,
 										and best practices.
 									</Typography>
@@ -75,11 +129,11 @@ const SkillsTable = () => {
 									Code Review
 								</Typography>
 								<ul>
-									<Typography variant="body2" component="li" fontSize={15}>
+									<Typography variant="body2" component="li" fontSize={16}>
 										Analyzed code from students to assist in finding the source of bugs, working through the operation of the functions verbally to
 										find the source of the problem
 									</Typography>
-									<Typography variant="body2" component="li" fontSize={15}>
+									<Typography variant="body2" component="li" fontSize={16}>
 										Pair programed to help students understand various concepts of web development, walking through simple and complex methods of
 										Javascript.
 									</Typography>
@@ -93,169 +147,259 @@ const SkillsTable = () => {
 							Extracurricular Activities
 						</Typography>
 					</Grid>
-					<Grid
-						container
-						sm={6}
-						borderLeft="2px solid"
-						borderColor="primary.main"
-						pl={2}
-						m={{ sm: 1 }}
-						mt={-2}
-						position="relative"
-						className="resumeitem"
-					>
-						<Grid item sm={8} m="auto">
+					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
+						<Grid item sm={10} m="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Golf
 							</Typography>
 						</Grid>
-						<Grid item component="article">
-							<ul>
-								<Typography variant="body1" component="li" fontSize={15} px={1} sx={{ listStyle: "none" }} gutterBottom>
-									Consistent focus on personal improvement, with a focus on repetition and routine.
+						<Grid container component="article">
+							<Grid item md={9} mx="auto">
+								<Typography variant="body1" fontSize={16} px={1} sx={{ listStyle: "none" }} gutterBottom>
+									Consistent focus on personal improvement, both physically and mentally, with a focus on repetition and routine.
 								</Typography>
-								<Typography variant="body1" component="li" fontSize={15} px={1} sx={{ listStyle: "none" }} gutterBottom>
-									A frequent review of recent performance increases learning speed and personal performance.
+							</Grid>
+							<Grid item md={9} mx="auto">
+								<Typography variant="body1" fontSize={16} px={1} sx={{ listStyle: "none" }} gutterBottom>
+									Frequently reviewing recordings and notes from recent performances, increasing learning speed and personal performance.
 								</Typography>
-							</ul>
+							</Grid>
 						</Grid>
 					</Grid>
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
-						<Grid item sm={8} m="auto">
+					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
+						<Grid item sm={10} m="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								World of Warcraft
 							</Typography>
 						</Grid>
-						<Grid item component="article">
-							<ul>
-								<Typography variant="body1" component="li" fontSize={15} gutterBottom px={1} sx={{ listStyle: "none" }}>
+						<Grid container component="article">
+							<Grid item md={9} mx="auto">
+								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
 									Weekly scheduled collaboration with between 19-24 other people, coordinating movement and actions in a precise manner to accomplish
 									our goals.
 								</Typography>
-								<Typography variant="body1" component="li" fontSize={15} gutterBottom px={1} sx={{ listStyle: "none" }}>
+							</Grid>
+							<Grid item md={9} mx="auto">
+								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
 									Quick corrections when mistakes are made to lower the time spent on any single challenge
 								</Typography>
-								<Typography variant="body1" component="li" fontSize={15} gutterBottom px={1} sx={{ listStyle: "none" }}>
+							</Grid>
+							<Grid item md={9} mx="auto">
+								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
 									Requires communication across a variety of mediums to keep up to date on the status of various goals and what contributors can do to
 									help accomplish the next endeavor
 								</Typography>
-							</ul>
+							</Grid>
 						</Grid>
 					</Grid>
 				</Grid>
-
-				<Grid container xs={12} sm={6} p={1} px={{ xs: 3 }} justifyContent="center">
+				{/* SKILLSET */}
+				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
 					<Grid item xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
 							Skillset
 						</Typography>
 					</Grid>
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
-						<Grid item sm={8} mx="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+						<Grid item sm={10} mx="auto">
+							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
 								Languages
 							</Typography>
 						</Grid>
-						<Grid item sm={6} component="article" mx="auto">
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								HTML
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								CSS
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Javascript
-							</Typography>
+						<Grid container sm={9} component="article" mx="auto">
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+									HTML
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+									CSS
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+									Javascript
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
+							</Grid>
 						</Grid>
 					</Grid>
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
-						<Grid item sm={8} mx="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+						<Grid item sm={10} mx="auto">
+							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
 								Tools
 							</Typography>
 						</Grid>
-						<Grid item sm={6} component="article" mx="auto">
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Nodejs
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Express
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								SQL
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								MongoDB
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								React
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Handlebars
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								GraphQL
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Google
-							</Typography>
+						<Grid container sm={9} component="article" mx="auto">
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Nodejs
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Express
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									SQL
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									MongoDB
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									React
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Handlebars
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									GraphQL
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Google
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
+							</Grid>
 						</Grid>
 					</Grid>
 
-					<Grid container sm={6} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
-						<Grid item sm={8} m="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={130} sx={{ backgroundColor: "#0E959466" }}>
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+						<Grid item sm={10} m="auto">
+							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={130} sx={{ backgroundColor: "#0E959466" }}>
 								Applications
 							</Typography>
 						</Grid>
-						<Grid item sm={6} component="article" mx="auto">
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Github
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Mongo Compass
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Insomnia
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Apollo Sandbox
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								MySQL
-							</Typography>
-							<Typography variant="subtitle1" sx={{ fontFamily: "Roboto Mono" }}>
-								Heroku
-							</Typography>
+						<Grid container sm={9} component="article" mx="auto">
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Github
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Mongo Compass
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Insomnia
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Apollo Sandbox
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									MySQL
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
+							<Grid item md={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Heroku
+								</Typography>
+							</Grid>
+							<Grid item md={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+							</Grid>
 						</Grid>
 					</Grid>
-
+					{/* CERTIFICATES */}
 					<Grid item xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
 							Certificates
 						</Typography>
 					</Grid>
-					<Grid
-						container
-						sm={6}
-						borderLeft="2px solid"
-						borderColor="primary.main"
-						pl={2}
-						mt={-2}
-						ml={1}
-						position="relative"
-						className="resumeitem"
-					></Grid>
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+						<Grid item sm={10} mx="auto">
+							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
+								Denver University
+							</Typography>
+						</Grid>
+						<Grid item xs={12} mx="auto">
+							<Typography variant="caption" paragraph gutterBottom align="center" fontStyle="oblique">
+								May 2022
+							</Typography>
+						</Grid>
+						<Grid item md={9} mx="auto">
+							<Typography variant="body1" gutterBottom px={1}>
+								Worked with peers and instructors to organize and implement code in an Agile environment, focusing on learning the MERN (MongoDB,
+								Express, React, Nodejs) stack as well as source control (Github) and code review.
+							</Typography>
+							<Typography variant="body1" px={1}>
+								Selected to present capstone project to network of industry professionals associated with Denver University.
+							</Typography>
+						</Grid>
+					</Grid>
 				</Grid>
 				<Grid container xs={12} my={2}>
-					{/* Add the same link animation to this that you have on the nav bar */}
-
 					<Button
 						size="large"
 						variant="outlined"
 						href={resume}
 						target="_blank"
 						rel="noreferrer"
+						backgroundColor="#00000099"
 						sx={{ m: "auto", borderRadius: `${1}px` }}
 						className="resumedlbutton"
 					>
