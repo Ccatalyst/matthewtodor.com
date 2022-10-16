@@ -69,8 +69,7 @@ const SkillsTable = () => {
 						href={resume}
 						target="_blank"
 						rel="noreferrer"
-						backgroundColor="#00000099"
-						sx={{ m: "auto", borderRadius: `${1}px` }}
+						sx={{ m: "auto", borderRadius: `${1}px`, backgroundColor: "#00000090" }}
 						className="resumedlbutton"
 					>
 						<Typography variant="body1" component="p">
@@ -399,8 +398,7 @@ const SkillsTable = () => {
 						href={resume}
 						target="_blank"
 						rel="noreferrer"
-						backgroundColor="#00000099"
-						sx={{ m: "auto", borderRadius: `${1}px` }}
+						sx={{ m: "auto", borderRadius: `${1}px`, backgroundColor: "#00000090" }}
 						className="resumedlbutton"
 					>
 						<Typography variant="body1" component="p">
