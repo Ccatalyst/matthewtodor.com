@@ -367,7 +367,7 @@ const SkillsTable = () => {
 							Certificates
 						</Typography>
 					</Grid>
-					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} ml={1} position="relative" className="resumeitem">
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item sm={10} mx="auto">
 							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
 								Denver University
