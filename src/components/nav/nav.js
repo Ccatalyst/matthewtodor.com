@@ -46,7 +46,7 @@ const Nav = () => {
 		},
 		{
 			icon: (
-				<Link component={RouterLink} to="/#" sx={{ mt: 1 }}>
+				<Link component={RouterLink} to="/contact" sx={{ mt: 1 }}>
 					<ContactPage />
 				</Link>
 			),
@@ -186,8 +186,7 @@ const Nav = () => {
 									textAlign: "center",
 								}}
 							>
-								{/* TODO: Fix this link when contact me form is finished */}
-								<Link component={RouterLink} to="#" underline="none" sx={{ m: "auto" }}>
+								<Link component={RouterLink} to="/contact" underline="none" sx={{ m: "auto" }}>
 									Contact
 								</Link>
 							</Typography>
