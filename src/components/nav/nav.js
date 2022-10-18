@@ -134,9 +134,9 @@ const Nav = () => {
 					{/* this container holds the links */}
 					<Grid container xs={12} md={7} lg={8} xl={8} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center", mx: {} }} className="mdNav">
 						{/* empty div, used to push links to the right. bad way to do it, fix later */}
-						<Grid item xs={0} lg={4} xl={6}></Grid>
+						<Grid item xs={0} lg={4} xl={7}></Grid>
 						{/* link to portfolio */}
-						<Grid item xs={12} sm={3} lg={2} xl={1}>
+						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
@@ -150,7 +150,7 @@ const Nav = () => {
 							</Typography>
 						</Grid>
 						{/* link to algos page */}
-						<Grid item xs={12} sm={3} lg={2} xl={1}>
+						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ minWidth: { xl: 113.3 }, mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
@@ -164,7 +164,7 @@ const Nav = () => {
 							</Typography>
 						</Grid>
 						{/* link to resume */}
-						<Grid item xs={12} sm={3} lg={2} xl={1}>
+						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
@@ -178,7 +178,7 @@ const Nav = () => {
 							</Typography>
 						</Grid>
 						{/* link to contact form */}
-						<Grid item xs={12} sm={3} lg={2} xl={1}>
+						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
