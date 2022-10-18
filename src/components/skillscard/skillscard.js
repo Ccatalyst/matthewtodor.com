@@ -59,7 +59,7 @@ const marks = new Array(10).fill(null).map((value, index) => ({ value: index }))
 const SkillsTable = () => {
 	return (
 		<>
-			<Grid container>
+			<Grid container backgroundColor="#12121290">
 				<Grid container xs={12} mt={6}>
 					<Button
 						size="large"
