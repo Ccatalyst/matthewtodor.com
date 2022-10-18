@@ -107,7 +107,7 @@ const Nav = () => {
 					}}
 					className={navBar ? "sticky" : "navbar"}
 				>
-					<Grid item xs={12} sm={7} md={5} lg={4} xl={3}>
+					<Grid item xs={12} sm={7} md={5} lg={4} xl={4}>
 						<Typography
 							variant="h2"
 							component="h1"
@@ -132,9 +132,9 @@ const Nav = () => {
 						</Typography>
 					</Grid>
 					{/* this container holds the links */}
-					<Grid container xs={12} md={7} lg={8} xl={9} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center", mx: {} }} className="mdNav">
+					<Grid container xs={12} md={7} lg={8} xl={8} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center", mx: {} }} className="mdNav">
 						{/* empty div, used to push links to the right. bad way to do it, fix later */}
-						<Grid item xs={0} lg={4} xl={7}></Grid>
+						<Grid item xs={0} lg={4} xl={6}></Grid>
 						{/* link to portfolio */}
 						<Grid item xs={12} sm={3} lg={2} xl={1}>
 							<Typography

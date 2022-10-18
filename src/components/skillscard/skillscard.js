@@ -10,8 +10,8 @@ const SkillSlider = styled(Slider)(({ theme }) => ({
 	padding: "15px 0",
 	pointerEvents: "none",
 	"& .MuiSlider-thumb": {
-		height: 10,
-		width: 10,
+		height: 13,
+		width: 13,
 		backgroundColor: "primary.main",
 		boxShadow: boxShadow,
 		"&:focus, &:hover, &.Mui-active": {
@@ -37,7 +37,7 @@ const SkillSlider = styled(Slider)(({ theme }) => ({
 		},
 	},
 	"& .MuiSlider-track": {
-		border: "none",
+		border: "1px solid",
 	},
 	"& .MuiSlider-rail": {
 		opacity: 0.5,
@@ -45,8 +45,8 @@ const SkillSlider = styled(Slider)(({ theme }) => ({
 	},
 	"& .MuiSlider-mark": {
 		backgroundColor: "#bfbfbf",
-		height: 8,
-		width: 1,
+		height: 10,
+		width: 2,
 		"&.MuiSlider-markActive": {
 			opacity: 1,
 			backgroundColor: "currentColor",
@@ -206,11 +206,19 @@ const SkillsTable = () => {
 						<Grid container xs={9} component="article" mx="auto">
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+									Javascript
+								</Typography>
+							</Grid>
+							<Grid item xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
+							</Grid>
+							<Grid item xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									HTML
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
@@ -218,15 +226,7 @@ const SkillsTable = () => {
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
-							</Grid>
-							<Grid item xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
-									Javascript
-								</Typography>
-							</Grid>
-							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
+								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
 							</Grid>
 						</Grid>
 					</Grid>
@@ -237,6 +237,38 @@ const SkillsTable = () => {
 							</Typography>
 						</Grid>
 						<Grid container xs={9} component="article" mx="auto">
+							<Grid item xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Google
+								</Typography>
+							</Grid>
+							<Grid item xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={10} marks={marks} max={10} />
+							</Grid>
+							<Grid item xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									React
+								</Typography>
+							</Grid>
+							<Grid item xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={9} marks={marks} max={10} />
+							</Grid>
+							<Grid item xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									GraphQL
+								</Typography>
+							</Grid>
+							<Grid item xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
+							</Grid>
+							<Grid item xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									MongoDB
+								</Typography>
+							</Grid>
+							<Grid item xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
+							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Nodejs
@@ -251,31 +283,7 @@ const SkillsTable = () => {
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
-							</Grid>
-							<Grid item xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									SQL
-								</Typography>
-							</Grid>
-							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
-							</Grid>
-							<Grid item xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									MongoDB
-								</Typography>
-							</Grid>
-							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
-							</Grid>
-							<Grid item xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									React
-								</Typography>
-							</Grid>
-							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
@@ -283,23 +291,15 @@ const SkillsTable = () => {
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									GraphQL
+									SQL
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
-							</Grid>
-							<Grid item xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									Google
-								</Typography>
-							</Grid>
-							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
+								<SkillSlider aria-label="HTML skill" defaultValue={3} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
 							</Grid>
 						</Grid>
 					</Grid>
@@ -317,23 +317,7 @@ const SkillsTable = () => {
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
-							</Grid>
-							<Grid item xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									Mongo Compass
-								</Typography>
-							</Grid>
-							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
-							</Grid>
-							<Grid item xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									Insomnia
-								</Typography>
-							</Grid>
-							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+								<SkillSlider aria-label="HTML skill" defaultValue={9} marks={marks} max={10} />
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
@@ -341,15 +325,15 @@ const SkillsTable = () => {
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									MySQL
+									Insomnia
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
@@ -357,7 +341,23 @@ const SkillsTable = () => {
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
+								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
+							</Grid>
+							<Grid item xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Mongo Compass
+								</Typography>
+							</Grid>
+							<Grid item xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
+							</Grid>
+							<Grid item xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									MySQL
+								</Typography>
+							</Grid>
+							<Grid item xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
 						</Grid>
 					</Grid>
