@@ -43,7 +43,17 @@ const Contact = () => {
 				<TextField id="company" label="Company" helperText="" variant="standard" fullWidth />
 			</Grid>
 			<Grid item mt={3} xs={11} md={5} mx="auto">
-				<TextField required select id="reason" label="Reason" helperText="Why are you reaching out?" value={reason} variant="standard" fullWidth>
+				<TextField
+					required
+					select
+					id="reason"
+					label="Reason"
+					helperText="Why are you reaching out?"
+					value={reason}
+					onChange={handleChange}
+					variant="standard"
+					fullWidth
+				>
 					{reasons.map((option) => (
 						<MenuItem key={option.value} value={option.value}>
 							{option.label}
