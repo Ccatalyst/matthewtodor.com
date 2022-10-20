@@ -1,6 +1,6 @@
 # React Portfolio Remix
 
-The deployed version of this site can be found at [matthewtodor.netlify.app](matthewtodor.netlify.app)
+The deployed version of this site can be found at [www.matthewtodor.com](https://www.matthewtodor.com)
 
 The original intention of this app was to show my proficency in React by building a React porfolio website as a homework project. It's new role is similar.
 
