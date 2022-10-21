@@ -5,11 +5,11 @@
 }
 
 #fingerprintBox {
-	animation: fadeIn 4s;
-	-webkit-animation: fadeIn 4s;
-	-moz-animation: fadeIn 4s;
-	-o-animation: fadeIn 4s;
-	-ms-animation: fadeIn 4s;
+	animation: fadeIn 9s;
+	-webkit-animation: fadeIn 9s;
+	-moz-animation: fadeIn 9s;
+	-o-animation: fadeIn 9s;
+	-ms-animation: fadeIn 9s;
 	/* These likely need their own keyframes */
 	/*  */
 	/*  */
