@@ -8,14 +8,19 @@ const AboutMe = () => {
 	return (
 		<Grid container>
 			<Grid item xs={12}>
-				<Typography variant="h3" align="center" color="white">
+				<Typography variant="h3" align="center" color="white" fontFamily="Raleway">
 					I am...
 				</Typography>
 			</Grid>
 			<Grid item xs={12}>
 				<Box elevation={0} sx={{ width: 95 / 100, m: "auto" }}>
-					<Typography variant="h4" sx={{ m: 1, p: 1, color: "primary.main" }} align="center">
-						<TypeAnimation sequence={["A Programmer", 1000, "A Teacher", 1000, "Full Stack", 1000]} wrapper="div" cursor={true} repeat={Infinity} />
+					<Typography variant="h4" sx={{ m: 1, p: 1, color: "primary.main" }} align="center" fontFamily="Raleway">
+						<TypeAnimation
+							sequence={[1000, "A Programmer", 3000, "A Teacher", 3000, "Full Stack", 3000]}
+							wrapper="div"
+							cursor={true}
+							repeat={Infinity}
+						/>
 					</Typography>
 				</Box>
 			</Grid>
