@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardMedia, CardContent, Typography, IconButton, Button, CardActionArea } from "@mui/material";
+import { Card, CardMedia, CardContent, Typography, IconButton, Button } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import PropTypes from "prop-types";
