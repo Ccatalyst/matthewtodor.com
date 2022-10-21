@@ -17,7 +17,7 @@ const FingerPrintMark = () => {
 				<img src={`${Fingerprint}`} id="fingerprint" alt="fingerprint" />
 			</Grid>
 			<Grid item xs={12}>
-				<Typography variant="h4" align="center" fontFamily="Raleway">
+				<Typography variant="h4" align="center" fontFamily="Raleway" sx={{ minHeight: 41 }}>
 					<TypeAnimation sequence={[3500, "on the industry."]} wrapper="div" repeat={0} cursor={false} />
 				</Typography>
 			</Grid>
