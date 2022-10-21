@@ -18,7 +18,7 @@ const FingerPrintMark = () => {
 			</Grid>
 			<Grid item xs={12}>
 				<Typography variant="h4" align="center" fontFamily="Raleway">
-					<TypeAnimation sequence={[, 3500, "on the industry."]} wrapper="div" repeat={0} cursor={false} />
+					<TypeAnimation sequence={[3500, "on the industry."]} wrapper="div" repeat={0} cursor={false} />
 				</Typography>
 			</Grid>
 		</Grid>
