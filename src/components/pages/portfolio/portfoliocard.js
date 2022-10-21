@@ -8,15 +8,16 @@ const PortfolioCard = ({ props }) => {
 	return (
 		<Grid item xs={12} sm={6} md={4} lg={3} sx={{ p: 2 }}>
 			<Card>
-				<CardActionArea>
-					<CardMedia component="img" alt={props.project.name} height="140" image={props.project.img} />
-					<CardContent>
-						<Typography variant="h5">{props.project.name}</Typography>
-						<Typography variant="body1" paragraph>
-							{props.project.body}
-						</Typography>
-					</CardContent>
-				</CardActionArea>
+				<CardMedia component="img" alt={props.project.name} height="140" image={props.project.img} />
+				<CardContent>
+					<Typography variant="h5" component="h2">
+						{props.project.name}
+					</Typography>
+					<Typography variant="body1" paragraph>
+						{props.project.body}
+					</Typography>
+				</CardContent>
+
 				{deploy ? (
 					""
 				) : (
@@ -24,7 +25,7 @@ const PortfolioCard = ({ props }) => {
 						Demo
 					</Button>
 				)}
-				<IconButton href={props.project.github} target="_blank" rel="noreferrer">
+				<IconButton href={props.project.github} target="_blank" rel="noreferrer" aria-label="Github">
 					<GitHub color="primary" />
 				</IconButton>
 			</Card>

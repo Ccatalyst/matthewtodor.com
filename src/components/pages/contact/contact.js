@@ -29,7 +29,15 @@ const Contact = () => {
 	return (
 		<Grid container maxWidth="lg" mx="auto" backgroundColor="#12121290">
 			<Grid item xs={12} mt={3}>
-				<Typography variant="h4" fontFamily="Raleway" fontWeight={200} color="primary" align="center" sx={{ textDecoration: "underline" }}>
+				<Typography
+					variant="h4"
+					component="h2"
+					fontFamily="Raleway"
+					fontWeight={200}
+					color="primary"
+					align="center"
+					sx={{ textDecoration: "underline" }}
+				>
 					Contact Me
 				</Typography>
 			</Grid>

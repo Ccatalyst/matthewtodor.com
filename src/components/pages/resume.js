@@ -1,13 +1,13 @@
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
-import SkillsTable from "../skillscard/skillscard";
+import ResumeContent from "../resumecontent/resumecontent";
 
 const Resume = () => {
 	return (
 		<Grid container>
 			<Grid item xs={12}>
-				<SkillsTable />
+				<ResumeContent />
 			</Grid>
 		</Grid>
 	);

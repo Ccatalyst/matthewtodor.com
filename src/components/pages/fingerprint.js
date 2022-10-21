@@ -9,7 +9,7 @@ const FingerPrintMark = () => {
 	return (
 		<Grid container>
 			<Grid item m="auto" xs={12}>
-				<Typography variant="h4" align="center" gutterBottom fontFamily="Raleway">
+				<Typography variant="h4" component="h3" align="center" gutterBottom fontFamily="Raleway">
 					<TypeAnimation sequence={[" ", 2000, "Hoping to leave my"]} wrapper="div" repeat={0} cursor={false} />
 				</Typography>
 			</Grid>

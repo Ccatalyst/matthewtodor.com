@@ -6,7 +6,7 @@ const Algorithms = () => {
 	return (
 		<Grid container>
 			<Grid item xs={12} m="auto">
-				<Typography variant="h2" component="h6" align="center" color="primary">
+				<Typography variant="h2" align="center" color="primary">
 					Algorithms
 				</Typography>
 			</Grid>

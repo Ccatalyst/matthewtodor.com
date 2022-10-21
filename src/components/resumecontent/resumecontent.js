@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Button, Typography, Slider, styled } from "@mui/material";
 import resume from "../../assets/resume/MatthewTodorResume.pdf";
-import "./skillscard.scss";
+import "./resumecontent.scss";
 
 const SkillSlider = styled(Slider)(({ theme }) => ({
 	color: "primary.main",
@@ -56,7 +56,7 @@ const SkillSlider = styled(Slider)(({ theme }) => ({
 const boxShadow = "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
 // Values for Skill Slider
 const marks = new Array(10).fill(null).map((value, index) => ({ value: index }));
-const SkillsTable = () => {
+const ResumeContent = () => {
 	return (
 		<>
 			<Grid container backgroundColor="#12121290">
@@ -78,13 +78,13 @@ const SkillsTable = () => {
 				{/* EXPERIENCE */}
 				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
 					<Grid item xs={12}>
-						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
+						<Typography variant="h4" component="h2" gutterBottom color="primary" align="center" py={4}>
 							Experience
 						</Typography>
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item sm={10} mx="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
+							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Full Stack Web Development Teacher's Assistant
 							</Typography>
 						</Grid>
@@ -109,32 +109,36 @@ const SkillsTable = () => {
 								<Typography variant="body1" component="li" sx={{ listStyle: "none" }}>
 									Lesson Planning and Grading
 								</Typography>
-								<ul>
-									<Typography variant="body2" component="li" fontSize={16}>
-										Worked with instructor on reviewing lesson plans for the day, going over goals and potential stumbling blocks, discussing
-										solutions and simplified explanations for complex subjects
-									</Typography>
-									<Typography variant="body2" component="li" fontSize={16}>
-										Worked with fellow Teacher’s Assistants and Instructor to analyze students’ projects and grade based on functionality, appearance,
-										and best practices.
-									</Typography>
-								</ul>
+								<li className="invisList">
+									<ul>
+										<Typography variant="body2" component="li" fontSize={16}>
+											Worked with instructor on reviewing lesson plans for the day, going over goals and potential stumbling blocks, discussing
+											solutions and simplified explanations for complex subjects
+										</Typography>
+										<Typography variant="body2" component="li" fontSize={16}>
+											Worked with fellow Teacher’s Assistants and Instructor to analyze students’ projects and grade based on functionality,
+											appearance, and best practices.
+										</Typography>
+									</ul>
+								</li>
 							</ul>
 
 							<ul>
 								<Typography variant="body1" component="li" sx={{ listStyle: "none" }}>
 									Code Review
 								</Typography>
-								<ul>
-									<Typography variant="body2" component="li" fontSize={16}>
-										Analyzed code from students to assist in finding the source of bugs, working through the operation of the functions verbally to
-										find the source of the problem
-									</Typography>
-									<Typography variant="body2" component="li" fontSize={16}>
-										Pair programed to help students understand various concepts of web development, walking through simple and complex methods of
-										Javascript.
-									</Typography>
-								</ul>
+								<li className="invisList">
+									<ul>
+										<Typography variant="body2" component="li" fontSize={16}>
+											Analyzed code from students to assist in finding the source of bugs, working through the operation of the functions verbally to
+											find the source of the problem
+										</Typography>
+										<Typography variant="body2" component="li" fontSize={16}>
+											Pair programed to help students understand various concepts of web development, walking through simple and complex methods of
+											Javascript.
+										</Typography>
+									</ul>
+								</li>
 							</ul>
 						</Grid>
 					</Grid>
@@ -146,7 +150,7 @@ const SkillsTable = () => {
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
 						<Grid item sm={10} m="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
+							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Golf
 							</Typography>
 						</Grid>
@@ -165,7 +169,7 @@ const SkillsTable = () => {
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
 						<Grid item sm={10} m="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
+							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								World of Warcraft
 							</Typography>
 						</Grid>
@@ -199,7 +203,16 @@ const SkillsTable = () => {
 					</Grid>
 					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item xs={10} mx="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
+							<Typography
+								variant="h6"
+								component="h3"
+								py={0.5}
+								px={1}
+								align="center"
+								my={{ xs: 2, sm: 1 }}
+								minWidth={110}
+								sx={{ backgroundColor: "#0E959466" }}
+							>
 								Languages
 							</Typography>
 						</Grid>
@@ -232,7 +245,16 @@ const SkillsTable = () => {
 					</Grid>
 					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item xs={10} mx="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
+							<Typography
+								variant="h6"
+								component="h3"
+								py={0.5}
+								px={1}
+								align="center"
+								my={{ xs: 2, sm: 1 }}
+								minWidth={110}
+								sx={{ backgroundColor: "#0E959466" }}
+							>
 								Tools
 							</Typography>
 						</Grid>
@@ -306,7 +328,16 @@ const SkillsTable = () => {
 
 					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item xs={10} m="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 1 }} minWidth={130} sx={{ backgroundColor: "#0E959466" }}>
+							<Typography
+								variant="h6"
+								component="h3"
+								py={0.5}
+								px={1}
+								align="center"
+								my={{ xs: 2, sm: 1 }}
+								minWidth={130}
+								sx={{ backgroundColor: "#0E959466" }}
+							>
 								Applications
 							</Typography>
 						</Grid>
@@ -369,7 +400,16 @@ const SkillsTable = () => {
 					</Grid>
 					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
 						<Grid item sm={10} mx="auto">
-							<Typography variant="h6" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} minWidth={110} sx={{ backgroundColor: "#0E959466" }}>
+							<Typography
+								variant="h6"
+								component="h3"
+								py={0.5}
+								px={1}
+								align="center"
+								my={{ xs: 2, sm: 0 }}
+								minWidth={110}
+								sx={{ backgroundColor: "#0E959466" }}
+							>
 								Denver University
 							</Typography>
 						</Grid>
@@ -408,4 +448,4 @@ const SkillsTable = () => {
 		</>
 	);
 };
-export default SkillsTable;
+export default ResumeContent;
