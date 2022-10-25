@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Button, Typography, Slider, styled } from "@mui/material";
-import resume from "../../assets/resume/MatthewTodorResume.pdf";
+import resume from "../../../../assets/resume/MatthewTodorResume.pdf";
 import "./resumecontent.scss";
 
 const SkillSlider = styled(Slider)(({ theme }) => ({

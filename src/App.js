@@ -1,10 +1,10 @@
 import { React, useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-import Home from "./components/pages/home";
+import Home from "./components/pages/home/home";
 import Portfolio from "./components/pages/portfolio/portfolio";
-import Algorithms from "./components/pages/algorithms";
-import Resume from "./components/pages/resume";
+import Algorithms from "./components/pages/algorithms/algorithms";
+import Resume from "./components/pages/resume/resume";
 import Nav from "./components/nav/nav";
 import Contact from "./components/pages/contact/contact";
 import Footer from "./components/footer/footer";

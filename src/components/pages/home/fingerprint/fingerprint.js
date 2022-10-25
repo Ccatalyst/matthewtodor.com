@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Typography } from "@mui/material";
-import Fingerprint from "../../assets/pictures/Fingerprint.png";
+import Fingerprint from "../../../../assets/pictures/Fingerprint.png";
 import "./fingerprint.css";
 import { TypeAnimation } from "react-type-animation";
 

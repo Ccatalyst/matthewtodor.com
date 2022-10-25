@@ -1,7 +1,7 @@
 import React from "react";
-import AboutMe from "./aboutme";
+import AboutMe from "../aboutme/aboutme";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import FingerPrintMark from "./fingerprint";
+import FingerPrintMark from "./fingerprint/fingerprint";
 
 const Home = () => {
 	return (
