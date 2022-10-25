@@ -10,14 +10,6 @@
 	-moz-animation: fadeIn 9s;
 	-o-animation: fadeIn 9s;
 	-ms-animation: fadeIn 9s;
-	/* These likely need their own keyframes */
-	/*  */
-	/*  */
-	/* animation-delay: 2s;
-	-webkit-animation-delay: 2s;
-	-moz-animation-delay: 2s;
-	-o-animation-delay: 2s;
-	-ms-animation-delay: 2s; */
 }
 @keyframes fadeIn {
 	0% {

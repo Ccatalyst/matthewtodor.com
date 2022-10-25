@@ -73,6 +73,8 @@ const Contact = () => {
 				<TextField required id="details" label="Details" helperText="Required" variant="standard" fullWidth multiline rows={3} />
 			</Grid>
 
+			<Grid item mt={3} xs={11} md={10} height={15} mx={{ xs: "auto", backgroundColor: "pink" }}></Grid>
+
 			<Grid container xs={12} my={2} justifyContent="center">
 				<Button type="submit" size="large" variant="outlined" sx={{ borderRadius: `${1}px`, px: 6, py: 1, backgroundColor: "#00000090" }}>
 					Send
