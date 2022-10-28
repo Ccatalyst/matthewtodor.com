@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Typography } from "@mui/material";
 import AlgoCard from "./algoCard/algoCard";
-
+import algorithmData from "./algorithmData";
 const Algorithms = () => {
 	return (
 		<Grid container>
@@ -11,17 +11,11 @@ const Algorithms = () => {
 					Algorithms
 				</Typography>
 			</Grid>
-			<Grid item xs={2} m="auto" backgroundColor="background.paper" maxWidth="xl">
-				<AlgoCard
-					code="function multiply(a, b) {
-						var z = a * b;
-						return z;
-					}"
-					language="javascript"
-					name="Multiply"
-					difficulty="8"
-				/>
-			</Grid>
+			{algorithmData.map((data, i) => (
+				<Grid key={i} item xs={2} m="auto" backgroundColor="background.paper" maxWidth="xl">
+					<AlgoCard code={data.code} language={data.language} name={data.name} difficulty={data.difficulty} explaination={data.explaination} />
+				</Grid>
+			))}
 		</Grid>
 	);
 };
