@@ -12,8 +12,8 @@ const Algorithms = () => {
 				</Typography>
 			</Grid>
 			{algorithmData.map((data, i) => (
-				<Grid key={i} item xs={2} m="auto" backgroundColor="background.paper" maxWidth="xl">
-					<AlgoCard code={data.code} language={data.language} name={data.name} difficulty={data.difficulty} explaination={data.explaination} />
+				<Grid key={i} item xs={11} sm={6} md={4} lg={3} xl={2} m="auto" backgroundColor="background.paper" maxWidth="xl">
+					<AlgoCard code={data.code} language={data.language} name={data.name} difficulty={data.difficulty} explanation={data.explanation} />
 				</Grid>
 			))}
 		</Grid>

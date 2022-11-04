@@ -1,4 +1,4 @@
-import { Typography, Card, CardContent, CardActionArea, Modal, Box } from "@mui/material";
+import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { React, useState } from "react";
 import { CodeBlock, monokaiSublime } from "react-code-blocks";
@@ -15,22 +15,25 @@ const modalStyle = {
 	p: 4,
 };
 
-const AlgoCard = ({ name, difficulty, code, language, explaination }) => {
+const AlgoCard = ({ name, difficulty, code, language, explanation: explanation }) => {
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	return (
 		<>
-			<Card>
+			<Card sx={{ backgroundColor: "#12121299", m: 2 }}>
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
-						<Typography align="center" gutterBottom>
-							Kata: {difficulty}
+						<Typography variant="h6" align="left" gutterBottom fontFamily="Raleway">
+							{difficulty} Kyu
 						</Typography>
-						<Typography align="center" gutterBottom>
+						<Typography variant="h6" align="center">
 							{name}
 						</Typography>
-						<Typography align="center">{explaination}</Typography>
+						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
+						<Typography align="center" mt={1} maxHeight={200} overflow="auto">
+							{explanation}
+						</Typography>
 					</CardContent>
 				</CardActionArea>
 			</Card>
