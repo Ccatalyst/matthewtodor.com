@@ -76,6 +76,32 @@ return str.split("").reverse().join("");
   return name + " does not play banjo";
 }`,
 	},
+	{
+		name: "Even or Odd",
+		difficulty: "8",
+		language: "javascript",
+		explanation: `Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.`,
+		code: `function even_or_odd(number) {
+		if(number % 2 === 0){
+			return "Even";
+		}else{
+			return "Odd"
+		}
+	}`,
+	},
+	{
+		name: "Keep Hydrated",
+		difficulty: "8",
+		language: "javascript",
+		explanation: `Nathan loves cycling.
+
+		Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+		
+		You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.`,
+		code: `function litres(time) {
+ 		return Math.floor(time * .5);
+		  }`,
+	},
 ];
 
 export default algorithmData;

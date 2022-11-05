@@ -1,5 +1,5 @@
 import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
+// import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { React, useState } from "react";
 import { CodeBlock, monokaiSublime } from "react-code-blocks";
 
@@ -15,7 +15,7 @@ const modalStyle = {
 	p: 4,
 };
 
-const AlgoCard = ({ name, difficulty, code, language, explanation: explanation }) => {
+const AlgoCard = ({ name, difficulty, code, language, explanation }) => {
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
