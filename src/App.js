@@ -1,6 +1,6 @@
 import { React, useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import Home from "./components/pages/home/home";
 import Portfolio from "./components/pages/portfolio/portfolio";
 import Algorithms from "./components/pages/algorithms/algorithms";
