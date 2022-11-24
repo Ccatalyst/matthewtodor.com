@@ -40,6 +40,7 @@ const AlgoCard = ({ name, difficulty, code, language, explanation }) => {
 			</Card>
 			<Modal open={open} onClose={handleClose} aria-labelledby={name} aria-describedby={name}>
 				<Box style={modalStyle}>
+					{/* If the block of code is larger than the size of the screen, there isn't any way to click/tap out of it. It "bricks" the experience on phones. Currently an issue with latest algo added 11/23 */}
 					<CodeBlock text={code} language={language} wrapLines theme={monokaiSublime} />
 				</Box>
 			</Modal>
