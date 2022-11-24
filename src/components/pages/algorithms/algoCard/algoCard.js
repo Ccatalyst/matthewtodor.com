@@ -2,6 +2,7 @@ import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider } fr
 // import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { React, useState } from "react";
 import { CodeBlock, monokaiSublime } from "react-code-blocks";
+import "./algoCard.scss";
 
 const modalStyle = {
 	position: "absolute",
@@ -31,7 +32,7 @@ const AlgoCard = ({ name, difficulty, code, language, explanation }) => {
 							{name}
 						</Typography>
 						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
-						<Typography align="center" mt={1} maxHeight={200} overflow="auto">
+						<Typography align="center" mt={1} mx={0.5} maxHeight={200} overflow="auto" className="explanation">
 							{explanation}
 						</Typography>
 					</CardContent>

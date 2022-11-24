@@ -29,7 +29,7 @@ return str.split("").reverse().join("");
 		explanation:
 			"A function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.",
 		code: `function sum (numbers) {
-  	return numbers.reduce((p, c) => p + c, 0);
+return numbers.reduce((p, c) => p + c, 0);
 }`,
 	},
 	{
@@ -55,7 +55,7 @@ return str.split("").reverse().join("");
 			"A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with by powerful dragons! Each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's going to grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive? Return True if yes, False otherwise",
 		code: `function hero(bullets, dragons){
 			return dragons * 2 <= bullets;
-		  }`,
+		}`,
 	},
 	{
 		name: "Are you Playing Banjo?",
@@ -70,10 +70,10 @@ return str.split("").reverse().join("");
 		code: `function areYouPlayingBanjo(name) {
   //   toLowerCase to make all names lowercase, ignoring capital letters. 
   //   charAt is fed an index point in the string "array" and compares it to the value
-  if(name.toLowerCase().charAt(0) === "r"){
+if(name.toLowerCase().charAt(0) === "r"){
     return name + " plays banjo"
-  } 
-  return name + " does not play banjo";
+} 
+return name + " does not play banjo";
 }`,
 	},
 	{
@@ -100,7 +100,46 @@ return str.split("").reverse().join("");
 		You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.`,
 		code: `function litres(time) {
  		return Math.floor(time * .5);
-		  }`,
+		}`,
+	},
+	{
+		name: "Are they the 'Same'?",
+		difficulty: "6",
+		language: "javascript",
+		explanation: `Given two arrays, write a function that checks whether the two arrays have the 'same' elements, with the same multiplicities.`,
+		code: `function comp(array1, array2){
+		var isSame = true;
+		
+		if (array1 == null || 
+			array2 == null || 
+			array1.length !== array2.length){
+			return false;
+		}
+		array1.map((val, index) => {
+			let array2Index = array2.indexOf(val * val);
+				if(array2Index == -1) {
+				isSame = false;
+				} else {
+				array2[array2Index] = -1;
+				}                
+			return val;
+									
+			});
+		return isSame;
+		
+		
+		||| Alternative |||
+		
+		array1.sort((a, b) => a - b);  
+		array2.sort((a, b) => a - b);
+		array1.map((val, index) => {
+			if(val * val !== array2[index]){
+				isSame = false;
+			}   
+			return val;
+		});
+		return isSame;  
+		}`,
 	},
 ];
 
