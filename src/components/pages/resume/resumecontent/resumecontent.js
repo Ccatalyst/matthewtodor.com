@@ -97,7 +97,7 @@ const ResumeContent = () => {
 						<Grid item md={9} component="article" mx="auto">
 							<ul>
 								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
-									Assisted in teaching students of various development skill levels web development concepts and languages, including HTML, CSS and
+									Assist in teaching students of various development skill levels web development concepts and languages, including HTML, CSS and
 									Javascript.
 								</Typography>
 								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
@@ -112,12 +112,12 @@ const ResumeContent = () => {
 								<li className="invisList">
 									<ul>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Worked with instructor on reviewing lesson plans for the day, going over goals and potential stumbling blocks, discussing
-											solutions and simplified explanations for complex subjects
+											Work with instructor on reviewing lesson plans for the day, going over goals and potential stumbling blocks, discussing
+											solutions and simplified explanations for complex subjects.
 										</Typography>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Worked with fellow Teacher’s Assistants and Instructor to analyze students’ projects and grade based on functionality,
-											appearance, and best practices.
+											Work with fellow Teacher’s Assistants and Instructor to analyze students’ projects and grade based on functionality, appearance,
+											and best practices.
 										</Typography>
 									</ul>
 								</li>
@@ -130,12 +130,12 @@ const ResumeContent = () => {
 								<li className="invisList">
 									<ul>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Analyzed code from students to assist in finding the source of bugs, working through the operation of the functions verbally to
-											find the source of the problem
+											Analyze code from students to assist in finding the source of bugs, walking through the operation of the functions together to
+											discover the source of the problems.
 										</Typography>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Pair programed to help students understand various concepts of web development, walking through simple and complex methods of
-											Javascript.
+											Pair program to help students understand various concepts of web development and design, walking through simple and complex
+											methods of Javascript.
 										</Typography>
 									</ul>
 								</li>
@@ -176,19 +176,19 @@ const ResumeContent = () => {
 						<Grid container component="article">
 							<Grid item md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
-									Weekly scheduled collaboration with between 19-24 other people, coordinating movement and actions in a precise manner to accomplish
+									Weekly scheduled collaboration with between 19-27 other people, coordinating movement and actions in a precise manner to accomplish
 									our goals.
 								</Typography>
 							</Grid>
 							<Grid item md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
-									Quick corrections when mistakes are made to lower the time spent on any single challenge
+									Quick corrections when mistakes are made to lower the time spent on any single challenge.
 								</Typography>
 							</Grid>
 							<Grid item md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
 									Requires communication across a variety of mediums to keep up to date on the status of various goals and what contributors can do to
-									help accomplish the next endeavor
+									help accomplish the next endeavor.
 								</Typography>
 							</Grid>
 						</Grid>
