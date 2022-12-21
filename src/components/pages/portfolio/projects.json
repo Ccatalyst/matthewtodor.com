@@ -31,7 +31,7 @@
 		"name": "Find Your Next Pet",
 		"body": "A site built using HandlbarsJs. It searches for cats or dogs up for adoption via an API run by Purina Pet Foods",
 		"img": "https://i.imgur.com/u3cLMG8.png",
-		"deploy": "https://find-your-next-pet.herokuapp.com/",
+		"deploy": "https://find-your-next-friend.herokuapp.com/",
 		"github": "https://github.com/Ccatalyst/Find-Your-Next-Pet"
 	},
 	{
