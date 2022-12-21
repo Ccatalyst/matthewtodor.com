@@ -123,7 +123,6 @@ return name + " does not play banjo";
 				array2[array2Index] = -1;
 				}                
 			return val;
-									
 			});
 		return isSame;`,
 	},
