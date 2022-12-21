@@ -125,21 +125,7 @@ return name + " does not play banjo";
 			return val;
 									
 			});
-		return isSame;
-		
-		
-		||| Alternative |||
-		
-		array1.sort((a, b) => a - b);  
-		array2.sort((a, b) => a - b);
-		array1.map((val, index) => {
-			if(val * val !== array2[index]){
-				isSame = false;
-			}   
-			return val;
-		});
-		return isSame;  
-		}`,
+		return isSame;`,
 	},
 ];
 

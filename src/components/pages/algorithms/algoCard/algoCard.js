@@ -1,5 +1,4 @@
 import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider } from "@mui/material";
-// import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { React, useState } from "react";
 import { CodeBlock, monokaiSublime } from "react-code-blocks";
 import "./algoCard.scss";
@@ -13,7 +12,7 @@ const modalStyle = {
 	bgcolor: "background.paper",
 	border: "2px solid ",
 	boxShadow: 24,
-	p: 4,
+	p: 12,
 };
 
 const AlgoCard = ({ name, difficulty, code, language, explanation }) => {
@@ -40,7 +39,6 @@ const AlgoCard = ({ name, difficulty, code, language, explanation }) => {
 			</Card>
 			<Modal open={open} onClose={handleClose} aria-labelledby={name} aria-describedby={name}>
 				<Box style={modalStyle}>
-					{/* If the block of code is larger than the size of the screen, there isn't any way to click/tap out of it. It "bricks" the experience on phones. Currently an issue with latest algo added 11/23 */}
 					<CodeBlock text={code} language={language} wrapLines theme={monokaiSublime} />
 				</Box>
 			</Modal>
