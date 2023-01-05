@@ -97,11 +97,11 @@ const ResumeContent = () => {
 						<Grid item md={9} component="article" mx="auto">
 							<ul>
 								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
-									Assist in teaching students of various development skill levels web development concepts and languages, including HTML, CSS and
-									Javascript.
+									Act as the students’ informational and procedural resource on web development concepts/languages, including HTML, CSS, & Javascript.
 								</Typography>
 								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
-									Built upon the foundational languages to teach both front-end and back-end development, all while fully remote.
+									Foster and help effectively establish a conducive and interactive learning environment for students in a fully remote educational
+									setting.{" "}
 								</Typography>
 							</ul>
 
@@ -112,12 +112,12 @@ const ResumeContent = () => {
 								<li className="invisList">
 									<ul>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Work with instructor on reviewing lesson plans for the day, going over goals and potential stumbling blocks, discussing
-											solutions and simplified explanations for complex subjects.
+											Drive lesson plan review and assessment of daily learning objectives while anticipating and resolving potential learning
+											obstacles/issues
 										</Typography>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Work with fellow Teacher’s Assistants and Instructor to analyze students’ projects and grade based on functionality, appearance,
-											and best practices.
+											Foster and help effectively establish a conducive and interactive learning environment for students in a fully remote
+											educational setting.
 										</Typography>
 									</ul>
 								</li>
@@ -130,12 +130,11 @@ const ResumeContent = () => {
 								<li className="invisList">
 									<ul>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Analyze code from students to assist in finding the source of bugs, walking through the operation of the functions together to
-											discover the source of the problems.
+											Render support and valuable insights on developing and discussing solutions and simplifying complex subjects and concepts.
 										</Typography>
 										<Typography variant="body2" component="li" fontSize={16}>
-											Pair program to help students understand various concepts of web development and design, walking through simple and complex
-											methods of Javascript.
+											Navigate and assist students and provide constructive feedback in building and reviewing codes and discovering and handling bug
+											sources.
 										</Typography>
 									</ul>
 								</li>
@@ -285,7 +284,7 @@ const ResumeContent = () => {
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									MongoDB
+									MongoDB/Mongoose
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
@@ -317,7 +316,7 @@ const ResumeContent = () => {
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									SQL
+									SQL/mySQL
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
@@ -384,7 +383,7 @@ const ResumeContent = () => {
 							</Grid>
 							<Grid item xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									MySQL
+									MySQL Workbench
 								</Typography>
 							</Grid>
 							<Grid item xs={12} lg={8}>
@@ -414,17 +413,22 @@ const ResumeContent = () => {
 							</Typography>
 						</Grid>
 						<Grid item xs={12} mx="auto">
+							<Typography variant="caption" paragraph gutterBottom align="center" mt={2} fontStyle="oblique">
+								Full Stack Web Development Certificate
+							</Typography>
 							<Typography variant="caption" paragraph gutterBottom align="center" fontStyle="oblique">
 								May 2022
 							</Typography>
 						</Grid>
 						<Grid item md={9} mx="auto">
 							<Typography variant="body1" gutterBottom px={1}>
-								Worked with peers and instructors to organize and implement code in an Agile environment, focusing on learning the MERN (MongoDB,
-								Express, React, Nodejs) stack as well as source control (Github) and code review.
+								Gained hands-on experience and technical understanding of the MERN (MongoDb, Express.js, React, Node.js) stack, Bootstrap, & Redux.
 							</Typography>
 							<Typography variant="body1" px={1}>
-								Selected to present capstone project to network of industry professionals associated with Denver University.
+								Generated new code for three agile projects, encompassing code review, Git-based source control and Heroku-based deployment.
+							</Typography>
+							<Typography variant="body1" px={1}>
+								Further developed and leveraged competitive proficiencies and technical knowledge of front-end design and back-end development.
 							</Typography>
 						</Grid>
 					</Grid>
