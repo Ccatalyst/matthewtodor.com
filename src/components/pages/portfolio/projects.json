@@ -22,14 +22,14 @@
 	},
 	{
 		"name": "DiscCover",
-		"body": "A basic website that uses the Shazam API and Youtube API to find similar artists to the searched song or artist. Built using JQuery.",
+		"body": "A basic website that uses the Shazam Music API and Youtube API to find similar artists to the searched song or artist. Built using JQuery.",
 		"img": "https://i.imgur.com/8VeGoPp.png",
 		"deploy": "https://samanthajrexroat.github.io/DiscCover/",
 		"github": "https://github.com/samanthajrexroat/DiscCover"
 	},
 	{
 		"name": "Find Your Next Pet",
-		"body": "A site built using HandlbarsJs. It searches for cats or dogs up for adoption via an API run by Purina Pet Foods",
+		"body": "A site built using HandlebarsJs. It searches for cats or dogs up for adoption via an API run by Purina Pet Foods",
 		"img": "https://i.imgur.com/u3cLMG8.png",
 		"deploy": "https://find-your-next-friend.herokuapp.com/",
 		"github": "https://github.com/Ccatalyst/Find-Your-Next-Pet"

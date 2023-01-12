@@ -3,6 +3,7 @@ import { Card, CardMedia, CardContent, Typography, IconButton, Button } from "@m
 import { GitHub } from "@mui/icons-material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import PropTypes from "prop-types";
+
 const PortfolioCard = ({ props }) => {
 	const deploy = props.project.deploy === "";
 	return (
