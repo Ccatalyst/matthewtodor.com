@@ -49,6 +49,7 @@ function App() {
 	const particlesInit = useCallback((main) => {
 		loadFull(main);
 	}, []);
+
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
