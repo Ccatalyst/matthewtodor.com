@@ -6,7 +6,7 @@ import ResumeContent from "./resumecontent/resumecontent";
 const Resume = () => {
 	return (
 		<Grid container>
-			<Grid item xs={12}>
+			<Grid xs={12}>
 				<ResumeContent />
 			</Grid>
 		</Grid>

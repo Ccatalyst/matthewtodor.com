@@ -56,10 +56,10 @@ const SkillSlider = styled(Slider)(({ theme }) => ({
 const boxShadow = "0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)";
 // Values for Skill Slider
 const marks = new Array(10).fill(null).map((value, index) => ({ value: index }));
-const ResumeContent = () => {
+const ResumeContent: React.FC = () => {
 	return (
 		<>
-			<Grid container backgroundColor="#12121290">
+			<Grid sx={{ backgroundColor: "#12121290" }}>
 				<Grid container xs={12} mt={6}>
 					<Button
 						size="large"
@@ -77,24 +77,24 @@ const ResumeContent = () => {
 				</Grid>
 				{/* EXPERIENCE */}
 				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
-					<Grid item xs={12}>
+					<Grid xs={12}>
 						<Typography variant="h4" component="h2" gutterBottom color="primary" align="center" py={4}>
 							Experience
 						</Typography>
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid item sm={10} mx="auto">
+						<Grid sm={10} mx="auto">
 							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Full Stack Web Development Teacher's Assistant
 							</Typography>
 						</Grid>
-						<Grid item sm={12} m="auto">
+						<Grid sm={12} m="auto">
 							<Typography variant="caption" paragraph gutterBottom align="center" mt={2} fontStyle="oblique">
 								July 2022-present
 							</Typography>
 						</Grid>
 
-						<Grid item md={9} component="article" mx="auto">
+						<Grid md={9} component="article" mx="auto">
 							<ul>
 								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
 									Act as the students’ informational and procedural resource on web development concepts/languages, including HTML, CSS, & Javascript.
@@ -142,24 +142,24 @@ const ResumeContent = () => {
 						</Grid>
 					</Grid>
 					{/* EXTRACURRICULAR ACTIVITIES */}
-					<Grid item xs={12}>
+					<Grid xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
 							Extracurricular Activities
 						</Typography>
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
-						<Grid item sm={10} m="auto">
+						<Grid sm={10} m="auto">
 							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Golf
 							</Typography>
 						</Grid>
 						<Grid container component="article">
-							<Grid item md={9} mx="auto">
+							<Grid md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} px={1} sx={{ listStyle: "none" }} gutterBottom>
 									Consistent focus on personal improvement, both physically and mentally, with a focus on repetition and routine.
 								</Typography>
 							</Grid>
-							<Grid item md={9} mx="auto">
+							<Grid md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} px={1} sx={{ listStyle: "none" }} gutterBottom>
 									Frequently reviewing recordings and notes from recent performances, increasing learning speed and personal performance.
 								</Typography>
@@ -167,24 +167,24 @@ const ResumeContent = () => {
 						</Grid>
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
-						<Grid item sm={10} m="auto">
+						<Grid sm={10} m="auto">
 							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								World of Warcraft
 							</Typography>
 						</Grid>
 						<Grid container component="article">
-							<Grid item md={9} mx="auto">
+							<Grid md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
 									Weekly scheduled collaboration with between 19-27 other people, coordinating movement and actions in a precise manner to accomplish
 									our goals.
 								</Typography>
 							</Grid>
-							<Grid item md={9} mx="auto">
+							<Grid md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
 									Quick corrections when mistakes are made to lower the time spent on any single challenge.
 								</Typography>
 							</Grid>
-							<Grid item md={9} mx="auto">
+							<Grid md={9} mx="auto">
 								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
 									Requires communication across a variety of mediums to keep up to date on the status of various goals and what contributors can do to
 									help accomplish the next endeavor.
@@ -195,13 +195,13 @@ const ResumeContent = () => {
 				</Grid>
 				{/* SKILLSET */}
 				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
-					<Grid item xs={12}>
+					<Grid xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
 							Skillset
 						</Typography>
 					</Grid>
 					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid item xs={10} mx="auto">
+						<Grid xs={10} mx="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -216,34 +216,34 @@ const ResumeContent = () => {
 							</Typography>
 						</Grid>
 						<Grid container xs={9} component="article" mx="auto">
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									Javascript
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									HTML
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									CSS
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
 							</Grid>
 						</Grid>
 					</Grid>
 					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid item xs={10} mx="auto">
+						<Grid xs={10} mx="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -258,75 +258,75 @@ const ResumeContent = () => {
 							</Typography>
 						</Grid>
 						<Grid container xs={9} component="article" mx="auto">
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Google
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={10} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									React
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={9} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									GraphQL
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									MongoDB/Mongoose
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Nodejs
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Express
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Handlebars
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									SQL/mySQL
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={3} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
 							</Grid>
 						</Grid>
 					</Grid>
 
 					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid item xs={10} m="auto">
+						<Grid xs={10} m="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -341,64 +341,64 @@ const ResumeContent = () => {
 							</Typography>
 						</Grid>
 						<Grid container xs={9} component="article" mx="auto">
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Github
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={9} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Apollo Sandbox
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Insomnia
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Heroku
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Mongo Compass
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
-							<Grid item xs={12} lg={3}>
+							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									MySQL Workbench
 								</Typography>
 							</Grid>
-							<Grid item xs={12} lg={8}>
+							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
 						</Grid>
 					</Grid>
 					{/* CERTIFICATES */}
-					<Grid item xs={12}>
+					<Grid xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
 							Certificates
 						</Typography>
 					</Grid>
 					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid item sm={10} mx="auto">
+						<Grid sm={10} mx="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -412,7 +412,7 @@ const ResumeContent = () => {
 								Denver University
 							</Typography>
 						</Grid>
-						<Grid item xs={12} mx="auto">
+						<Grid xs={12} mx="auto">
 							<Typography variant="caption" paragraph gutterBottom align="center" mt={2} fontStyle="oblique">
 								Full Stack Web Development Certificate
 							</Typography>
@@ -420,7 +420,7 @@ const ResumeContent = () => {
 								May 2022
 							</Typography>
 						</Grid>
-						<Grid item md={9} mx="auto">
+						<Grid md={9} mx="auto">
 							<Typography variant="body1" gutterBottom px={1}>
 								Gained hands-on experience and technical understanding of the MERN (MongoDb, Express.js, React, Node.js) stack, Bootstrap, & Redux.
 							</Typography>
