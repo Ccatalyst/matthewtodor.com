@@ -6,10 +6,10 @@ import FingerPrintMark from "./fingerprint/fingerprint";
 const Home = () => {
 	return (
 		<Grid container>
-			<Grid item xs={11} md={11} sx={{ m: "auto", mt: { xs: 2, sm: 6 } }}>
+			<Grid xs={11} md={11} sx={{ m: "auto", mt: { xs: 2, sm: 6 } }}>
 				<AboutMe />
 			</Grid>
-			<Grid item xs={11} md={11} sx={{ m: "auto", mt: { xs: 2 }, mb: { xs: 2, sm: 6 } }}>
+			<Grid xs={11} md={11} sx={{ m: "auto", mt: { xs: 2 }, mb: { xs: 2, sm: 6 } }}>
 				<FingerPrintMark />
 			</Grid>
 		</Grid>

@@ -7,15 +7,24 @@ import Typewriter from "typewriter-effect";
 const AboutMe = () => {
 	return (
 		<Grid container>
-			<Grid item xs={12}>
+			<Grid xs={12}>
 				<Typography variant="h3" component="h2" align="center" color="white" fontFamily="Raleway">
 					I am...
 				</Typography>
 			</Grid>
-			<Grid item xs={12}>
-				<Box elevation={0} sx={{ width: 95 / 100, m: "auto" }}>
+			<Grid xs={12}>
+				<Box sx={{ width: 95 / 100, m: "auto" }}>
 					<Typography variant="h4" component="h3" sx={{ m: 1, p: 1, color: "primary.main" }} align="center" fontFamily="Raleway">
-						<Typewriter options={{ strings: ["A Programmer", "A Teacher", "Full Stack"], autoStart: true, loop: true, delay: 75, pauseFor: 3600 }} />
+						<Typewriter
+							options={{
+								strings: ["A Programmer", "A Teacher", "Full Stack"],
+								autoStart: true,
+								loop: true,
+								delay: 75,
+								// @ts-expect-error
+								pauseFor: 3600,
+							}}
+						/>
 					</Typography>
 				</Box>
 			</Grid>

@@ -22,13 +22,13 @@ const reasons = [
 ];
 
 const Contact = () => {
-	const [reason, setReason] = React.useState("");
-	const handleChange = (event) => {
-		setReason(event.target.value);
+	const [reason, setReason] = React.useState<string | null>("");
+	const handleChange = (event: React.ChangeEvent) => {
+		setReason(event.target.textContent);
 	};
 	return (
-		<Grid container maxWidth="lg" mx="auto" backgroundColor="#12121290">
-			<Grid item xs={12} mt={3}>
+		<Grid component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
+			<Grid xs={12} mt={3}>
 				<Typography
 					variant="h4"
 					component="h2"
@@ -41,16 +41,16 @@ const Contact = () => {
 					Contact Me
 				</Typography>
 			</Grid>
-			<Grid item mt={3} xs={11} md={5} mx="auto">
+			<Grid mt={3} xs={11} md={5} mx="auto">
 				<TextField required id="name" label="Name" helperText="Required" variant="standard" fullWidth color="primary" />
 			</Grid>
-			<Grid item mt={3} xs={11} md={5} mx="auto">
+			<Grid mt={3} xs={11} md={5} mx="auto">
 				<TextField required id="email" label="Email" helperText="Required" variant="standard" fullWidth />
 			</Grid>
-			<Grid item mt={3} xs={11} md={5} mx="auto">
+			<Grid mt={3} xs={11} md={5} mx="auto">
 				<TextField id="company" label="Company" helperText="" variant="standard" fullWidth />
 			</Grid>
-			<Grid item mt={3} xs={11} md={5} mx="auto">
+			<Grid mt={3} xs={11} md={5} mx="auto">
 				<TextField
 					required
 					select
@@ -69,11 +69,11 @@ const Contact = () => {
 					))}
 				</TextField>
 			</Grid>
-			<Grid item mt={3} xs={11} md={10} mx={{ xs: "auto" }}>
+			<Grid mt={3} xs={11} md={10} mx={{ xs: "auto" }}>
 				<TextField required id="details" label="Details" helperText="Required" variant="standard" fullWidth multiline rows={3} />
 			</Grid>
 
-			<Grid item mt={3} xs={11} md={10} height={15} mx={{ xs: "auto" }}></Grid>
+			<Grid mt={3} xs={11} md={10} height={15} mx={{ xs: "auto" }}></Grid>
 
 			<Grid container xs={12} my={2} justifyContent="center">
 				<Button type="submit" size="large" variant="outlined" sx={{ borderRadius: `${1}px`, px: 6, py: 1, backgroundColor: "#00000090" }}>
