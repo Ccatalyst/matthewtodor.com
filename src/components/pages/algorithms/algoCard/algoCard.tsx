@@ -13,7 +13,7 @@ const modalStyle = {
 	bgcolor: "background.paper",
 	border: "2px solid ",
 	boxShadow: 24,
-	p: 12,
+	mr: 3,
 };
 type AlgoCardProps = {
 	name: string;

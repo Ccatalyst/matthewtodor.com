@@ -27,7 +27,7 @@ const Contact = (): JSX.Element => {
 		setReason(event.target.textContent);
 	};
 	return (
-		<Grid component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
+		<Grid container component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
 			<Grid xs={12} mt={3}>
 				<Typography
 					variant="h4"
