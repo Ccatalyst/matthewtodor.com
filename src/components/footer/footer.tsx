@@ -1,17 +1,19 @@
 import React from "react";
-import { Stack, IconButton, Tooltip, tooltipClasses, styled } from "@mui/material";
+import { Stack, IconButton, Tooltip, TooltipProps, tooltipClasses, styled } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { GitHub, LinkedIn, MailOutline, PhoneAndroid, Twitter } from "@mui/icons-material/";
 
-const StyledTooltip = styled(({ className, ...props }) => <Tooltip {...props} arrow classes={{ popper: className }} />)(({ theme }) => ({
-	[`& .${tooltipClasses.arrow}`]: {
-		color: theme.palette.background.default,
-	},
-	[`& .${tooltipClasses.tooltip}`]: {
-		backgroundColor: theme.palette.background.default,
-		color: theme.palette.primary.main,
-	},
-}));
+const StyledTooltip = styled(({ className, ...props }: TooltipProps) => <Tooltip {...props} arrow classes={{ popper: className }} />)(
+	({ theme }) => ({
+		[`& .${tooltipClasses.arrow}`]: {
+			color: theme.palette.background.default,
+		},
+		[`& .${tooltipClasses.tooltip}`]: {
+			backgroundColor: theme.palette.background.default,
+			color: theme.palette.primary.main,
+		},
+	})
+);
 
 const Footer = () => {
 	return (
@@ -27,7 +29,7 @@ const Footer = () => {
 			<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1, border: `${1}px solid #0E9594` }}>
 				<StyledTooltip title="Email" arrow>
 					<a href="mailto:todor.matthew.john@gmail.com" target="_blank" rel="noreferrer">
-						<IconButton fontSize="large" name="Email" aria-label="email">
+						<IconButton name="Email" aria-label="email">
 							<MailOutline color="primary" />
 						</IconButton>
 					</a>
