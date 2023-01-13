@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import projects from "./projects.json";
 import PortfolioCard from "./portfoliocard";
-const Portfolio: React.FC = () => {
+const Portfolio = (): JSX.Element => {
 	return (
 		<Grid container>
 			{projects.map((project, index) => {

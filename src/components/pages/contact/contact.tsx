@@ -21,7 +21,7 @@ const reasons = [
 	},
 ];
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
 	const [reason, setReason] = React.useState<string | null>("");
 	const handleChange = (event: React.ChangeEvent) => {
 		setReason(event.target.textContent);

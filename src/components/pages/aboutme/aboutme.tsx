@@ -4,7 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import "./aboutme.css";
 import Typewriter from "typewriter-effect";
 
-const AboutMe = () => {
+const AboutMe = (): JSX.Element => {
 	return (
 		<Grid container>
 			<Grid xs={12}>

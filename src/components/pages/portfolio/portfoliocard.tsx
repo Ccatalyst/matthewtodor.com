@@ -11,29 +11,28 @@ type CardProps = {
 	github: string;
 };
 
-const PortfolioCard: React.FC<CardProps> = ({ name, body, img, deploy, github }) => {
-	const deployCheck: boolean = deploy === "";
+const PortfolioCard = (cardProps: CardProps): JSX.Element => {
 	return (
 		<Grid xs={12} sm={6} md={4} lg={3} sx={{ p: 2 }}>
 			<Card>
-				<CardMedia component="img" alt={name} height="140" image={img} />
+				<CardMedia component="img" alt={cardProps.name} height="140" image={cardProps.img} />
 				<CardContent>
 					<Typography variant="h5" component="h2">
-						{name}
+						{cardProps.name}
 					</Typography>
 					<Typography variant="body1" paragraph>
-						{body}
+						{cardProps.body}
 					</Typography>
 				</CardContent>
 
-				{deployCheck ? (
+				{!cardProps.deploy ? (
 					""
 				) : (
-					<Button href={deploy} target="_blank" rel="noreferrer">
+					<Button href={cardProps.deploy} target="_blank" rel="noreferrer">
 						Demo
 					</Button>
 				)}
-				<IconButton href={github} target="_blank" rel="noreferrer" aria-label="Github">
+				<IconButton href={cardProps.github} target="_blank" rel="noreferrer" aria-label="Github">
 					<GitHub color="primary" />
 				</IconButton>
 			</Card>

@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import Fingerprint from "../../../../assets/pictures/Fingerprint.png";
 import "./fingerprint.css";
 import Typewriter from "typewriter-effect";
-const FingerPrintMark = () => {
+const FingerPrintMark = (): JSX.Element => {
 	return (
 		<Grid container>
 			<Grid m="auto" xs={12}>

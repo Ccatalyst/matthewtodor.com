@@ -1,5 +1,6 @@
 import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider } from "@mui/material";
-import { React, useState } from "react";
+import React from "react";
+
 import { CodeBlock, monokaiSublime } from "react-code-blocks";
 import "./algoCard.scss";
 
@@ -14,9 +15,16 @@ const modalStyle = {
 	boxShadow: 24,
 	p: 12,
 };
+type AlgoCardProps = {
+	name: string;
+	difficulty: string;
+	code: string;
+	language: string;
+	explanation: string;
+};
 
-const AlgoCard = ({ name, difficulty, code, language, explanation }) => {
-	const [open, setOpen] = useState(false);
+const AlgoCard = (algoCardProps: AlgoCardProps): JSX.Element => {
+	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	return (
@@ -25,21 +33,21 @@ const AlgoCard = ({ name, difficulty, code, language, explanation }) => {
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
 						<Typography variant="h6" align="left" gutterBottom fontFamily="Raleway">
-							{difficulty} Kyu
+							{algoCardProps.difficulty} Kyu
 						</Typography>
 						<Typography variant="h6" align="center">
-							{name}
+							{algoCardProps.name}
 						</Typography>
 						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
 						<Typography align="center" mt={1} mx={0.5} maxHeight={200} overflow="auto" className="explanation">
-							{explanation}
+							{algoCardProps.explanation}
 						</Typography>
 					</CardContent>
 				</CardActionArea>
 			</Card>
-			<Modal open={open} onClose={handleClose} aria-labelledby={name} aria-describedby={name}>
-				<Box style={modalStyle}>
-					<CodeBlock text={code} language={language} wrapLines theme={monokaiSublime} />
+			<Modal open={open} onClose={handleClose} aria-labelledby={algoCardProps.name} aria-describedby={algoCardProps.name}>
+				<Box sx={modalStyle}>
+					<CodeBlock text={algoCardProps.code} language={algoCardProps.language} wrapLines theme={monokaiSublime} />
 				</Box>
 			</Modal>
 		</>
