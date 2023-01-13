@@ -3,7 +3,7 @@ import AboutMe from "../aboutme/aboutme";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import FingerPrintMark from "./fingerprint/fingerprint";
 
-const Home = () => {
+const Home = (): JSX.Element => {
 	return (
 		<Grid container>
 			<Grid xs={11} md={11} sx={{ m: "auto", mt: { xs: 2, sm: 6 } }}>

@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React from "react";
 import { Link, Typography, Box, SpeedDial, SpeedDialAction, useMediaQuery, useTheme, Divider } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { Home, Fingerprint, Description, ContactPage, Construction, Functions } from "@mui/icons-material/";
@@ -6,9 +6,9 @@ import { Link as RouterLink } from "react-router-dom";
 import Banner from "../banner";
 import "./nav.scss";
 
-const Nav = () => {
+const Nav = (): JSX.Element => {
 	// Handling mobile SpeedDial navigation open/close settings
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	const icons = [
@@ -54,7 +54,7 @@ const Nav = () => {
 		},
 	];
 
-	const [navBar, updateNavbar] = useState(false);
+	const [navBar, updateNavbar] = React.useState(false);
 
 	function scrollHandler() {
 		if (window.scrollY >= 10) {
@@ -67,15 +67,13 @@ const Nav = () => {
 	window.addEventListener("scroll", scrollHandler);
 	// checking if the screen width is below the small breakpoint
 	const theme = useTheme();
-	const mobile = useMediaQuery(theme.breakpoints.down("sm"));
 	return (
 		<>
-			{mobile ? (
+			{useMediaQuery(theme.breakpoints.down("sm")) ? (
 				<>
 					<Banner />
 					<Box>
 						<SpeedDial
-							size="small"
 							FabProps={{
 								sx: {
 									bgcolor: "primary.main",
@@ -107,7 +105,7 @@ const Nav = () => {
 					}}
 					className={navBar ? "sticky" : "navbar"}
 				>
-					<Grid item xs={12} sm={7} md={5} lg={4} xl={4}>
+					<Grid xs={12} sm={7} md={5} lg={4} xl={4}>
 						<Typography
 							variant="h2"
 							component="h1"
@@ -127,9 +125,9 @@ const Nav = () => {
 					{/* this container holds the links */}
 					<Grid container xs={12} md={7} lg={8} xl={8} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center", mx: {} }} className="mdNav">
 						{/* empty div, used to push links to the right. bad way to do it, fix later */}
-						<Grid item xs={0} lg={4} xl={7}></Grid>
+						<Grid xs={0} lg={4} xl={7}></Grid>
 						{/* link to portfolio */}
-						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
+						<Grid xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
@@ -143,7 +141,7 @@ const Nav = () => {
 							</Typography>
 						</Grid>
 						{/* link to algos page */}
-						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ minWidth: { xl: 113.3 }, mx: { xl: "auto" } }}>
+						<Grid xs={12} sm={3} lg={2} xl={1} sx={{ minWidth: { xl: 113.3 }, mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
@@ -157,7 +155,7 @@ const Nav = () => {
 							</Typography>
 						</Grid>
 						{/* link to resume */}
-						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
+						<Grid xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
@@ -171,7 +169,7 @@ const Nav = () => {
 							</Typography>
 						</Grid>
 						{/* link to contact form */}
-						<Grid item xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
+						<Grid xs={12} sm={3} lg={2} xl={1} sx={{ mx: { xl: "auto" } }}>
 							<Typography
 								variant="h6"
 								component="p"
@@ -185,7 +183,7 @@ const Nav = () => {
 							</Typography>
 						</Grid>
 					</Grid>
-					<Grid item xs={11} md={12}>
+					<Grid xs={11} md={12}>
 						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
 					</Grid>
 				</Grid>

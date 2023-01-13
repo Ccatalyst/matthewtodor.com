@@ -15,7 +15,7 @@ const StyledTooltip = styled(({ className, ...props }: TooltipProps) => <Tooltip
 	})
 );
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
 	return (
 		<Grid
 			container

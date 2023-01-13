@@ -21,13 +21,13 @@ const reasons = [
 	},
 ];
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
 	const [reason, setReason] = React.useState<string | null>("");
 	const handleChange = (event: React.ChangeEvent) => {
 		setReason(event.target.textContent);
 	};
 	return (
-		<Grid component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
+		<Grid container component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
 			<Grid xs={12} mt={3}>
 				<Typography
 					variant="h4"
