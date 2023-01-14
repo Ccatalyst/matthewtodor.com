@@ -19,7 +19,7 @@ import "@fontsource/roboto-mono";
 import "@fontsource/raleway";
 
 import Particles from "react-particles";
-import { Container, Engine } from "tsparticles-engine";
+import { Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
 import "./App.css";
 const theme = createTheme({
@@ -49,9 +49,6 @@ const theme = createTheme({
 function App() {
 	const particlesInit = useCallback(async (engine: Engine) => {
 		await loadFull(engine);
-	}, []);
-	const particlesLoaded = useCallback(async (container: Container | undefined) => {
-		await console.log(container);
 	}, []);
 
 	return (
@@ -136,7 +133,6 @@ function App() {
 							},
 							detectRetina: true,
 						}}
-						loaded={particlesLoaded}
 						init={particlesInit}
 					/>
 					<Routes>

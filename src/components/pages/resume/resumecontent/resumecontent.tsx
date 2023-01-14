@@ -59,7 +59,7 @@ const marks = new Array(10).fill(null).map((value, index) => ({ value: index }))
 const ResumeContent = (): JSX.Element => {
 	return (
 		<>
-			<Grid sx={{ backgroundColor: "#12121290" }}>
+			<Grid container sx={{ backgroundColor: "#12121290" }}>
 				<Grid container xs={12} mt={6}>
 					<Button
 						size="large"
@@ -78,7 +78,7 @@ const ResumeContent = (): JSX.Element => {
 				{/* EXPERIENCE */}
 				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
 					<Grid xs={12}>
-						<Typography variant="h4" component="h2" gutterBottom color="primary" align="center" py={4}>
+						<Typography variant="h4" component="h2" gutterBottom color="primary" align="center" py={3}>
 							Experience
 						</Typography>
 					</Grid>
@@ -143,7 +143,7 @@ const ResumeContent = (): JSX.Element => {
 					</Grid>
 					{/* EXTRACURRICULAR ACTIVITIES */}
 					<Grid xs={12}>
-						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
+						<Typography variant="h4" gutterBottom color="primary" align="center" py={3}>
 							Extracurricular Activities
 						</Typography>
 					</Grid>
@@ -196,7 +196,7 @@ const ResumeContent = (): JSX.Element => {
 				{/* SKILLSET */}
 				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
 					<Grid xs={12}>
-						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
+						<Typography variant="h4" gutterBottom color="primary" align="center" py={3}>
 							Skillset
 						</Typography>
 					</Grid>
@@ -223,6 +223,14 @@ const ResumeContent = (): JSX.Element => {
 							</Grid>
 							<Grid xs={12} lg={8}>
 								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
+							</Grid>
+							<Grid xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+									Typescript
+								</Typography>
+							</Grid>
+							<Grid xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
@@ -393,7 +401,7 @@ const ResumeContent = (): JSX.Element => {
 					</Grid>
 					{/* CERTIFICATES */}
 					<Grid xs={12}>
-						<Typography variant="h4" gutterBottom color="primary" align="center" py={4}>
+						<Typography variant="h4" gutterBottom color="primary" align="center" py={3}>
 							Certificates
 						</Typography>
 					</Grid>
