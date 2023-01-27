@@ -2,7 +2,30 @@ import React from "react";
 import { Button, MenuItem, TextField, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
-const reasons = [
+type Reasons = [
+	{
+		value: string;
+		label: string;
+	},
+	{
+		value: string;
+		label: string;
+	},
+	{
+		value: string;
+		label: string;
+	},
+	{
+		value: string;
+		label: string;
+	}
+];
+
+const reasons: Reasons = [
+	// {
+	// 	value: "Default",
+	// 	label: "Select...",
+	// },
 	{
 		value: "Regarding an open position",
 		label: "Regarding an open position",
@@ -21,11 +44,32 @@ const reasons = [
 	},
 ];
 
+type Document = {
+	name: string;
+	email: string;
+	company: string;
+	reason: string;
+	details: string;
+};
+
 const Contact = (): JSX.Element => {
-	const [reason, setReason] = React.useState<string | null>("");
+	const [formData, setFormData] = React.useState<Document>({
+		name: "",
+		email: "",
+		company: "",
+		reason: reasons[0].value,
+		details: "",
+	});
 	const handleChange = (event: React.ChangeEvent) => {
-		setReason(event.target.textContent);
+		let value = (event.target as HTMLInputElement).value;
+		const name = (event.target as HTMLInputElement).id;
+
+		setFormData((prevState) => ({
+			...prevState,
+			[name]: value,
+		}));
 	};
+	console.log(formData);
 	return (
 		<Grid container component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
 			<Grid xs={12} mt={3}>
@@ -42,13 +86,13 @@ const Contact = (): JSX.Element => {
 				</Typography>
 			</Grid>
 			<Grid mt={3} xs={11} md={5} mx="auto">
-				<TextField required id="name" label="Name" helperText="Required" variant="standard" fullWidth color="primary" />
+				<TextField required id="name" label="Name" helperText="Required" variant="standard" onChange={handleChange} fullWidth color="primary" />
 			</Grid>
 			<Grid mt={3} xs={11} md={5} mx="auto">
-				<TextField required id="email" label="Email" helperText="Required" variant="standard" fullWidth />
+				<TextField required id="email" label="Email" helperText="Required" variant="standard" onChange={handleChange} fullWidth />
 			</Grid>
 			<Grid mt={3} xs={11} md={5} mx="auto">
-				<TextField id="company" label="Company" helperText="" variant="standard" fullWidth />
+				<TextField id="company" label="Company" helperText="" variant="standard" onChange={handleChange} fullWidth />
 			</Grid>
 			<Grid mt={3} xs={11} md={5} mx="auto">
 				<TextField
@@ -57,10 +101,11 @@ const Contact = (): JSX.Element => {
 					id="reason"
 					label="Reason"
 					helperText="Why are you reaching out?"
-					value={reason}
 					onChange={handleChange}
+					value={formData.reason}
 					variant="standard"
 					fullWidth
+					SelectProps={{ native: false }}
 				>
 					{reasons.map((option) => (
 						<MenuItem key={option.value} value={option.value}>
@@ -70,7 +115,18 @@ const Contact = (): JSX.Element => {
 				</TextField>
 			</Grid>
 			<Grid mt={3} xs={11} md={10} mx={{ xs: "auto" }}>
-				<TextField required id="details" label="Details" helperText="Required" variant="standard" fullWidth multiline rows={3} />
+				<TextField
+					required
+					id="details"
+					label="Details"
+					helperText="Required"
+					variant="standard"
+					value={formData.details}
+					onChange={handleChange}
+					fullWidth
+					multiline
+					rows={3}
+				/>
 			</Grid>
 
 			<Grid mt={3} xs={11} md={10} height={15} mx={{ xs: "auto" }}></Grid>
