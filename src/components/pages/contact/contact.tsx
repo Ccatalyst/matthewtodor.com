@@ -1,31 +1,52 @@
 import React from "react";
-import { Button, MenuItem, TextField, Typography } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
-const reasons = [
-	{
-		value: "Regarding an open position",
-		label: "Regarding an open position",
-	},
-	{
-		value: "Regarding collaborating on a project",
-		label: "Regarding collaborating on a project",
-	},
-	{
-		value: "Curious about a current project",
-		label: "Curious about a current project",
-	},
-	{
-		value: "Other",
-		label: "Other (specify in details)",
-	},
-];
+// const reasons: Array<Reasons> = [
+// 	{
+// 		value: "Regarding an open position",
+// 		label: "Regarding an open position",
+// 	},
+// 	{
+// 		value: "Regarding collaborating on a project",
+// 		label: "Regarding collaborating on a project",
+// 	},
+// 	{
+// 		value: "Curious about a current project",
+// 		label: "Curious about a current project",
+// 	},
+// 	{
+// 		value: "Other",
+// 		label: "Other (specify in details)",
+// 	},
+// ];
+
+type Document = {
+	name: string;
+	email: string;
+	company: string;
+	reason: string;
+	details: string;
+};
 
 const Contact = (): JSX.Element => {
-	const [reason, setReason] = React.useState<string | null>("");
+	const [formData, setFormData] = React.useState<Document>({
+		name: "",
+		email: "",
+		company: "",
+		reason: "",
+		details: "",
+	});
 	const handleChange = (event: React.ChangeEvent) => {
-		setReason(event.target.textContent);
+		const value = (event.target as HTMLInputElement).value;
+		const name = (event.target as HTMLInputElement).id;
+
+		setFormData((prevState) => ({
+			...prevState,
+			[name]: value,
+		}));
 	};
+	console.log(formData);
 	return (
 		<Grid container component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
 			<Grid xs={12} mt={3}>
@@ -42,35 +63,71 @@ const Contact = (): JSX.Element => {
 				</Typography>
 			</Grid>
 			<Grid mt={3} xs={11} md={5} mx="auto">
-				<TextField required id="name" label="Name" helperText="Required" variant="standard" fullWidth color="primary" />
-			</Grid>
-			<Grid mt={3} xs={11} md={5} mx="auto">
-				<TextField required id="email" label="Email" helperText="Required" variant="standard" fullWidth />
-			</Grid>
-			<Grid mt={3} xs={11} md={5} mx="auto">
-				<TextField id="company" label="Company" helperText="" variant="standard" fullWidth />
+				<TextField
+					required
+					id="name"
+					label="Name"
+					helperText="Required"
+					variant="standard"
+					onChange={handleChange}
+					fullWidth
+					color="primary"
+					InputLabelProps={{ shrink: !!formData.name }}
+					value={formData.name}
+				/>
 			</Grid>
 			<Grid mt={3} xs={11} md={5} mx="auto">
 				<TextField
 					required
-					select
+					id="email"
+					label="Email"
+					helperText="Required"
+					variant="standard"
+					onChange={handleChange}
+					fullWidth
+					InputLabelProps={{ shrink: !!formData.email }}
+					value={formData.email}
+				/>
+			</Grid>
+			<Grid mt={3} xs={11} md={5} mx="auto">
+				<TextField
+					id="company"
+					label="Company"
+					helperText=""
+					variant="standard"
+					onChange={handleChange}
+					fullWidth
+					InputLabelProps={{ shrink: !!formData.company }}
+					value={formData.company}
+				/>
+			</Grid>
+			<Grid mt={3} xs={11} md={5} mx="auto">
+				<TextField
+					required
 					id="reason"
 					label="Reason"
 					helperText="Why are you reaching out?"
-					value={reason}
 					onChange={handleChange}
 					variant="standard"
 					fullWidth
-				>
-					{reasons.map((option) => (
-						<MenuItem key={option.value} value={option.value}>
-							{option.label}
-						</MenuItem>
-					))}
-				</TextField>
+					InputLabelProps={{ shrink: !!formData.reason }}
+					value={formData.reason}
+				></TextField>
 			</Grid>
 			<Grid mt={3} xs={11} md={10} mx={{ xs: "auto" }}>
-				<TextField required id="details" label="Details" helperText="Required" variant="standard" fullWidth multiline rows={3} />
+				<TextField
+					required
+					id="details"
+					label="Details"
+					helperText="Required"
+					variant="standard"
+					onChange={handleChange}
+					fullWidth
+					multiline
+					rows={3}
+					InputLabelProps={{ shrink: !!formData.details }}
+					value={formData.details}
+				/>
 			</Grid>
 
 			<Grid mt={3} xs={11} md={10} height={15} mx={{ xs: "auto" }}></Grid>

@@ -1,6 +1,5 @@
 import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider } from "@mui/material";
-import React from "react";
-
+import { useState } from "react";
 import { CodeBlock, monokaiSublime } from "react-code-blocks";
 import "./algoCard.scss";
 
@@ -23,8 +22,8 @@ type AlgoCardProps = {
 	explanation: string;
 };
 
-const AlgoCard = (algoCardProps: AlgoCardProps): JSX.Element => {
-	const [open, setOpen] = React.useState(false);
+const AlgoCard = (props: AlgoCardProps): JSX.Element => {
+	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen(true);
 	const handleClose = () => setOpen(false);
 	return (
@@ -33,21 +32,21 @@ const AlgoCard = (algoCardProps: AlgoCardProps): JSX.Element => {
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
 						<Typography variant="h6" align="left" gutterBottom fontFamily="Raleway">
-							{algoCardProps.difficulty} Kyu
+							{props.difficulty} Kyu
 						</Typography>
 						<Typography variant="h6" align="center">
-							{algoCardProps.name}
+							{props.name}
 						</Typography>
 						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
 						<Typography align="center" mt={1} mx={0.5} maxHeight={200} overflow="auto" className="explanation">
-							{algoCardProps.explanation}
+							{props.explanation}
 						</Typography>
 					</CardContent>
 				</CardActionArea>
 			</Card>
-			<Modal open={open} onClose={handleClose} aria-labelledby={algoCardProps.name} aria-describedby={algoCardProps.name}>
+			<Modal open={open} onClose={handleClose} aria-labelledby={props.name} aria-describedby={props.name}>
 				<Box sx={modalStyle}>
-					<CodeBlock text={algoCardProps.code} language={algoCardProps.language} wrapLines theme={monokaiSublime} />
+					<CodeBlock text={props.code} language={props.language} wrapLines theme={monokaiSublime} />
 				</Box>
 			</Modal>
 		</>
