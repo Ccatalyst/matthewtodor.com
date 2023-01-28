@@ -2,7 +2,7 @@
 
 The deployed version of this site can be found at [www.matthewtodor.com](https://www.matthewtodor.com)
 
-Currently in the process of converting the site to typescript as additional practice with the language.
+The site has recently been converted to typescript as additional practice with the language.
 
 The original intention of this app was to show my proficiency in React by building a React portfolio website as a homework project. It's new role is similar.
 
