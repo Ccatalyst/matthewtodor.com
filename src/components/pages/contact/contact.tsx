@@ -36,7 +36,13 @@ const Contact = (): JSX.Element => {
 
 		try {
 			await emailjs.send("portoflio_site", "contact_form", emailParams, "ypNyTND79NhxGgTWZ");
-			alert("Email sent");
+			setFormData({
+				name: "",
+				email: "",
+				company: "",
+				reason: "",
+				details: "",
+			});
 		} catch (err) {
 			console.error("Error:", err);
 		}
