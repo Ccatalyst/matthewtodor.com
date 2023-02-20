@@ -144,24 +144,24 @@ const ResumeContent = (): JSX.Element => {
 					{/* EXTRACURRICULAR ACTIVITIES */}
 					<Grid xs={12}>
 						<Typography variant="h4" gutterBottom color="primary" align="center" py={3}>
-							Extracurricular Activities
+							Testimonials
 						</Typography>
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
 						<Grid sm={10} m="auto">
 							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
-								Golf
+								Darin Palombo
 							</Typography>
 						</Grid>
 						<Grid container component="article">
 							<Grid md={9} mx="auto">
-								<Typography variant="body1" fontSize={16} px={1} sx={{ listStyle: "none" }} gutterBottom>
-									Consistent focus on personal improvement, both physically and mentally, with a focus on repetition and routine.
-								</Typography>
-							</Grid>
-							<Grid md={9} mx="auto">
-								<Typography variant="body1" fontSize={16} px={1} sx={{ listStyle: "none" }} gutterBottom>
-									Frequently reviewing recordings and notes from recent performances, increasing learning speed and personal performance.
+								<Typography variant="body1" fontSize={16} pb={2} px={1} sx={{ listStyle: "none" }}>
+									"From the very beginning of the Bootcamp I had serious doubts as to how I could possibly overcome the challenge that laid in front
+									of me. Even though I chose to take the course, once it started I had no confidence that I was "smart enough" to get through it. This
+									is where Matt came in and lifted me and many of my classmates from the dark places our minds can go when stuck in a mental dead-end.
+									Firstly, he did this by providing fundamental explanations and examples on the concepts and materials we were going over any given
+									day. Secondly, aside from providing first class technical help he was a huge motivator for the entire class. His soft skills are top
+									tier, Matthew's attitude, personality and humor is what every company needs to cultivate an amazing team environment!"
 								</Typography>
 							</Grid>
 						</Grid>
@@ -169,25 +169,20 @@ const ResumeContent = (): JSX.Element => {
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
 						<Grid sm={10} m="auto">
 							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
-								World of Warcraft
+								Maximilian Gibes
 							</Typography>
 						</Grid>
 						<Grid container component="article">
 							<Grid md={9} mx="auto">
-								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
-									Weekly scheduled collaboration with between 19-27 other people, coordinating movement and actions in a precise manner to accomplish
-									our goals.
-								</Typography>
-							</Grid>
-							<Grid md={9} mx="auto">
-								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
-									Quick corrections when mistakes are made to lower the time spent on any single challenge.
-								</Typography>
-							</Grid>
-							<Grid md={9} mx="auto">
-								<Typography variant="body1" fontSize={16} gutterBottom px={1} sx={{ listStyle: "none" }}>
-									Requires communication across a variety of mediums to keep up to date on the status of various goals and what contributors can do to
-									help accomplish the next endeavor.
+								<Typography variant="body1" fontSize={16} pb={2} px={1} sx={{ listStyle: "none" }}>
+									"First starting this boot camp, I wasn’t really sure what to expect. My first homework assignment I got recked. As you all know
+									lmao. Matt, helped me out and put central grading in their place. Throughout the course of the boot camp, Matt continuously showed
+									support to me and many other students. I can’t think of a time where Matt was like, “...figure it out yourself”. Although he
+									probably spent to much time on us haha. Like a caring parent, he was there for all his children. When you first joined the discord I
+									was like ... our privacy is a little exposed because we have a TA in here. I’m really happy you were as involved as you were. I’m
+									happy to have had you around with us in the discord. Towards the end you became more of a friend than someone to be intimated by.
+									How you helped me on my first assignment you also helped me on my last. Thanks for everything Matt. Best TA NA, EU, KR, RU, bottom
+									and top half of the hemisphere.""
 								</Typography>
 							</Grid>
 						</Grid>
