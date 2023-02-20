@@ -11,6 +11,8 @@ interface Document {
 	details: string;
 }
 
+// TODO: When a field is deselected and is blank, an error is presented to the user using the error prop of the textfield component. If the required fields are not filled, the email button is disabled.
+
 const Contact = (): JSX.Element => {
 	const [formData, setFormData] = React.useState<Document>({
 		name: "",
@@ -19,6 +21,8 @@ const Contact = (): JSX.Element => {
 		reason: "",
 		details: "",
 	});
+	const [errors, setErrors] = React.useState({} as any);
+
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = (event.target as HTMLInputElement).value;
 		const name = (event.target as HTMLInputElement).id;
@@ -71,7 +75,7 @@ const Contact = (): JSX.Element => {
 								required
 								id="name"
 								label="Name"
-								helperText="Required"
+								helperText={formData.name === "" ? "Empty field!" : ""}
 								variant="standard"
 								onChange={handleChange}
 								fullWidth
@@ -85,7 +89,7 @@ const Contact = (): JSX.Element => {
 								required
 								id="email"
 								label="Email"
-								helperText="Required"
+								helperText=""
 								variant="standard"
 								onChange={handleChange}
 								fullWidth
@@ -110,7 +114,7 @@ const Contact = (): JSX.Element => {
 								required
 								id="reason"
 								label="Reason"
-								helperText="Why are you reaching out?"
+								helperText=""
 								onChange={handleChange}
 								variant="standard"
 								fullWidth
@@ -123,7 +127,7 @@ const Contact = (): JSX.Element => {
 								required
 								id="details"
 								label="Details"
-								helperText="Required"
+								helperText=""
 								variant="standard"
 								onChange={handleChange}
 								fullWidth
