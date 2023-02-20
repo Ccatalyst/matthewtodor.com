@@ -9,12 +9,14 @@ interface Document {
 	company: string;
 	reason: string;
 	details: string;
-	nameBoolean: boolean;
-	emailBoolean: boolean;
-	reasonBoolean: boolean;
-	detailsBoolean: boolean;
 }
 
+interface DocumentErrors {
+	name: string;
+	email: string;
+	reason: string;
+	details: string;
+}
 // TODO: When a field is deselected and is blank, an error is presented to the user using the error prop of the textfield component. If the required fields are not filled, the email button is disabled.
 // FIX: the error prop is checked on mounting, so the value needs to be false on page load, but checked if a required input loses focus and is still empty. I think the onBlur can work, but it needs more looking into because of the typescript validation that's running. Right now the check is happening in the handleChange function, which is too much, and is looking for the opposite of the error prop on the component.
 
@@ -25,13 +27,22 @@ const Contact = (): JSX.Element => {
 		company: "",
 		reason: "",
 		details: "",
-		nameBoolean: false,
-		emailBoolean: false,
-		reasonBoolean: false,
-		detailsBoolean: false,
 	});
-	const [buttonState, setButtonState] = React.useState(true);
 
+	const [formErrors, setFormErrors] = React.useState<DocumentErrors>({
+		name: "",
+		email: "",
+		reason: "",
+		details: "",
+	});
+
+	const handleBlur = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+		const value = (event.target as HTMLTextAreaElement).value;
+		const name = (event.target as HTMLTextAreaElement).id;
+		if (value.trim() === "") {
+			setFormErrors({ ...formErrors, [name]: "this field is required!" });
+		}
+	};
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = (event.target as HTMLInputElement).value;
 		const name = (event.target as HTMLInputElement).id;
@@ -43,10 +54,6 @@ const Contact = (): JSX.Element => {
 			[name]: value,
 			[errorBoolean]: errorValue,
 		}));
-		if (formData.nameBoolean === true && formData.emailBoolean === true && formData.reasonBoolean === true && formData.detailsBoolean === true) {
-			setButtonState(false);
-		}
-		console.log(formData.nameBoolean, formData.emailBoolean, formData.reasonBoolean, formData.detailsBoolean, buttonState);
 	};
 
 	const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -62,10 +69,6 @@ const Contact = (): JSX.Element => {
 				company: "",
 				reason: "",
 				details: "",
-				nameBoolean: false,
-				emailBoolean: false,
-				reasonBoolean: false,
-				detailsBoolean: false,
 			});
 		} catch (err) {
 			console.error("Error:", err);
@@ -95,14 +98,14 @@ const Contact = (): JSX.Element => {
 								required
 								id="name"
 								label="Name"
-								helperText={formData.nameBoolean ? "This field is required" : ""}
+								helperText={formData.name ? "This field is required" : ""}
 								variant="standard"
 								onChange={handleChange}
 								fullWidth
 								color="primary"
 								InputLabelProps={{ shrink: !!formData.name }}
 								value={formData.name}
-								error={formData.nameBoolean}
+								error={formData.name}
 							/>
 						</Grid>
 						<Grid mt={3} xs={11} md={5} mx="auto">
@@ -110,13 +113,13 @@ const Contact = (): JSX.Element => {
 								required
 								id="email"
 								label="Email"
-								helperText={formData.emailBoolean ? "This field is required" : ""}
+								helperText={formData.email ? "This field is required" : ""}
 								variant="standard"
 								onChange={handleChange}
 								fullWidth
 								InputLabelProps={{ shrink: !!formData.email }}
 								value={formData.email}
-								error={formData.emailBoolean}
+								error={formData.email}
 							/>
 						</Grid>
 						<Grid mt={3} xs={11} md={5} mx="auto">
@@ -136,13 +139,13 @@ const Contact = (): JSX.Element => {
 								required
 								id="reason"
 								label="Reason"
-								helperText={formData.reasonBoolean ? "This field is required" : ""}
+								helperText={formData.reason ? "This field is required" : ""}
 								onChange={handleChange}
 								variant="standard"
 								fullWidth
 								InputLabelProps={{ shrink: !!formData.reason }}
 								value={formData.reason}
-								error={formData.reasonBoolean}
+								error={formData.reason}
 							></TextField>
 						</Grid>
 						<Grid mt={3} xs={11} md={10} mx={{ xs: "auto" }}>
@@ -150,7 +153,7 @@ const Contact = (): JSX.Element => {
 								required
 								id="details"
 								label="Details"
-								helperText={formData.detailsBoolean ? "This field is required" : ""}
+								helperText={formData.details ? "This field is required" : ""}
 								variant="standard"
 								onChange={handleChange}
 								fullWidth
@@ -158,7 +161,7 @@ const Contact = (): JSX.Element => {
 								rows={3}
 								InputLabelProps={{ shrink: !!formData.details }}
 								value={formData.details}
-								error={formData.detailsBoolean}
+								error={formData.details}
 							/>
 						</Grid>
 						<Grid mt={3} xs={11} md={10} height={15} mx={{ xs: "auto" }}></Grid>
