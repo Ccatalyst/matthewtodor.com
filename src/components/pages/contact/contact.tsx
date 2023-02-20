@@ -50,7 +50,7 @@ const Contact = (): JSX.Element => {
 			if (formData[name] === "") {
 				setFormErrors({ ...formErrors, [name]: "This field is required!" });
 			} else {
-				if (name === "email" && !formData[name].match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+				if (name === "email" && !formData[name].match(/^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/)) {
 					setFormErrors({ ...formErrors, [name]: "This is not a valid email address" });
 				} else {
 					setFormErrors({ ...formErrors, [name]: "" });
@@ -86,9 +86,15 @@ const Contact = (): JSX.Element => {
 			console.error("Error:", err);
 		}
 	};
+
 	const isButtonDisabled = requiredFields.some((fieldName) => {
-		return formData[fieldName].trim() === "";
+		if (!formData.email.match(/^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/)) {
+			return true;
+		} else {
+			return formData[fieldName].trim() === "";
+		}
 	});
+
 	return (
 		<Grid container component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
 			<Grid xs={12} mt={3}>
