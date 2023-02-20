@@ -6,7 +6,7 @@ import emailjs from "@emailjs/browser";
 interface Document {
 	name: string;
 	email: string;
-	company: string;
+	company?: string;
 	reason: string;
 	details: string;
 }
@@ -14,12 +14,14 @@ interface Document {
 interface DocumentErrors {
 	name: string;
 	email: string;
+	company: string;
 	reason: string;
 	details: string;
 }
-// TODO: When a field is deselected and is blank, an error is presented to the user using the error prop of the textfield component. If the required fields are not filled, the email button is disabled.
-// FIX: the error prop is checked on mounting, so the value needs to be false on page load, but checked if a required input loses focus and is still empty. I think the onBlur can work, but it needs more looking into because of the typescript validation that's running. Right now the check is happening in the handleChange function, which is too much, and is looking for the opposite of the error prop on the component.
 
+type RequiredFields = "name" | "email" | "reason" | "details";
+
+// FIX: because the isButtonDisabled function is only checking to see if the formErrors state isn't empty, it's enabling even if the email input doesn't have a valid email address.
 const Contact = (): JSX.Element => {
 	const [formData, setFormData] = React.useState<Document>({
 		name: "",
@@ -32,27 +34,37 @@ const Contact = (): JSX.Element => {
 	const [formErrors, setFormErrors] = React.useState<DocumentErrors>({
 		name: "",
 		email: "",
+		company: "",
 		reason: "",
 		details: "",
 	});
 
-	const handleBlur = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-		const value = (event.target as HTMLTextAreaElement).value;
-		const name = (event.target as HTMLTextAreaElement).id;
-		if (value.trim() === "") {
-			setFormErrors({ ...formErrors, [name]: "this field is required!" });
+	const requiredFields: RequiredFields[] = ["name", "email", "reason", "details"];
+
+	const handleBlur = (event: React.FocusEvent<HTMLTextAreaElement>) => {
+		const name = event.target.id as keyof Document;
+		if (name === "company") {
+			return;
+		}
+		if (requiredFields.includes(name)) {
+			if (formData[name] === "") {
+				setFormErrors({ ...formErrors, [name]: "This field is required!" });
+			} else {
+				if (name === "email" && !formData[name].match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
+					setFormErrors({ ...formErrors, [name]: "This is not a valid email address" });
+				} else {
+					setFormErrors({ ...formErrors, [name]: "" });
+				}
+			}
 		}
 	};
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = (event.target as HTMLInputElement).value;
 		const name = (event.target as HTMLInputElement).id;
-		const errorBoolean = name + "Boolean";
-		const errorValue = value === "";
 
 		setFormData((prevState) => ({
 			...prevState,
 			[name]: value,
-			[errorBoolean]: errorValue,
 		}));
 	};
 
@@ -74,7 +86,9 @@ const Contact = (): JSX.Element => {
 			console.error("Error:", err);
 		}
 	};
-
+	const isButtonDisabled = requiredFields.some((fieldName) => {
+		return formData[fieldName].trim() === "";
+	});
 	return (
 		<Grid container component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
 			<Grid xs={12} mt={3}>
@@ -98,14 +112,15 @@ const Contact = (): JSX.Element => {
 								required
 								id="name"
 								label="Name"
-								helperText={formData.name ? "This field is required" : ""}
+								helperText={formErrors.name}
 								variant="standard"
 								onChange={handleChange}
+								onBlur={handleBlur}
 								fullWidth
 								color="primary"
 								InputLabelProps={{ shrink: !!formData.name }}
 								value={formData.name}
-								error={formData.name}
+								error={!!formErrors.name}
 							/>
 						</Grid>
 						<Grid mt={3} xs={11} md={5} mx="auto">
@@ -113,13 +128,15 @@ const Contact = (): JSX.Element => {
 								required
 								id="email"
 								label="Email"
-								helperText={formData.email ? "This field is required" : ""}
+								helperText={formErrors.email}
+								type="email"
 								variant="standard"
 								onChange={handleChange}
+								onBlur={handleBlur}
 								fullWidth
 								InputLabelProps={{ shrink: !!formData.email }}
 								value={formData.email}
-								error={formData.email}
+								error={!!formErrors.email}
 							/>
 						</Grid>
 						<Grid mt={3} xs={11} md={5} mx="auto">
@@ -129,6 +146,7 @@ const Contact = (): JSX.Element => {
 								helperText=""
 								variant="standard"
 								onChange={handleChange}
+								onBlur={handleBlur}
 								fullWidth
 								InputLabelProps={{ shrink: !!formData.company }}
 								value={formData.company}
@@ -139,29 +157,31 @@ const Contact = (): JSX.Element => {
 								required
 								id="reason"
 								label="Reason"
-								helperText={formData.reason ? "This field is required" : ""}
+								helperText={formErrors.reason}
 								onChange={handleChange}
+								onBlur={handleBlur}
 								variant="standard"
 								fullWidth
 								InputLabelProps={{ shrink: !!formData.reason }}
 								value={formData.reason}
-								error={formData.reason}
-							></TextField>
+								error={!!formErrors.reason}
+							/>
 						</Grid>
 						<Grid mt={3} xs={11} md={10} mx={{ xs: "auto" }}>
 							<TextField
 								required
 								id="details"
 								label="Details"
-								helperText={formData.details ? "This field is required" : ""}
+								helperText={formErrors.details}
 								variant="standard"
 								onChange={handleChange}
+								onBlur={handleBlur}
 								fullWidth
 								multiline
 								rows={3}
 								InputLabelProps={{ shrink: !!formData.details }}
 								value={formData.details}
-								error={formData.details}
+								error={!!formErrors.details}
 							/>
 						</Grid>
 						<Grid mt={3} xs={11} md={10} height={15} mx={{ xs: "auto" }}></Grid>
@@ -170,7 +190,7 @@ const Contact = (): JSX.Element => {
 								type="submit"
 								size="large"
 								variant="outlined"
-								disabled={buttonState}
+								disabled={isButtonDisabled}
 								sx={{ borderRadius: `${1}px`, px: 6, py: 1, backgroundColor: "#00000090" }}
 							>
 								Send
