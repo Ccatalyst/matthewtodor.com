@@ -28,39 +28,29 @@ const Footer = (): JSX.Element => {
 		>
 			<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1, border: `${1}px solid #0E9594` }}>
 				<StyledTooltip title="Email" arrow>
-					<a href="mailto:todor.matthew.john@gmail.com" target="_blank" rel="noreferrer">
-						<IconButton name="Email" aria-label="email">
-							<MailOutline color="primary" />
-						</IconButton>
-					</a>
+					<IconButton aria-label="email" href="mailto:todor.matthew.john@gmail.com" target="_blank" rel="noreferrer">
+						<MailOutline color="primary" />
+					</IconButton>
 				</StyledTooltip>
 				<StyledTooltip title="Github" arrow>
-					<a href="https://github.com/Ccatalyst" target="_blank" rel="noreferrer">
-						<IconButton name="Github" aria-label="github">
-							<GitHub color="primary" />
-						</IconButton>
-					</a>
+					<IconButton aria-label="github" href="https://github.com/Ccatalyst" target="_blank" rel="noreferrer">
+						<GitHub color="primary" />
+					</IconButton>
 				</StyledTooltip>
 				<StyledTooltip title="LinkedIn" arrow>
-					<a href="https://www.linkedin.com/in/matthew-todor-a9185062/" target="_blank" rel="noreferrer">
-						<IconButton name="LinkedIn" aria-label="linkedin">
-							<LinkedIn color="primary" />
-						</IconButton>
-					</a>
+					<IconButton aria-label="linkedin" href="https://www.linkedin.com/in/matthew-todor-a9185062/" target="_blank" rel="noreferrer">
+						<LinkedIn color="primary" />
+					</IconButton>
 				</StyledTooltip>
 				<StyledTooltip title="Twitter" arrow>
-					<a href="https://twitter.com/Ccatalysttt" target="_blank" rel="noreferrer">
-						<IconButton name="Twitter" aria-label="twitter">
-							<Twitter color="primary" />
-						</IconButton>
-					</a>
+					<IconButton aria-label="twitter" href="https://twitter.com/Ccatalysttt" target="_blank" rel="noreferrer">
+						<Twitter color="primary" />
+					</IconButton>
 				</StyledTooltip>
 				<StyledTooltip title="Phone" arrow>
-					<a href="tel:303-489-5742">
-						<IconButton name="Phone" aria-label="phone">
-							<PhoneAndroid color="primary" />
-						</IconButton>
-					</a>
+					<IconButton aria-label="phone" href="tel:303-489-5742">
+						<PhoneAndroid color="primary" />
+					</IconButton>
 				</StyledTooltip>
 			</Stack>
 		</Grid>
