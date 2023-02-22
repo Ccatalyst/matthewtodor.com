@@ -16,7 +16,7 @@ const modalStyle = {
 };
 type AlgoCardProps = {
 	name: string;
-	difficulty: string;
+	difficulty: number;
 	code: string;
 	language: string;
 	explanation: string;

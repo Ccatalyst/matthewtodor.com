@@ -1,7 +1,7 @@
 const algorithmData = [
 	{
 		name: "Multiply",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation: "Given two integers, multiply them and return the result",
 		code: `function multiply(a, b) {
@@ -11,7 +11,7 @@ const algorithmData = [
 	},
 	{
 		name: "Reversed Strings",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation: "Given a string, return it reversed.",
 		code: `function solution(str){
@@ -24,7 +24,7 @@ return str.split("").reverse().join("");
 	},
 	{
 		name: "Sum Arrays",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation:
 			"A function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.",
@@ -34,7 +34,7 @@ return numbers.reduce((p, c) => p + c, 0);
 	},
 	{
 		name: "String Repeat",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation: "Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.",
 		code: `function repeatStr (n, s) {
@@ -49,7 +49,7 @@ return numbers.reduce((p, c) => p + c, 0);
 	},
 	{
 		name: "Is he going to survive?",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation:
 			"A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with by powerful dragons! Each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's going to grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive? Return True if yes, False otherwise",
@@ -59,7 +59,7 @@ return numbers.reduce((p, c) => p + c, 0);
 	},
 	{
 		name: "Are you Playing Banjo?",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation: `Create a function which answers the question "Are you playing banjo?".
 			If your name starts with the letter "R" or lower case "r", you are playing banjo!			
@@ -78,7 +78,7 @@ return name + " does not play banjo";
 	},
 	{
 		name: "Even or Odd",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation: `Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.`,
 		code: `function even_or_odd(number) {
@@ -91,7 +91,7 @@ return name + " does not play banjo";
 	},
 	{
 		name: "Keep Hydrated",
-		difficulty: "8",
+		difficulty: 8,
 		language: "javascript",
 		explanation: `Nathan loves cycling.
 
@@ -104,7 +104,7 @@ return name + " does not play banjo";
 	},
 	{
 		name: "Are they the 'Same'?",
-		difficulty: "6",
+		difficulty: 6,
 		language: "javascript",
 		explanation: `Given two arrays, write a function that checks whether the two arrays have the 'same' elements, with the same multiplicities.`,
 		code: `function comp(array1, array2){
