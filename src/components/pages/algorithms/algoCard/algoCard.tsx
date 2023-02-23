@@ -1,8 +1,8 @@
-import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider } from "@mui/material";
+import { Typography, Card, CardContent, CardActionArea, Modal, Box, Divider, IconButton } from "@mui/material";
+import LaunchIcon from "@mui/icons-material/Launch";
 import { useState } from "react";
 import { CodeBlock, monokaiSublime } from "react-code-blocks";
 import "./algoCard.scss";
-
 const modalStyle = {
 	position: "absolute",
 	top: "50%",
@@ -16,10 +16,12 @@ const modalStyle = {
 };
 type AlgoCardProps = {
 	name: string;
-	difficulty: string;
+	difficulty: number;
 	code: string;
 	language: string;
 	explanation: string;
+	source: string;
+	url: string;
 };
 
 const AlgoCard = (props: AlgoCardProps): JSX.Element => {
@@ -28,12 +30,13 @@ const AlgoCard = (props: AlgoCardProps): JSX.Element => {
 	const handleClose = () => setOpen(false);
 	return (
 		<>
-			<Card sx={{ backgroundColor: "#12121299", m: 2 }}>
+			<Card elevation={2} sx={{ backgroundColor: "#121212E6", m: 1.5 }}>
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
 						<Typography variant="h6" align="left" gutterBottom fontFamily="Raleway">
 							{props.difficulty} Kyu
 						</Typography>
+
 						<Typography variant="h6" align="center">
 							{props.name}
 						</Typography>
@@ -47,6 +50,12 @@ const AlgoCard = (props: AlgoCardProps): JSX.Element => {
 			<Modal open={open} onClose={handleClose} aria-labelledby={props.name} aria-describedby={props.name}>
 				<Box sx={modalStyle}>
 					<CodeBlock text={props.code} language={props.language} wrapLines theme={monokaiSublime} />
+					<CardActionArea href={props.url} target="_blank" rel="noreferrer">
+						<IconButton>
+							<LaunchIcon />
+						</IconButton>
+						<Typography variant="caption">View the algorithm on {props.source}</Typography>
+					</CardActionArea>
 				</Box>
 			</Modal>
 		</>

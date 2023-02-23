@@ -21,7 +21,6 @@ interface DocumentErrors {
 
 type RequiredFields = "name" | "email" | "reason" | "details";
 
-// FIX: because the isButtonDisabled function is only checking to see if the formErrors state isn't empty, it's enabling even if the email input doesn't have a valid email address.
 const Contact = (): JSX.Element => {
 	const [formData, setFormData] = React.useState<Document>({
 		name: "",
