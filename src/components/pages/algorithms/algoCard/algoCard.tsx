@@ -30,7 +30,7 @@ const AlgoCard = (props: AlgoCardProps): JSX.Element => {
 	const handleClose = () => setOpen(false);
 	return (
 		<>
-			<Card sx={{ backgroundColor: "#12121299", m: 2 }}>
+			<Card elevation={2} sx={{ backgroundColor: "#121212E6", m: 1.5 }}>
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
 						<Typography variant="h6" align="left" gutterBottom fontFamily="Raleway">

@@ -182,7 +182,7 @@ const ResumeContent = (): JSX.Element => {
 									was like ... our privacy is a little exposed because we have a TA in here. I’m really happy you were as involved as you were. I’m
 									happy to have had you around with us in the discord. Towards the end you became more of a friend than someone to be intimated by.
 									How you helped me on my first assignment you also helped me on my last. Thanks for everything Matt. Best TA NA, EU, KR, RU, bottom
-									and top half of the hemisphere.""
+									and top half of the hemisphere."
 								</Typography>
 							</Grid>
 						</Grid>
@@ -263,14 +263,6 @@ const ResumeContent = (): JSX.Element => {
 						<Grid container xs={9} component="article" mx="auto">
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									Google
-								</Typography>
-							</Grid>
-							<Grid xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={10} marks={marks} max={10} />
-							</Grid>
-							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									React
 								</Typography>
 							</Grid>
@@ -323,7 +315,15 @@ const ResumeContent = (): JSX.Element => {
 								</Typography>
 							</Grid>
 							<Grid xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={3} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
+								<SkillSlider aria-label="HTML skill" defaultValue={3} marks={marks} max={10} />
+							</Grid>
+							<Grid xs={12} lg={3}>
+								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+									Google-fu
+								</Typography>
+							</Grid>
+							<Grid xs={12} lg={8}>
+								<SkillSlider aria-label="HTML skill" defaultValue={10} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
 							</Grid>
 						</Grid>
 					</Grid>
