@@ -13,7 +13,15 @@ const Algorithms = (): JSX.Element => {
 			</Grid>
 			{algorithmData.map((data, i) => (
 				<Grid key={i} component="div" xs={11} sm={6} md={4} lg={3} xl={2} m="auto" sx={{ backgroundColor: "background.paper" }} maxWidth="xl">
-					<AlgoCard code={data.code} language={data.language} name={data.name} difficulty={data.difficulty} explanation={data.explanation} />
+					<AlgoCard
+						code={data.code}
+						language={data.language}
+						name={data.name}
+						difficulty={data.difficulty}
+						explanation={data.explanation}
+						source={data.source}
+						url={data.url}
+					/>
 				</Grid>
 			))}
 		</Grid>

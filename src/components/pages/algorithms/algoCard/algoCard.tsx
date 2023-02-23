@@ -20,6 +20,8 @@ type AlgoCardProps = {
 	code: string;
 	language: string;
 	explanation: string;
+	source: string;
+	url: string;
 };
 
 const AlgoCard = (props: AlgoCardProps): JSX.Element => {
@@ -48,10 +50,12 @@ const AlgoCard = (props: AlgoCardProps): JSX.Element => {
 			<Modal open={open} onClose={handleClose} aria-labelledby={props.name} aria-describedby={props.name}>
 				<Box sx={modalStyle}>
 					<CodeBlock text={props.code} language={props.language} wrapLines theme={monokaiSublime} />
-					<IconButton>
-						<LaunchIcon />
-					</IconButton>
-					<Typography variant="caption">View the algorithm on "props.source goes here"</Typography>
+					<CardActionArea href={props.url} target="_blank" rel="noreferrer">
+						<IconButton>
+							<LaunchIcon />
+						</IconButton>
+						<Typography variant="caption">View the algorithm on {props.source}</Typography>
+					</CardActionArea>
 				</Box>
 			</Modal>
 		</>
