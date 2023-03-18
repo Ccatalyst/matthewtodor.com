@@ -443,6 +443,30 @@ if (a + b > c && b + c > a && a + c > b){
  return false;
 }}`,
 	},
+	{
+		name: "RBG to Hex Conversion",
+		difficulty: 5,
+		source: "Codewars",
+		url: "https://www.codewars.com/kata/513e08acc600c94f01000001",
+		language: "javascript",
+		explanation: `The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
+
+		Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.`,
+		code: `function rgb(r, g, b){
+ function toHex(i){
+  if(i>=255){
+   return 'FF'
+  }
+  if(i<=0){
+   return '00'
+  }
+  let value = i.toString(16).padStart(2,"0");
+
+  return value.toUpperCase();
+  };
+return toHex(r) + toHex(g) + toHex(b); 
+};`,
+	},
 ];
 
 export default algorithmData;
