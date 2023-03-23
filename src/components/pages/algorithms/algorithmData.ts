@@ -467,6 +467,41 @@ if (a + b > c && b + c > a && a + c > b){
 return toHex(r) + toHex(g) + toHex(b); 
 };`,
 	},
+	{
+		name: "Total Comp",
+		difficulty: 6,
+		source: "develop.This()",
+		url: "",
+		language: "javascript",
+		explanation: `Everyone should know that salary is only a part of your total compensation. Companies offer additional compensation in things like bonuses and one time stock grants.
+
+		Create a function named totalComp that accepts three required arguments:
+		
+		salary
+		bonus percentage
+		stock grant
+		The output of the function should return what your first year total compensation will be (stock grant included) and what the next two years will be assuming a 3 percent merit increase each year. All values should be rounded up to the nearest integer digit.
+		
+		Restrictions
+		Salary should be an integer greater than 0.
+		Bonus should be a float in the interval [0,1]
+		Stock grant should be an integer value greater than 0`,
+		code: `const totalComp = (salary, bonus, stock) => {
+const array = [];
+ for (let i = 0; i < 3; i++) {
+  if (i === 0) {
+   const bonusInt = Math.ceil(salary * bonus);
+   array.push(salary + bonusInt + stock);
+  } else {
+   const merit = salary * 0.03;
+   salary = salary + merit;
+   const bonusInt = salary * bonus;
+   array.push(Math.ceil(salary + bonusInt));
+  }
+ }
+return array;
+		};`,
+	},
 ];
 
 export default algorithmData;
