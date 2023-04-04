@@ -14,6 +14,13 @@
 		"github": "https://github.com/Ccatalyst/Find-Your-Next-Pet"
 	},
 	{
+		"name": "Cascading Solar System",
+		"body": "A website designed for students to learn about the planets in our solar system. Built with react and a mySQL server, the entire site, including the planets and moons is done with pure CSS. Built for a Dear Junior Dev community hackathon.",
+		"img": "https://i.imgur.com/FLsFpi0.png",
+		"deploy": "https://cascading-solar-system.herokuapp.com/",
+		"github": "https://github.com/Ccatalyst/Cascading-Solar-System"
+	},
+	{
 		"name": "recycled.gg",
 		"body": "A static site for a World of Warcraft Guild. The focus was on building a modern, mobile friendly site to look at the guild members while learning Material UI",
 		"img": "https://i.imgur.com/R2topER.png",
@@ -55,6 +62,7 @@
 		"deploy": "https://gist.github.com/Ccatalyst/54b5fac5dfd90dba5d49c6c1f7e9075c",
 		"github": "https://github.com/Ccatalyst/Rejex-Tutorial"
 	},
+
 	{
 		"name": "Employee Tracker",
 		"body": "A backend application based on nodejs and SQL that allows for manipulation of employees&apos; job information within a company.",

@@ -217,7 +217,7 @@ const ResumeContent = (): JSX.Element => {
 								</Typography>
 							</Grid>
 							<Grid xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
+								<SkillSlider aria-label="Javascript skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
@@ -225,7 +225,7 @@ const ResumeContent = (): JSX.Element => {
 								</Typography>
 							</Grid>
 							<Grid xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
+								<SkillSlider aria-label="Typescript skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
