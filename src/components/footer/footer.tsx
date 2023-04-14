@@ -33,7 +33,7 @@ const Footer = (): JSX.Element => {
 					</IconButton>
 				</StyledTooltip>
 				<StyledTooltip title="Github" arrow>
-					<IconButton aria-label="github" href="https://github.com/Ccatalyst" target="_blank" rel="noreferrer">
+					<IconButton aria-label="github" href="https://github.com/matthewtodor" target="_blank" rel="noreferrer">
 						<GitHub color="primary" />
 					</IconButton>
 				</StyledTooltip>
@@ -43,7 +43,7 @@ const Footer = (): JSX.Element => {
 					</IconButton>
 				</StyledTooltip>
 				<StyledTooltip title="Twitter" arrow>
-					<IconButton aria-label="twitter" href="https://twitter.com/Ccatalysttt" target="_blank" rel="noreferrer">
+					<IconButton aria-label="twitter" href="https://twitter.com/matthewtodortt" target="_blank" rel="noreferrer">
 						<Twitter color="primary" />
 					</IconButton>
 				</StyledTooltip>
