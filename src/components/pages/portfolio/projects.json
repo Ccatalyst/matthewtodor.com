@@ -11,35 +11,35 @@
 		"body": "A site built using HandlebarsJs. It searches for cats or dogs up for adoption via an API run by Purina Pet Foods",
 		"img": "https://i.imgur.com/u3cLMG8.png",
 		"deploy": "https://find-your-next-friend.herokuapp.com/",
-		"github": "https://github.com/Ccatalyst/Find-Your-Next-Pet"
+		"github": "https://github.com/matthewtodor/Find-Your-Next-Pet"
 	},
 	{
 		"name": "Cascading Solar System",
 		"body": "A website designed for students to learn about the planets in our solar system. Built with react and a mySQL server, the entire site, including the planets and moons is done with pure CSS. Built for a Dear Junior Dev community hackathon.",
 		"img": "https://i.imgur.com/FLsFpi0.png",
 		"deploy": "https://cascading-solar-system.herokuapp.com/",
-		"github": "https://github.com/Ccatalyst/Cascading-Solar-System"
+		"github": "https://github.com/matthewtodor/Cascading-Solar-System"
 	},
 	{
 		"name": "recycled.gg",
 		"body": "A static site for a World of Warcraft Guild. The focus was on building a modern, mobile friendly site to look at the guild members while learning Material UI",
 		"img": "https://i.imgur.com/R2topER.png",
 		"deploy": "https://recycled.netlify.app/",
-		"github": "https://github.com/Ccatalyst/recycled.gg"
+		"github": "https://github.com/matthewtodor/recycled.gg"
 	},
 	{
 		"name": "Custom Post Type WordPress Plugin",
 		"body": "A Wordpress plugin that will call an API and present the data that is returned to be viewed and edited. Built using php.",
 		"img": "https://i.imgur.com/cj1kyay.png",
 		"deploy": "",
-		"github": "https://github.com/Ccatalyst/Custom-Post-Type-Plugin"
+		"github": "https://github.com/matthewtodor/Custom-Post-Type-Plugin"
 	},
 	{
 		"name": "Markdown Generator",
 		"body": "A node.js application using inquirer to build a README for a repository.",
 		"img": "https://i.imgur.com/gpdkro8.png",
 		"deploy": "https://www.youtube.com/watch?v=bKQhTpOltik",
-		"github": "https://github.com/Ccatalyst/Markdown-Generator"
+		"github": "https://github.com/matthewtodor/Markdown-Generator"
 	},
 	{
 		"name": "DiscCover",
@@ -53,14 +53,14 @@
 		"body": "A backend project using MongoDB and Mongoose. An API that has users who can post &quot;thoughts&quot;, and have other users respond to the thoughts with responses. Allows for users to add friends as well.",
 		"img": "https://i.imgur.com/BxowT6s.png",
 		"deploy": "https://www.youtube.com/watch?v=1pRy9wAnT8Q",
-		"github": "https://github.com/Ccatalyst/Social-Network-API"
+		"github": "https://github.com/matthewtodor/Social-Network-API"
 	},
 	{
 		"name": "Regex URL Tutorial",
 		"body": "A tutorial covering regular expressions for URLs. Outlines an expression that allows for the inclusion/exclusion of portions of a url, such as &quot;http&quot;.",
 		"img": "https://i.imgur.com/8fo2w7U.png",
-		"deploy": "https://gist.github.com/Ccatalyst/54b5fac5dfd90dba5d49c6c1f7e9075c",
-		"github": "https://github.com/Ccatalyst/Rejex-Tutorial"
+		"deploy": "https://gist.github.com/matthewtodor/54b5fac5dfd90dba5d49c6c1f7e9075c",
+		"github": "https://github.com/matthewtodor/Rejex-Tutorial"
 	},
 
 	{
@@ -68,6 +68,6 @@
 		"body": "A backend application based on nodejs and SQL that allows for manipulation of employees&apos; job information within a company.",
 		"img": "https://i.imgur.com/V8FiMhj.png",
 		"deploy": "",
-		"github": "https://github.com/Ccatalyst/Employee-Tracker"
+		"github": "https://github.com/matthewtodor/Employee-Tracker"
 	}
 ]
