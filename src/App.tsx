@@ -1,12 +1,4 @@
-import { Route, Routes } from "react-router-dom";
-import { HashRouter as Router } from "react-router-dom";
-import Home from "./components/pages/home/home";
-import Portfolio from "./components/pages/portfolio/portfolio";
-import Algorithms from "./components/pages/algorithms/algorithms";
-import Resume from "./components/pages/resume/resume";
-import Nav from "./components/nav/nav";
-import Contact from "./components/pages/contact/contact";
-import Footer from "./components/footer/footer";
+import { Outlet } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import "@fontsource/roboto/300.css";
@@ -17,6 +9,7 @@ import "@fontsource/roboto-mono";
 import "@fontsource/raleway";
 
 import "./App.css";
+import Footer from "./components/footer/footer";
 const theme = createTheme({
 	palette: {
 		mode: "dark",
@@ -48,21 +41,11 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
-			<Router>
-				{/* this is here to keep the footer at the bottom of the page */}
-				<div className="container">
-					<Nav />
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/portfolio" element={<Portfolio />} />
-						<Route path="/algorithms" element={<Algorithms />} />
-						<Route path="/resume" element={<Resume />} />
-						<Route path="/contact" element={<Contact />} />
-						<Route path="/*" element={<Home />} />
-					</Routes>
-				</div>
-				<Footer />
-			</Router>
+			{/* this is here to keep the footer at the bottom of the page */}
+			<div className="container">
+				<Outlet />
+			</div>
+			<Footer />
 		</ThemeProvider>
 	);
 }
