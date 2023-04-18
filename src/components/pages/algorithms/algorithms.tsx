@@ -13,7 +13,7 @@ const Algorithms = (): JSX.Element => {
 				</Typography>
 			</Grid>
 			{algorithmData.map((data, i) => (
-				<Grid key={i} component="div" xs={11} sm={6} md={4} lg={3} xl={2} m="auto" maxWidth="xl">
+				<Grid key={i} component="div" xs={11} sm={6} md={4} lg={3} xl={2} maxWidth="xl" m={{ xs: "auto", sm: 0 }}>
 					<AlgoCard
 						code={data.code}
 						language={data.language}

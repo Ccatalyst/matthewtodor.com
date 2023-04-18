@@ -72,6 +72,7 @@ const Nav = (): JSX.Element => {
 			{useMediaQuery(theme.breakpoints.down("sm")) ? (
 				<>
 					<Banner />
+					<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
 					<Box>
 						<SpeedDial
 							FabProps={{

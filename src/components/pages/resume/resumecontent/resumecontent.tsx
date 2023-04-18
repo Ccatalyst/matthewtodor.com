@@ -59,7 +59,7 @@ const marks = new Array(10).fill(null).map((value, index) => ({ value: index }))
 const ResumeContent = (): JSX.Element => {
 	return (
 		<>
-			<Grid container sx={{ backgroundColor: "#12121290" }}>
+			<Grid container>
 				<Grid container xs={12} mt={6}>
 					<Button
 						size="large"
@@ -67,7 +67,7 @@ const ResumeContent = (): JSX.Element => {
 						href={resume}
 						target="_blank"
 						rel="noreferrer"
-						sx={{ m: "auto", borderRadius: `${1}px`, backgroundColor: "#00000090" }}
+						sx={{ m: "auto", borderRadius: `${1}px`, backgroundColor: "#12121299" }}
 						className="resumedlbutton"
 					>
 						<Typography variant="body1" component="p">
@@ -443,7 +443,7 @@ const ResumeContent = (): JSX.Element => {
 						href={resume}
 						target="_blank"
 						rel="noreferrer"
-						sx={{ m: "auto", borderRadius: `${1}px`, backgroundColor: "#00000090" }}
+						sx={{ m: "auto", borderRadius: `${1}px`, backgroundColor: "#12121299" }}
 						className="resumedlbutton"
 					>
 						<Typography variant="body1" component="p">

@@ -19,11 +19,12 @@ const Footer = (): JSX.Element => {
 	return (
 		<Grid
 			container
-			sx={{ width: { xs: `calc(100% - ${74}px)`, sm: 1 / 1 }, backgroundColor: "#121212e6" }}
+			sx={{ width: { xs: `calc(100% - ${82}px)`, sm: "90vw" }, justifySelf: { xs: "flex-start", sm: "center" } }}
 			component="footer"
 			position="absolute"
 			bottom={`${16}px`}
 			my={`${7}px`}
+			ml={{ xs: 1, sm: 0 }}
 			px={0.5}
 		>
 			<Stack direction="row" spacing="auto" sx={{ m: "auto", width: 1 / 1, border: `${1}px solid #0E9594` }}>
@@ -40,11 +41,6 @@ const Footer = (): JSX.Element => {
 				<StyledTooltip title="LinkedIn" arrow>
 					<IconButton aria-label="linkedin" href="https://www.linkedin.com/in/matthew-todor-a9185062/" target="_blank" rel="noreferrer">
 						<LinkedIn color="primary" />
-					</IconButton>
-				</StyledTooltip>
-				<StyledTooltip title="Twitter" arrow>
-					<IconButton aria-label="twitter" href="https://twitter.com/matthewtodortt" target="_blank" rel="noreferrer">
-						<Twitter color="primary" />
 					</IconButton>
 				</StyledTooltip>
 				<StyledTooltip title="Phone" arrow>
