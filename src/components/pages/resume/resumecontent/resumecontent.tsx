@@ -71,7 +71,7 @@ const ResumeContent = (): JSX.Element => {
 						className="resumedlbutton"
 					>
 						<Typography variant="body1" component="p">
-							Download Resume
+							Download Resume (PDF)
 						</Typography>
 					</Button>
 				</Grid>
@@ -234,7 +234,7 @@ const ResumeContent = (): JSX.Element => {
 						</Grid>
 						<Grid container xs={10} component="article" mx="auto">
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									Javascript
 								</Typography>
 							</Grid>
@@ -242,7 +242,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="Javascript skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									Typescript
 								</Typography>
 							</Grid>
@@ -250,7 +250,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="Typescript skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									HTML
 								</Typography>
 							</Grid>
@@ -258,7 +258,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									CSS
 								</Typography>
 							</Grid>
@@ -284,7 +284,7 @@ const ResumeContent = (): JSX.Element => {
 						</Grid>
 						<Grid container xs={10} component="article" mx="auto">
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									React
 								</Typography>
 							</Grid>
@@ -292,7 +292,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={9} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									GraphQL
 								</Typography>
 							</Grid>
@@ -300,7 +300,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									MongoDB
 								</Typography>
 							</Grid>
@@ -308,7 +308,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Nodejs
 								</Typography>
 							</Grid>
@@ -316,7 +316,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={6} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Express
 								</Typography>
 							</Grid>
@@ -324,7 +324,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Handlebars
 								</Typography>
 							</Grid>
@@ -332,7 +332,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									SQL
 								</Typography>
 							</Grid>
@@ -340,7 +340,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={3} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Google-fu
 								</Typography>
 							</Grid>
@@ -366,7 +366,7 @@ const ResumeContent = (): JSX.Element => {
 						</Grid>
 						<Grid container xs={10} component="article" mx="auto">
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Github
 								</Typography>
 							</Grid>
@@ -374,7 +374,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={9} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Apollo Sandbox
 								</Typography>
 							</Grid>
@@ -382,7 +382,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Insomnia
 								</Typography>
 							</Grid>
@@ -390,7 +390,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={8} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Heroku
 								</Typography>
 							</Grid>
@@ -398,7 +398,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									Mongo Compass
 								</Typography>
 							</Grid>
@@ -406,7 +406,7 @@ const ResumeContent = (): JSX.Element => {
 								<SkillSlider aria-label="HTML skill" defaultValue={7} marks={marks} max={10} />
 							</Grid>
 							<Grid xs={12} lg={3}>
-								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
+								<Typography variant="subtitle1" component="h4" sx={{ fontFamily: "Roboto Mono" }}>
 									MySQL Workbench
 								</Typography>
 							</Grid>
@@ -475,7 +475,7 @@ const ResumeContent = (): JSX.Element => {
 						className="resumedlbutton"
 					>
 						<Typography variant="body1" component="p">
-							Download Resume
+							Download Resume (PDF)
 						</Typography>
 					</Button>
 				</Grid>

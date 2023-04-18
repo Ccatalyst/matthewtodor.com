@@ -13,9 +13,9 @@ const Portfolio = (): JSX.Element => {
 			})}
 			<Grid xs={12} mb={2}>
 				<Typography variant="h4" component="h2" fontFamily="Raleway" fontWeight={200} color="primary" align="center" gutterBottom>
-					Additional projects can be found{" "}
+					Additional projects can be found on my{" "}
 					<Link href="https://github.com/matthewtodor?tab=repositories" target="_blank" rel="noreferrer">
-						here
+						Github
 					</Link>
 				</Typography>
 			</Grid>

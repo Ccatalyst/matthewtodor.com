@@ -34,10 +34,10 @@ const AlgoCard = (props: AlgoCardProps): JSX.Element => {
 			<Card elevation={6} sx={{ m: 1.5 }}>
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
-						<Typography variant="h6" align="left" gutterBottom fontFamily="Raleway">
+						<Typography variant="h6" component="h3" align="left" gutterBottom fontFamily="Raleway">
 							{props.difficulty} Kyu
 						</Typography>
-						<Typography variant="h6" align="center">
+						<Typography variant="h6" component="h4" align="center">
 							{props.name}
 						</Typography>
 						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
