@@ -60,7 +60,7 @@ const ResumeContent = (): JSX.Element => {
 	return (
 		<>
 			<Grid container>
-				<Grid container xs={12} mt={6}>
+				<Grid container xs={12} mt={6} pl={{ xs: 2 }}>
 					<Button
 						size="large"
 						variant="outlined"
@@ -76,14 +76,22 @@ const ResumeContent = (): JSX.Element => {
 					</Button>
 				</Grid>
 				{/* EXPERIENCE */}
-				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
-					<Grid xs={12}>
-						<Typography variant="h4" component="h2" gutterBottom color="primary" align="center" py={3}>
+				<Grid container xs={12} md={6} p={1} px={{ xs: 2 }} justifyContent="center">
+					<Grid xs={12} ml={2}>
+						<Typography
+							variant="h4"
+							component="h2"
+							gutterBottom
+							color="primary"
+							align="center"
+							py={3}
+							sx={{ textDecoration: { xs: "underline 2px", sm: "none" }, textUnderlineOffset: { xs: 3 } }}
+						>
 							Experience
 						</Typography>
 					</Grid>
 					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid sm={10} mx="auto">
+						<Grid sm={11} mx="auto">
 							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
 								Full Stack Web Development Teacher's Assistant
 							</Typography>
@@ -95,17 +103,17 @@ const ResumeContent = (): JSX.Element => {
 						</Grid>
 
 						<Grid md={9} component="article" mx="auto">
-							<ul>
-								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
+							<ul style={{ paddingInlineStart: 8 }}>
+								<Typography variant="body1" component="li" sx={{ listStyle: "none" }} gutterBottom>
 									Act as the students’ informational and procedural resource on web development concepts/languages, including HTML, CSS, & Javascript.
 								</Typography>
-								<Typography variant="body1" component="li" px={1} sx={{ listStyle: "none" }}>
+								<Typography variant="body1" component="li" sx={{ listStyle: "none" }}>
 									Foster and help effectively establish a conducive and interactive learning environment for students in a fully remote educational
 									setting.{" "}
 								</Typography>
 							</ul>
 
-							<ul>
+							<ul style={{ paddingInlineStart: 8 }}>
 								<Typography variant="body1" component="li" sx={{ listStyle: "none" }}>
 									Lesson Planning and Grading
 								</Typography>
@@ -123,7 +131,7 @@ const ResumeContent = (): JSX.Element => {
 								</li>
 							</ul>
 
-							<ul>
+							<ul style={{ paddingInlineStart: 8 }}>
 								<Typography variant="body1" component="li" sx={{ listStyle: "none" }}>
 									Code Review
 								</Typography>
@@ -141,21 +149,28 @@ const ResumeContent = (): JSX.Element => {
 							</ul>
 						</Grid>
 					</Grid>
-					{/* EXTRACURRICULAR ACTIVITIES */}
-					<Grid xs={12}>
-						<Typography variant="h4" gutterBottom color="primary" align="center" py={3}>
+					{/* TESTIMONIALS */}
+					<Grid xs={12} ml={2}>
+						<Typography
+							variant="h4"
+							gutterBottom
+							color="primary"
+							align="center"
+							py={3}
+							sx={{ textDecoration: { xs: "underline 2px", sm: "none" }, textUnderlineOffset: { xs: 3 } }}
+						>
 							Testimonials
 						</Typography>
 					</Grid>
-					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
-						<Grid sm={10} m="auto">
-							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
+					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
+						<Grid xs={11} m="auto">
+							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2 }} sx={{ backgroundColor: "#0E959466" }}>
 								Darin Palombo
 							</Typography>
 						</Grid>
 						<Grid container component="article">
 							<Grid md={9} mx="auto">
-								<Typography variant="body1" fontSize={16} pb={2} px={1} sx={{ listStyle: "none" }}>
+								<Typography variant="body1" fontSize={16} pb={2} align="center">
 									"From the very beginning of the Bootcamp I had serious doubts as to how I could possibly overcome the challenge that laid in front
 									of me. Even though I chose to take the course, once it started I had no confidence that I was "smart enough" to get through it. This
 									is where Matt came in and lifted me and many of my classmates from the dark places our minds can go when stuck in a mental dead-end.
@@ -166,15 +181,15 @@ const ResumeContent = (): JSX.Element => {
 							</Grid>
 						</Grid>
 					</Grid>
-					<Grid container md={12} borderLeft="2px solid" borderColor="primary.main" pl={1} mt={-2} position="relative" className="resumeitem">
-						<Grid sm={10} m="auto">
-							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2, sm: 0 }} sx={{ backgroundColor: "#0E959466" }}>
+					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
+						<Grid xs={10} m="auto">
+							<Typography variant="h6" component="h3" py={0.5} px={1} align="center" my={{ xs: 2 }} sx={{ backgroundColor: "#0E959466" }}>
 								Maximilian Gibes
 							</Typography>
 						</Grid>
 						<Grid container component="article">
 							<Grid md={9} mx="auto">
-								<Typography variant="body1" fontSize={16} pb={2} px={1} sx={{ listStyle: "none" }}>
+								<Typography variant="body1" fontSize={16} pb={2} align="center">
 									"First starting this boot camp, I wasn’t really sure what to expect. My first homework assignment I got recked. As you all know
 									lmao. Matt, helped me out and put central grading in their place. Throughout the course of the boot camp, Matt continuously showed
 									support to me and many other students. I can’t think of a time where Matt was like, “...figure it out yourself”. Although he
@@ -189,14 +204,21 @@ const ResumeContent = (): JSX.Element => {
 					</Grid>
 				</Grid>
 				{/* SKILLSET */}
-				<Grid container xs={12} md={6} p={1} px={{ xs: 3 }} justifyContent="center">
-					<Grid xs={12}>
-						<Typography variant="h4" gutterBottom color="primary" align="center" py={3}>
+				<Grid container xs={12} md={6} p={1} px={{ xs: 2 }} justifyContent="center">
+					<Grid xs={12} ml={1}>
+						<Typography
+							variant="h4"
+							gutterBottom
+							color="primary"
+							align="center"
+							py={3}
+							sx={{ textDecoration: { xs: "underline 2px", sm: "none" }, textUnderlineOffset: { xs: 3 } }}
+						>
 							Skillset
 						</Typography>
 					</Grid>
-					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid xs={10} mx="auto">
+					<Grid container xs={12} borderLeft="2px solid" borderColor="primary.main" mt={-2} position="relative" className="resumeitem">
+						<Grid xs={11} mx="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -210,7 +232,7 @@ const ResumeContent = (): JSX.Element => {
 								Languages
 							</Typography>
 						</Grid>
-						<Grid container xs={9} component="article" mx="auto">
+						<Grid container xs={10} component="article" mx="auto">
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" gutterBottom sx={{ fontFamily: "Roboto Mono" }}>
 									Javascript
@@ -241,12 +263,12 @@ const ResumeContent = (): JSX.Element => {
 								</Typography>
 							</Grid>
 							<Grid xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
+								<SkillSlider aria-label="HTML skill" defaultValue={5} marks={marks} max={10} sx={{ mb: { md: 3 } }} />
 							</Grid>
 						</Grid>
 					</Grid>
-					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid xs={10} mx="auto">
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" mt={-2} position="relative" className="resumeitem">
+						<Grid xs={11} m="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -260,7 +282,7 @@ const ResumeContent = (): JSX.Element => {
 								Tools
 							</Typography>
 						</Grid>
-						<Grid container xs={9} component="article" mx="auto">
+						<Grid container xs={10} component="article" mx="auto">
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									React
@@ -279,7 +301,7 @@ const ResumeContent = (): JSX.Element => {
 							</Grid>
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									MongoDB/Mongoose
+									MongoDB
 								</Typography>
 							</Grid>
 							<Grid xs={12} lg={8}>
@@ -311,7 +333,7 @@ const ResumeContent = (): JSX.Element => {
 							</Grid>
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
-									SQL/mySQL
+									SQL
 								</Typography>
 							</Grid>
 							<Grid xs={12} lg={8}>
@@ -323,13 +345,12 @@ const ResumeContent = (): JSX.Element => {
 								</Typography>
 							</Grid>
 							<Grid xs={12} lg={8}>
-								<SkillSlider aria-label="HTML skill" defaultValue={10} marks={marks} max={10} sx={{ mb: { xl: 3 } }} />
+								<SkillSlider aria-label="HTML skill" defaultValue={10} marks={marks} max={10} sx={{ mb: { md: 3 } }} />
 							</Grid>
 						</Grid>
 					</Grid>
-
-					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid xs={10} m="auto">
+					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" mt={-2} position="relative" className="resumeitem">
+						<Grid xs={11} m="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -343,7 +364,7 @@ const ResumeContent = (): JSX.Element => {
 								Applications
 							</Typography>
 						</Grid>
-						<Grid container xs={9} component="article" mx="auto">
+						<Grid container xs={10} component="article" mx="auto">
 							<Grid xs={12} lg={3}>
 								<Typography variant="subtitle1" component="u" sx={{ fontFamily: "Roboto Mono" }}>
 									Github
@@ -395,13 +416,20 @@ const ResumeContent = (): JSX.Element => {
 						</Grid>
 					</Grid>
 					{/* CERTIFICATES */}
-					<Grid xs={12}>
-						<Typography variant="h4" gutterBottom color="primary" align="center" py={3}>
+					<Grid xs={12} ml={2}>
+						<Typography
+							variant="h4"
+							gutterBottom
+							color="primary"
+							align="center"
+							py={3}
+							sx={{ textDecoration: { xs: "underline 2px", sm: "none" }, textUnderlineOffset: { xs: 3 } }}
+						>
 							Certificates
 						</Typography>
 					</Grid>
 					<Grid container sm={12} borderLeft="2px solid" borderColor="primary.main" pl={2} mt={-2} position="relative" className="resumeitem">
-						<Grid sm={10} mx="auto">
+						<Grid xs={11} mx="auto">
 							<Typography
 								variant="h6"
 								component="h3"
@@ -436,7 +464,7 @@ const ResumeContent = (): JSX.Element => {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid container xs={12} my={2}>
+				<Grid container xs={12} my={2} pl={{ xs: 2 }}>
 					<Button
 						size="large"
 						variant="outlined"

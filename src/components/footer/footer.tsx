@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, IconButton, Tooltip, TooltipProps, tooltipClasses, styled } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { GitHub, LinkedIn, MailOutline, PhoneAndroid, Twitter } from "@mui/icons-material/";
+import { GitHub, LinkedIn, MailOutline, PhoneAndroid } from "@mui/icons-material/";
 
 const StyledTooltip = styled(({ className, ...props }: TooltipProps) => <Tooltip {...props} arrow classes={{ popper: className }} />)(
 	({ theme }) => ({

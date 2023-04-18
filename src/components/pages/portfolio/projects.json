@@ -57,7 +57,7 @@
 	},
 	{
 		"name": "Regex URL Tutorial",
-		"body": "A tutorial covering regular expressions for URLs. Outlines an expression that allows for the inclusion/exclusion of portions of a url, such as &quot;http&quot;.",
+		"body": "A tutorial covering regular expressions for URLs. Outlines an expression that allows for the inclusion/exclusion of portions of a url, such as 'http'.",
 		"img": "https://i.imgur.com/8fo2w7U.png",
 		"deploy": "https://gist.github.com/matthewtodor/54b5fac5dfd90dba5d49c6c1f7e9075c",
 		"github": "https://github.com/matthewtodor/Rejex-Tutorial"
@@ -65,7 +65,7 @@
 
 	{
 		"name": "Employee Tracker",
-		"body": "A backend application based on nodejs and SQL that allows for manipulation of employees&apos; job information within a company.",
+		"body": "A backend application based on nodejs and SQL that allows for manipulation of employees' job information within a company.",
 		"img": "https://i.imgur.com/V8FiMhj.png",
 		"deploy": "",
 		"github": "https://github.com/matthewtodor/Employee-Tracker"
