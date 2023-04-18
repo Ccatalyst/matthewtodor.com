@@ -54,17 +54,6 @@ const Nav = (): JSX.Element => {
 		},
 	];
 
-	const [navBar, updateNavbar] = React.useState(false);
-
-	function scrollHandler() {
-		if (window.scrollY >= 10) {
-			updateNavbar(true);
-		} else {
-			updateNavbar(false);
-		}
-	}
-
-	window.addEventListener("scroll", scrollHandler);
 	// checking if the screen width is below the small breakpoint
 	const theme = useTheme();
 	return (
@@ -105,7 +94,6 @@ const Nav = (): JSX.Element => {
 						m: "auto",
 						justifyContent: "center",
 					}}
-					className={navBar ? "sticky" : "navbar"}
 				>
 					<Grid xs={12} sm={7} md={5} lg={4} xl={4}>
 						<Typography
