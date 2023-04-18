@@ -22,7 +22,7 @@ const Nav = (): JSX.Element => {
 		},
 		{
 			icon: (
-				<Link component={RouterLink} to="/portfolio" sx={{ mt: 1 }}>
+				<Link component={RouterLink} to="portfolio" sx={{ mt: 1 }}>
 					<Construction />
 				</Link>
 			),
@@ -30,7 +30,7 @@ const Nav = (): JSX.Element => {
 		},
 		{
 			icon: (
-				<Link component={RouterLink} to="/algorithms" sx={{ mt: 1 }}>
+				<Link component={RouterLink} to="algorithms" sx={{ mt: 1 }}>
 					<Functions />
 				</Link>
 			),
@@ -38,7 +38,7 @@ const Nav = (): JSX.Element => {
 		},
 		{
 			icon: (
-				<Link component={RouterLink} to="/resume" sx={{ mt: 1 }}>
+				<Link component={RouterLink} to="resume" sx={{ mt: 1 }}>
 					<Description />
 				</Link>
 			),
@@ -46,7 +46,7 @@ const Nav = (): JSX.Element => {
 		},
 		{
 			icon: (
-				<Link component={RouterLink} to="/contact" sx={{ mt: 1 }}>
+				<Link component={RouterLink} to="contact" sx={{ mt: 1 }}>
 					<ContactPage />
 				</Link>
 			),
@@ -137,7 +137,7 @@ const Nav = (): JSX.Element => {
 									textAlign: "center",
 								}}
 							>
-								<Link component={RouterLink} to="/portfolio" underline="none" sx={{ m: "auto" }}>
+								<Link component={RouterLink} to="portfolio" underline="none" sx={{ m: "auto" }}>
 									Portfolio
 								</Link>
 							</Typography>
@@ -151,7 +151,7 @@ const Nav = (): JSX.Element => {
 									textAlign: "center",
 								}}
 							>
-								<Link component={RouterLink} to="/algorithms" underline="none" sx={{ m: "auto" }}>
+								<Link component={RouterLink} to="algorithms" underline="none" sx={{ m: "auto" }}>
 									Algorithms
 								</Link>
 							</Typography>
@@ -165,7 +165,7 @@ const Nav = (): JSX.Element => {
 									textAlign: "center",
 								}}
 							>
-								<Link component={RouterLink} to="/resume" underline="none" sx={{ m: "auto" }}>
+								<Link component={RouterLink} to="resume" underline="none" sx={{ m: "auto" }}>
 									Resume
 								</Link>
 							</Typography>
@@ -179,7 +179,7 @@ const Nav = (): JSX.Element => {
 									textAlign: "center",
 								}}
 							>
-								<Link component={RouterLink} to="/contact" underline="none" sx={{ m: "auto" }}>
+								<Link component={RouterLink} to="contact" underline="none" sx={{ m: "auto" }}>
 									Contact
 								</Link>
 							</Typography>
