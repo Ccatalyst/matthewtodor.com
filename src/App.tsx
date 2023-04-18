@@ -10,6 +10,7 @@ import "@fontsource/raleway";
 
 import "./App.css";
 import Footer from "./components/footer/footer";
+import Nav from "./components/nav/nav";
 const theme = createTheme({
 	palette: {
 		mode: "dark",
@@ -43,6 +44,7 @@ function App() {
 			<CssBaseline />
 			{/* this is here to keep the footer at the bottom of the page */}
 			<div className="container">
+				<Nav />
 				<Outlet />
 			</div>
 			<Footer />
