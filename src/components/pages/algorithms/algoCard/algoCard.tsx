@@ -31,7 +31,7 @@ const AlgoCard = (props: AlgoCardProps): JSX.Element => {
 	const handleClose = () => setOpen(false);
 	return (
 		<>
-			<Card elevation={6} sx={{ m: 1.5 }}>
+			<Card elevation={3} sx={{ m: 1.5 }}>
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
 						<Typography variant="h6" component="h3" align="left" gutterBottom fontFamily="Raleway">
