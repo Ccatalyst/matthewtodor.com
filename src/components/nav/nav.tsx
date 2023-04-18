@@ -72,6 +72,7 @@ const Nav = (): JSX.Element => {
 			{useMediaQuery(theme.breakpoints.down("sm")) ? (
 				<>
 					<Banner />
+					<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
 					<Box>
 						<SpeedDial
 							FabProps={{
@@ -99,6 +100,7 @@ const Nav = (): JSX.Element => {
 			) : (
 				<Grid
 					container
+					component="nav"
 					sx={{
 						m: "auto",
 						justifyContent: "center",
@@ -123,7 +125,7 @@ const Nav = (): JSX.Element => {
 						</Typography>
 					</Grid>
 					{/* this container holds the links */}
-					<Grid container xs={12} md={7} lg={8} xl={8} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center", mx: {} }} className="mdNav">
+					<Grid container xs={12} md={7} lg={8} xl={8} sx={{ m: "auto", my: { sm: 2, md: 0 }, alignContent: "center" }} className="mdNav">
 						{/* empty div, used to push links to the right. bad way to do it, fix later */}
 						<Grid xs={0} lg={4} xl={7}></Grid>
 						{/* link to portfolio */}

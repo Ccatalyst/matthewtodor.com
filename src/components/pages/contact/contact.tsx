@@ -95,18 +95,10 @@ const Contact = (): JSX.Element => {
 	});
 
 	return (
-		<Grid container component="main" maxWidth="lg" mx="auto" sx={{ backgroundColor: "#12121290" }}>
+		<Grid container component="main" maxWidth="lg" mx="auto">
 			<Grid xs={12} mt={3}>
-				<Typography
-					variant="h4"
-					component="h2"
-					fontFamily="Raleway"
-					fontWeight={200}
-					color="primary"
-					align="center"
-					sx={{ textDecoration: "underline" }}
-				>
-					Contact Me
+				<Typography variant="h4" component="h2" fontFamily="Raleway" fontWeight={200} color="primary" align="center">
+					Contact
 				</Typography>
 			</Grid>
 			<Grid container xs={12} mt={3}>

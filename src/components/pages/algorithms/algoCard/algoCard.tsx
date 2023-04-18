@@ -8,7 +8,8 @@ const modalStyle = {
 	top: "50%",
 	left: "50%",
 	transform: "translate(-50%, -50%)",
-	width: 400,
+	minWidth: "40vw",
+	maxWidth: "90vw",
 	bgcolor: "background.paper",
 	border: "2px solid ",
 	boxShadow: 24,
@@ -30,18 +31,17 @@ const AlgoCard = (props: AlgoCardProps): JSX.Element => {
 	const handleClose = () => setOpen(false);
 	return (
 		<>
-			<Card elevation={2} sx={{ backgroundColor: "#121212E6", m: 1.5 }}>
+			<Card elevation={6} sx={{ m: 1.5 }}>
 				<CardActionArea onClick={handleOpen}>
 					<CardContent>
-						<Typography variant="h6" align="left" gutterBottom fontFamily="Raleway">
+						<Typography variant="h6" component="h3" align="left" gutterBottom fontFamily="Raleway">
 							{props.difficulty} Kyu
 						</Typography>
-
-						<Typography variant="h6" align="center">
+						<Typography variant="h6" component="h4" align="center">
 							{props.name}
 						</Typography>
 						<Divider sx={{ borderWidth: 1, borderColor: "primary.main" }} />
-						<Typography align="center" mt={1} mx={0.5} maxHeight={200} overflow="auto" className="explanation">
+						<Typography align="center" mt={1} mx={0.5} maxHeight={{ xs: "60vh", sm: "30vh" }} overflow="auto" className="explanation">
 							{props.explanation}
 						</Typography>
 					</CardContent>

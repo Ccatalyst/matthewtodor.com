@@ -14,8 +14,8 @@ type CardProps = {
 const PortfolioCard = (cardProps: CardProps): JSX.Element => {
 	return (
 		<Grid xs={12} sm={6} md={4} lg={3} sx={{ p: 2 }}>
-			<Card>
-				<CardMedia component="img" alt={cardProps.name} height="140" image={cardProps.img} />
+			<Card elevation={6}>
+				<CardMedia component="img" alt="" height="140" image={cardProps.img} />
 				<CardContent>
 					<Typography variant="h5" component="h2">
 						{cardProps.name}

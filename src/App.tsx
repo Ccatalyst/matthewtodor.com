@@ -1,5 +1,3 @@
-import React from "react";
-import { useCallback } from "react";
 import { Route, Routes } from "react-router-dom";
 import { HashRouter as Router } from "react-router-dom";
 import Home from "./components/pages/home/home";
@@ -18,9 +16,6 @@ import "@fontsource/roboto/700.css";
 import "@fontsource/roboto-mono";
 import "@fontsource/raleway";
 
-import Particles from "react-particles";
-import { Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
 import "./App.css";
 const theme = createTheme({
 	palette: {
@@ -43,14 +38,13 @@ const theme = createTheme({
 		success: {
 			main: "#37FF8B",
 		},
+		background: {
+			default: "#1f1f1f",
+		},
 	},
 });
 
 function App() {
-	const particlesInit = useCallback(async (engine: Engine) => {
-		await loadFull(engine);
-	}, []);
-
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
@@ -58,83 +52,6 @@ function App() {
 				{/* this is here to keep the footer at the bottom of the page */}
 				<div className="container">
 					<Nav />
-					<Particles
-						id="tsparticles"
-						options={{
-							background: {
-								color: {
-									value: "#121212",
-								},
-							},
-							fpsLimit: 120,
-							interactivity: {
-								events: {
-									onClick: {
-										enable: false,
-										mode: "push",
-									},
-									onHover: {
-										enable: false,
-										mode: "repulse",
-									},
-									resize: true,
-								},
-								modes: {
-									push: {
-										quantity: 4,
-									},
-									repulse: {
-										distance: 200,
-										duration: 0.4,
-									},
-								},
-							},
-							particles: {
-								color: {
-									value: "#0E9594",
-								},
-								links: {
-									color: "#0E959420",
-									distance: 150,
-									enable: true,
-									opacity: 0.5,
-									width: 1,
-								},
-								collisions: {
-									enable: true,
-								},
-								move: {
-									direction: "none",
-									enable: true,
-									outModes: {
-										default: "bounce",
-									},
-									random: false,
-									speed: 1,
-									straight: false,
-								},
-								number: {
-									density: {
-										enable: true,
-										value_area: 800,
-									},
-									value: 45,
-								},
-								opacity: {
-									value: 0.5,
-								},
-								shape: {
-									type: "circle",
-								},
-								size: {
-									random: true,
-									value: 5,
-								},
-							},
-							detectRetina: true,
-						}}
-						init={particlesInit}
-					/>
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/portfolio" element={<Portfolio />} />
