@@ -32,9 +32,6 @@ const theme = createTheme({
 		success: {
 			main: "#37FF8B",
 		},
-		background: {
-			default: "#1f1f1f",
-		},
 	},
 });
 
